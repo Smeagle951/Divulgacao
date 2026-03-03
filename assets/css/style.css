@@ -1190,3 +1190,187 @@ a {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================================================
+   LIGHTBOX — Preview e Zoom de Imagens
+   ========================================================================= */
+#lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+#lightbox.lb-open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.lb-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 10, 5, 0.94);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    cursor: pointer;
+}
+
+/* Wrapper da imagem — centraliza e limita área de scroll/drag */
+.lb-img-wrap {
+    position: relative;
+    z-index: 2;
+    max-width: 90vw;
+    max-height: 85vh;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.lb-img {
+    display: block;
+    max-width: 90vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    transform-origin: center center;
+    transition: opacity 0.3s ease, transform 0.1s linear;
+    will-change: transform;
+    -webkit-user-drag: none;
+}
+
+/* Botão fechar */
+.lb-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1.25rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s, transform 0.2s;
+    backdrop-filter: blur(8px);
+}
+
+.lb-close:hover {
+    background: rgba(255, 80, 80, 0.6);
+    transform: rotate(90deg) scale(1.1);
+}
+
+/* Botões de navegação */
+.lb-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 1;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s, transform 0.2s;
+    backdrop-filter: blur(6px);
+}
+
+.lb-nav:hover {
+    background: rgba(46, 125, 50, 0.8);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.lb-prev {
+    left: 18px;
+}
+
+.lb-next {
+    right: 18px;
+}
+
+/* Legenda */
+.lb-caption {
+    position: absolute;
+    bottom: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.55);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.875rem;
+    padding: 6px 16px;
+    border-radius: 20px;
+    max-width: 80vw;
+    text-align: center;
+    backdrop-filter: blur(6px);
+}
+
+/* Dica de controles */
+.lb-hint {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.75rem;
+    white-space: nowrap;
+    letter-spacing: 0.03em;
+}
+
+/* Entrada animada da imagem ao trocar */
+@keyframes lbFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsivo mobile */
+@media screen and (max-width: 576px) {
+    .lb-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.8rem;
+    }
+
+    .lb-prev {
+        left: 8px;
+    }
+
+    .lb-next {
+        right: 8px;
+    }
+
+    .lb-hint {
+        display: none;
+    }
+}
