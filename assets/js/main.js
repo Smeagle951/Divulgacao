@@ -1,18 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Smooth Scrolling para links internos
+
+    // Navbar — adiciona classe 'scrolled' ao rolar
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 60) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }, { passive: true });
+
+    // Smooth Scrolling para links internos (com offset da navbar fixa)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
-            if(targetId === '#') return;
-            
+            if (targetId === '#') return;
             const targetElement = document.querySelector(targetId);
-            if(targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+            if (targetElement) {
+                const navbarHeight = navbar ? navbar.offsetHeight : 72;
+                const top = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
+                window.scrollTo({ top, behavior: 'smooth' });
             }
         });
     });
@@ -36,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Seleciona todos os elementos que devem ser animados (Seções, Grids e Timeline)
     const animatableElements = document.querySelectorAll('.animate-on-scroll, .cards-grid, .timeline-section');
-    
+
     animatableElements.forEach(el => {
         scrollObserver.observe(el);
     });
@@ -54,4 +62,4 @@ document.addEventListener('DOMContentLoaded', () => {
         item.style.transitionDelay = `${index * 0.15}s`;
     });
 
-});
+}); // fim DOMContentLoaded

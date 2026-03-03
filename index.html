@@ -14,16 +14,33 @@
 
 <body>
 
+    <!-- ══ NAVBAR ══ -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar-inner">
+            <a href="#home" class="navbar-logo">
+                <img src="assets/images/FortSmart.png" alt="FortSmart Logo" class="logo-img">
+            </a>
+            <nav class="navbar-links">
+                <a href="#sobre">Sobre</a>
+                <a href="#como-funciona">Funciona</a>
+                <a href="#como-usar">Como Usar</a>
+                <a href="#diferenciais">Diferenciais</a>
+                <a href="#timeline">Evolução</a>
+            </nav>
+        </div>
+    </header>
+
     <!-- ══════════════════════════════════════════════
          1. HERO SECTION — imagem Fundo.jpeg
     ══════════════════════════════════════════════ -->
     <section class="hero" id="home">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1 class="hero-title fade-in-up">FortSmart &ndash; Tecnologia Inteligente no Campo</h1>
-            <p class="hero-subtitle fade-in-up delay-1">Conectando educação e agricultura digital</p>
+            <h1 class="hero-title fade-in-up">FortSmart &ndash; Gestão Agrícola Digital no Campo</h1>
+            <p class="hero-subtitle fade-in-up delay-1">Dados técnicos transformados em decisões estratégicas para a sua
+                lavoura</p>
             <div class="hero-actions fade-in-up delay-2">
-                <a href="#sobre" class="btn btn-primary">Conhecer o Projeto</a>
+                <a href="#sobre" class="btn btn-primary">Conhecer a Plataforma</a>
             </div>
         </div>
     </section>
@@ -33,12 +50,21 @@
     ══════════════════════════════════════════════ -->
     <section class="sobre section-padding" id="sobre">
         <div class="container animate-on-scroll">
-            <h2 class="section-title">Sobre o Projeto</h2>
+            <h2 class="section-title">🌾 Sobre o FortSmart</h2>
             <p class="section-desc">
-                O FortSmart é uma iniciativa focada em transformar o ambiente escolar técnico agrícola.
-                Nossa missão é aproximar a tecnologia de ponta das salas de aula e campos de prova,
-                preparando a nova geração de profissionais para uma agricultura eficiente,
-                sustentável e impulsionada por dados.
+                O FortSmart é uma plataforma digital voltada exclusivamente para o agronegócio.
+                Foi desenvolvido para organizar o monitoramento técnico por talhão, garantir rastreabilidade
+                das operações e apoiar decisões baseadas em histórico real de campo.
+            </p>
+            <ul class="sobre-lista animate-on-scroll">
+                <li>📍 Monitoramento técnico por talhão</li>
+                <li>📋 Rastreabilidade das operações agrícolas</li>
+                <li>🌱 Centralização de dados de plantio e aplicações</li>
+                <li>📊 Relatórios profissionais online compartilháveis</li>
+                <li>🧠 Decisões baseadas em histórico real de campo</li>
+            </ul>
+            <p class="sobre-nota animate-on-scroll delay-1">
+                Mais do que um aplicativo, o FortSmart é uma ferramenta de gestão agrícola orientada por dados.
             </p>
             <div class="app-showcase">
                 <img src="assets/images/Divulgacao.png" alt="FortSmart - Divulgação" class="app-image">
@@ -51,10 +77,12 @@
     ══════════════════════════════════════════════ -->
     <section class="como-funciona section-padding bg-light" id="como-funciona">
         <div class="container animate-on-scroll">
-            <h2 class="section-title">Como Funciona</h2>
-            <p class="section-desc">Ferramentas essenciais para o aprendizado prático e gestão do campo escolar.</p>
+            <h2 class="section-title">Como Funciona na Lavoura</h2>
+            <p class="section-desc">Ferramentas essenciais para o produtor e o consultor agronômico gerirem a lavoura
+                com precisão.</p>
 
             <div class="cards-grid">
+                <!-- Card 1 -->
                 <div class="card hover-fx">
                     <div class="card-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -64,10 +92,11 @@
                             <line x1="16" y1="6" x2="16" y2="22"></line>
                         </svg>
                     </div>
-                    <h3 class="card-title">Mapeamento de Talhões</h3>
-                    <p class="card-text">Registre e visualize áreas de cultivo interativamente, otimizando o uso do
-                        solo.</p>
+                    <h3 class="card-title">Mapeamento por Talhão</h3>
+                    <p class="card-text">Delimite e organize cada área produtiva com precisão via GPS para controle
+                        total da lavoura.</p>
                 </div>
+                <!-- Card 2 -->
                 <div class="card hover-fx delay-1">
                     <div class="card-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -76,9 +105,11 @@
                             <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
                         </svg>
                     </div>
-                    <h3 class="card-title">Análise de Dados</h3>
-                    <p class="card-text">Acompanhe relatórios precisos de plantio, insumos e produtividade esperada.</p>
+                    <h3 class="card-title">Análise e Relatórios</h3>
+                    <p class="card-text">Gere relatórios profissionais de plantio, insumos, monitoramentos e histórico
+                        de campo.</p>
                 </div>
+                <!-- Card 3 -->
                 <div class="card hover-fx delay-2">
                     <div class="card-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -89,18 +120,19 @@
                             <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                         </svg>
                     </div>
-                    <h3 class="card-title">Ambiente Colaborativo</h3>
-                    <p class="card-text">Alunos e professores conectados numa mesma plataforma de gestão agrícola
-                        educacional.</p>
+                    <h3 class="card-title">Decisão Técnica Baseada em Dados</h3>
+                    <p class="card-text">Produtores e consultores acessam histórico real de campo para tomada de decisão
+                        estratégica.</p>
                 </div>
             </div>
 
-            <!-- Imagem Informacoes como banner ilustrativo -->
+            <!-- Banner Informacoes.png -->
             <div class="info-banner animate-on-scroll delay-2">
-                <img src="assets/images/Informacoes.png" alt="Informações do FortSmart" class="info-banner-img">
+                <img src="assets/images/Informacoes.png" alt="Informações FortSmart" class="info-banner-img">
             </div>
         </div>
     </section>
+
 
     <!-- ══════════════════════════════════════════════
          4. DO CAMPO AO RELATÓRIO DIGITAL
@@ -291,7 +323,8 @@
     ══════════════════════════════════════════════ -->
     <section class="tech-edu section-padding bg-green-soft">
         <div class="container text-center animate-on-scroll">
-            <h2 class="inspiring-text">"A agricultura do futuro será digital.<br>O aprendizado começa agora."</h2>
+            <h2 class="inspiring-text">"A agricultura do futuro é digital.<br>Dados de campo, decisões inteligentes."
+            </h2>
         </div>
     </section>
 
@@ -300,8 +333,8 @@
     ══════════════════════════════════════════════ -->
     <section class="cta-final section-padding bg-dark">
         <div class="container text-center animate-on-scroll">
-            <h2 class="cta-title">Pronto para inovar no campo?</h2>
-            <p class="cta-subtitle">Descubra como o FortSmart pode transformar sua escola hoje mesmo.</p>
+            <h2 class="cta-title">Leve o FortSmart para a sua operação</h2>
+            <p class="cta-subtitle">Plataforma completa para gestão agrícola digital, do talhão ao relatório.</p>
             <div class="cta-actions">
                 <a href="#" class="btn btn-primary">Começar Agora</a>
                 <a href="#" class="btn btn-outline-white">Falar com Consultor</a>
