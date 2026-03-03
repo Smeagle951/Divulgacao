@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relatório Técnico — FS-ENT-2026-000014 | FortSmart</title>
+    <link rel="stylesheet" href="assets/css/relatorio.css" />
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- ════════════════════════ SIDEBAR ════════════════════════ -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="assets/images/FortSmart.png" alt="FortSmart" onerror="this.style.display='none'" />
+                <div>
+                    <div class="sidebar-logo-text">FortSmart</div>
+                    <span class="sidebar-logo-sub">Gestão Agrícola</span>
+                </div>
+            </div>
+
+            <div class="sidebar-user">
+                <div class="user-avatar">CH</div>
+                <div class="user-name">Carlos Henrique</div>
+                <div class="user-role">Engenheiro Agrônomo · CREA-000000-D</div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-label">Navegação</div>
+                <a class="nav-item active" href="#resumo">
+                    <span class="nav-icon">📋</span> Visão Geral
+                </a>
+                <a class="nav-item" href="#propriedade">
+                    <span class="nav-icon">🌾</span> Propriedade
+                </a>
+                <a class="nav-item" href="#monitoramento">
+                    <span class="nav-icon">🔬</span> Monitoramento
+                </a>
+                <a class="nav-item" href="#pragas">
+                    <span class="nav-icon">🐛</span> Análise de Pragas
+                </a>
+                <a class="nav-item" href="#risco">
+                    <span class="nav-icon">📊</span> Avaliação de Risco
+                </a>
+                <a class="nav-item" href="#auditoria">
+                    <span class="nav-icon">🔒</span> Auditoria
+                </a>
+
+                <div class="nav-section-label" style="margin-top:1rem;">Relatório</div>
+                <a class="nav-item" href="#" onclick="window.print(); return false;">
+                    <span class="nav-icon">🖨️</span> Imprimir / PDF
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="index.html">← Voltar ao site</a>
+            </div>
+        </aside>
+
+        <!-- ════════════════════════ MAIN ════════════════════════ -->
+        <main class="main">
+
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <nav class="breadcrumb">
+                        <span>Fazenda Ferradura</span>
+                        <span class="breadcrumb-sep">›</span>
+                        <span>Talhão 14</span>
+                        <span class="breadcrumb-sep">›</span>
+                        <span class="breadcrumb-current">Relatório Técnico</span>
+                    </nav>
+                    <span class="status-badge finalizado">
+                        <span class="dot"></span> Finalizado
+                    </span>
+                </div>
+                <div class="header-right">
+                    <span class="meta-tag">v3</span>
+                    <span class="meta-tag">FS-ENT-2026-000014</span>
+                    <a href="#" onclick="window.print(); return false;" class="btn-action outline">🖨️ Exportar PDF</a>
+                    <a href="index.html" class="btn-action primary">← Voltar</a>
+                </div>
+            </header>
+
+            <div class="page-content">
+
+                <!-- ── REPORT HEADER CARD ──────────────────── -->
+                <div id="resumo" class="report-header-card">
+                    <div class="report-header-info">
+                        <h1>📋 Relatório de Monitoramento Fitossanitário</h1>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 4px;">
+                            Emitido em 02/03/2026 às 14:10 · Aprovado por Administrador Técnico
+                        </p>
+                        <div class="report-meta-tags">
+                            <span class="meta-tag">🌾 Milho — Safra 2025/2026</span>
+                            <span class="meta-tag">📍 Rio Verde · GO</span>
+                            <span class="meta-tag">📐 32,5 ha · Talhão 14</span>
+                            <span class="meta-tag">🌱 V3 — 12 DAE</span>
+                            <span class="meta-tag">Híbrido: 2B610 PRO3</span>
+                            <span class="meta-tag">Plano: Enterprise</span>
+                        </div>
+                    </div>
+                    <div class="report-header-right">
+                        <div class="risk-badge medio">
+                            <span>⚠️</span>
+                            <div>
+                                <div class="risk-score">62</div>
+                                <div style="font-size: 0.7rem; font-weight: 500;">Risco Médio</div>
+                            </div>
+                        </div>
+                        <span style="font-size: 0.75rem; color: var(--text-muted);">Próxima visita: 05/03/2026</span>
+                    </div>
+                </div>
+
+                <!-- ── PROPRIEDADE & SAFRA ─────────────────── -->
+                <div id="propriedade" class="grid-2">
+                    <div class="card">
+                        <div class="card-title"><span class="card-title-icon">🏡</span> Propriedade</div>
+                        <div class="info-row"><span class="info-label">Fazenda</span><span class="info-value">Fazenda
+                                Ferradura</span></div>
+                        <div class="info-row"><span class="info-label">Município</span><span class="info-value">Rio
+                                Verde — GO</span></div>
+                        <div class="info-row"><span class="info-label">Área total</span><span class="info-value">850
+                                ha</span></div>
+                        <div class="info-row"><span class="info-label">Talhão</span><span class="info-value">Talhão 14
+                                (32,5 ha)</span></div>
+                        <div class="info-row"><span class="info-label">Solo</span><span class="info-value">Latossolo
+                                Vermelho</span></div>
+                        <div class="info-row"><span class="info-label">Irrigação</span><span
+                                class="info-value">Não</span></div>
+                        <div class="info-row"><span class="info-label">Cultura anterior</span><span
+                                class="info-value">Soja</span></div>
+                        <div class="geo-placeholder" style="margin-top: 1rem;">
+                            📍 Polígono GPS — Talhão 14
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title"><span class="card-title-icon">🌱</span> Ciclo da Cultura</div>
+                        <div class="info-row"><span class="info-label">Safra</span><span
+                                class="info-value">2025/2026</span></div>
+                        <div class="info-row"><span class="info-label">Cultura</span><span
+                                class="info-value">Milho</span></div>
+                        <div class="info-row"><span class="info-label">Híbrido</span><span class="info-value">2B610
+                                PRO3</span></div>
+                        <div class="info-row"><span class="info-label">Data de semeadura</span><span
+                                class="info-value">18/02/2026</span></div>
+                        <div class="info-row"><span class="info-label">Data de emergência</span><span
+                                class="info-value">20/02/2026</span></div>
+                        <div class="info-row"><span class="info-label">DAE</span><span class="info-value">12 dias</span>
+                        </div>
+                        <div class="info-row"><span class="info-label">Estádio fenológico</span><span class="info-value"
+                                style="color: var(--primary); font-weight: 700;">V3</span></div>
+                    </div>
+                </div>
+
+                <!-- ── MONITORAMENTO ──────────────────────── -->
+                <div id="monitoramento">
+                    <div class="section-heading">🔬 Visita de Monitoramento</div>
+                    <div class="grid-4" style="margin-bottom: 1.25rem;">
+                        <div class="stat-card">
+                            <div class="stat-label">Método</div>
+                            <div class="stat-value" style="font-size: 1.1rem; margin-top: 6px; line-height: 1.3;">
+                                Zigue-Zague</div>
+                            <div class="stat-unit">Padrão técnico</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">Pontos amostrados</div>
+                            <div class="stat-value">10</div>
+                            <div class="stat-unit">pontos de coleta</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">Temperatura</div>
+                            <div class="stat-value">29°C</div>
+                            <div class="stat-unit">no momento da visita</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">Umidade relativa</div>
+                            <div class="stat-value">72<span style="font-size:1rem">%</span></div>
+                            <div class="stat-unit">favorável a moluscos</div>
+                            <span class="stat-delta up">⚠️ Atenção</span>
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 1.25rem;">
+                        <div class="card-title">💧 Condições Climáticas Recentes</div>
+                        <div class="grid-3" style="margin: 0; gap: 1rem;">
+                            <div style="text-align:center; background: var(--bg); border-radius:10px; padding: 1rem;">
+                                <div style="font-size: 1.6rem; font-weight: 800; color: var(--primary);">38mm</div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted);">Chuva nos últimos 7 dias
+                                </div>
+                            </div>
+                            <div style="text-align:center; background: var(--bg); border-radius:10px; padding: 1rem;">
+                                <div style="font-size: 1.6rem; font-weight: 800; color: var(--warning);">72%</div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted);">Umidade do ar</div>
+                            </div>
+                            <div style="text-align:center; background: var(--bg); border-radius:10px; padding: 1rem;">
+                                <div style="font-size: 1.6rem; font-weight: 800; color: var(--text-main);">29°C</div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted);">Temperatura máx.</div>
+                            </div>
+                        </div>
+                        <div
+                            style="margin-top: 1rem; padding: 0.9rem; background: var(--bg); border-radius: 8px; border-left: 3px solid var(--primary); font-size: 0.85rem; color: var(--text-main);">
+                            📝 <strong>Observações gerais:</strong> Desenvolvimento vegetativo uniforme. Presença
+                            inicial de moluscos e baixa incidência de ovoposição.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── ANÁLISE DE PRAGAS ──────────────────── -->
+                <div id="pragas">
+                    <div class="section-heading">🐛 Análise de Pragas</div>
+                    <div class="grid-2">
+                        <!-- Praga 1: Caramujo -->
+                        <div class="pest-card">
+                            <div class="pest-header">
+                                <div>
+                                    <div class="pest-name">🐌 Caramujo</div>
+                                    <div class="pest-cat">Molusco · Distribuição em bordadura</div>
+                                </div>
+                                <span class="severity-badge moderado">⚠️ Moderado</span>
+                            </div>
+                            <div class="pest-metrics">
+                                <div class="pest-metric">
+                                    <div class="pest-metric-val">3</div>
+                                    <div class="pest-metric-lbl">méd./ponto</div>
+                                </div>
+                                <div class="pest-metric">
+                                    <div class="pest-metric-val">18%</div>
+                                    <div class="pest-metric-lbl">plantas afetadas</div>
+                                </div>
+                                <div class="pest-metric" style="grid-column: 1 / -1;">
+                                    <div class="pest-metric-val" style="font-size:1rem; line-height:1.4;">Lesões
+                                        irregulares em folhas jovens e trilhas de muco</div>
+                                    <div class="pest-metric-lbl">dano observado</div>
+                                </div>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Safra anterior (mesmo estágio)</span>
+                                <span class="info-value">6%</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Variação</span>
+                                <span class="info-value"><span class="trend-pill aumento">▲ +12% aumento</span></span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Limiar econômico atingido</span>
+                                <span class="info-value" style="color: var(--success);">✗ Não</span>
+                            </div>
+                            <div class="action-bar">
+                                <div>
+                                    <div class="action-type">🔍 Monitoramento Intensificado</div>
+                                    <div class="action-deadline">Retorno recomendado em até 3 dias</div>
+                                </div>
+                                <span class="severity-badge moderado">3 dias</span>
+                            </div>
+                        </div>
+
+                        <!-- Praga 2: Ovoposição -->
+                        <div class="pest-card">
+                            <div class="pest-header">
+                                <div>
+                                    <div class="pest-name">🦋 Ovoposição em Milho</div>
+                                    <div class="pest-cat">Lepidoptera · Distribuição dispersa</div>
+                                </div>
+                                <span class="severity-badge baixo">✓ Baixo</span>
+                            </div>
+                            <div class="pest-metrics">
+                                <div class="pest-metric">
+                                    <div class="pest-metric-val">1</div>
+                                    <div class="pest-metric-lbl">méd./ponto</div>
+                                </div>
+                                <div class="pest-metric">
+                                    <div class="pest-metric-val">7%</div>
+                                    <div class="pest-metric-lbl">plantas afetadas</div>
+                                </div>
+                                <div class="pest-metric" style="grid-column: 1 / -1;">
+                                    <div class="pest-metric-val" style="font-size:1rem; line-height:1.4;">Posturas
+                                        isoladas na face inferior das folhas</div>
+                                    <div class="pest-metric-lbl">dano observado</div>
+                                </div>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Safra anterior (mesmo estágio)</span>
+                                <span class="info-value">9%</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Variação</span>
+                                <span class="info-value"><span class="trend-pill reducao">▼ -2% redução</span></span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Limiar econômico atingido</span>
+                                <span class="info-value" style="color: var(--success);">✗ Não</span>
+                            </div>
+                            <div class="action-bar priority-low">
+                                <div>
+                                    <div class="action-type">📅 Acompanhamento Semanal</div>
+                                    <div class="action-deadline">Retorno recomendado em até 7 dias</div>
+                                </div>
+                                <span class="severity-badge baixo">7 dias</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── RISCO & DECISÃO ────────────────────── -->
+                <div id="risco">
+                    <div class="section-heading">📊 Avaliação de Risco e Suporte à Decisão</div>
+                    <div class="grid-2">
+                        <div class="card">
+                            <div class="card-title"><span class="card-title-icon">⚠️</span> Score de Risco Global</div>
+                            <div class="risk-gauge-wrap">
+                                <div class="gauge-ring">
+                                    <svg viewBox="0 0 120 120">
+                                        <circle class="gauge-track" cx="60" cy="60" r="50" />
+                                        <!-- 62% de 314 (circunferência) = ~195 -->
+                                        <circle class="gauge-fill medio" cx="60" cy="60" r="50" stroke-dasharray="314"
+                                            stroke-dashoffset="119" />
+                                    </svg>
+                                    <div class="gauge-label">62</div>
+                                </div>
+                                <div class="gauge-sub">Risco <strong>Médio</strong> — Prioridade: Monitorar</div>
+                            </div>
+                            <div class="info-row" style="margin-top:1rem;">
+                                <span class="info-label">Decisão recomendada</span>
+                                <span class="info-value">🔍 Monitorar</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Próxima visita técnica</span>
+                                <span class="info-value"
+                                    style="color: var(--warning); font-weight: 600;">05/03/2026</span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title"><span class="card-title-icon">🧠</span> Inteligência de Dados</div>
+                            <div class="insight-item">
+                                <span class="insight-icon">⚠️</span>
+                                <span class="insight-text">Incidência de moluscos <strong>12% superior</strong> à safra
+                                    anterior no mesmo estágio fenológico.</span>
+                            </div>
+                            <div class="insight-item">
+                                <span class="insight-icon">💧</span>
+                                <span class="insight-text">Condições de umidade (<strong>72%</strong>) favorecem aumento
+                                    populacional de caramujos.</span>
+                            </div>
+                            <div class="insight-item">
+                                <span class="insight-icon">📈</span>
+                                <span class="insight-text">Análise preditiva indica <strong>probabilidade moderada de
+                                        aumento</strong> (<strong>84%</strong> de confiança).</span>
+                            </div>
+                            <div class="insight-item">
+                                <span class="insight-icon">✅</span>
+                                <span class="insight-text">Ovoposição em <strong>tendência de redução</strong> comparado
+                                    à safra anterior. Acompanhamento semanal suficiente.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── AUDITORIA ──────────────────────────── -->
+                <div id="auditoria">
+                    <div class="section-heading">🔒 Log de Auditoria</div>
+                    <div class="card" style="margin-bottom: 1.25rem;">
+                        <table class="audit-table">
+                            <thead>
+                                <tr>
+                                    <th>Ação</th>
+                                    <th>Usuário</th>
+                                    <th>Data/Hora</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="audit-action-badge create">Criação</span></td>
+                                    <td>Carlos Henrique (usr_0032)</td>
+                                    <td>02/03/2026 às 09:15</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="audit-action-badge update">Atualização</span></td>
+                                    <td>Carlos Henrique (usr_0032)</td>
+                                    <td>02/03/2026 às 09:45</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="audit-action-badge finalize">Finalização</span></td>
+                                    <td>Administrador Técnico (usr_0001)</td>
+                                    <td>02/03/2026 às 10:02</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div><!-- /page-content -->
+
+            <!-- ── FOOTER ────────────────────────────── -->
+            <footer class="page-footer">
+                <div style="display:flex; align-items:center; gap: 0.5rem; flex-wrap:wrap;">
+                    <span>Hash SHA-256:</span>
+                    <span class="hash-display">e94f2a0c98d2e5...enterprisehash</span>
+                </div>
+                <div style="display:flex; align-items:center; gap: 0.75rem; flex-wrap:wrap;">
+                    <span class="integrity-badge">✓ Integridade validada</span>
+                    <span class="integrity-badge" style="background: #eff6ff; color: #2563eb;">☁️ Backup
+                        multi-região</span>
+                </div>
+                <div style="color: var(--text-light);">
+                    FortSmart v2.3.0 · Plano Enterprise · Grupo Agrícola Ferradura
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        // Active nav on scroll
+        const sections = document.querySelectorAll('[id]');
+        const navLinks = document.querySelectorAll('.nav-item');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+
+        sections.forEach(s => observer.observe(s));
+    </script>
+
+</body>
+
+</html>
