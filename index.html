@@ -708,7 +708,189 @@
     </section>
 
     <!-- ══════════════════════════════════════════════
-         7. TECNOLOGIA E EDUCAÇÃO
+         7. ENTERPRISE API REPORT
+    ══════════════════════════════════════════════ -->
+    <section class="api-section section-padding bg-dark" id="api-enterprise">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title text-center" style="color: var(--color-white); margin-bottom: 1rem;">Integração e
+                Dados Estruturados</h2>
+            <p class="section-desc text-center" style="color: #aaaaaa; margin-bottom: 3rem;">
+                Arquitetura pronta para integrações via API REST, com suporte multi-tenant, controle de versão,
+                histórico comparativo e auditoria completa para o agronegócio Enterprise.
+            </p>
+
+            <div class="mac-window">
+                <div class="mac-header">
+                    <span class="mac-dot close"></span>
+                    <span class="mac-dot minimize"></span>
+                    <span class="mac-dot expand"></span>
+                    <span class="mac-title">report-fs-ent-2026.json</span>
+                </div>
+                <div class="mac-body">
+                    <pre style="margin: 0;"><code>{
+  <span class="json-key">"enterprise_metadata"</span>: {
+    <span class="json-key">"tenant_id"</span>: <span class="json-string">"tenant_fortsmart_demo"</span>,
+    <span class="json-key">"organization"</span>: {
+      <span class="json-key">"name"</span>: <span class="json-string">"Grupo Agrícola Ferradura"</span>,
+      <span class="json-key">"document_id"</span>: <span class="json-string">"00.000.000/0001-00"</span>,
+      <span class="json-key">"subscription_plan"</span>: <span class="json-string">"Enterprise"</span>,
+      <span class="json-key">"active_users"</span>: <span class="json-number">12</span>
+    },
+    <span class="json-key">"system_version"</span>: <span class="json-string">"2.3.0"</span>,
+    <span class="json-key">"environment"</span>: <span class="json-string">"production"</span>,
+    <span class="json-key">"generated_at"</span>: <span class="json-string">"2026-03-02T14:10:00Z"</span>
+  },
+
+  <span class="json-key">"report"</span>: {
+    <span class="json-key">"report_id"</span>: <span class="json-string">"FS-ENT-2026-000014"</span>,
+    <span class="json-key">"report_type"</span>: <span class="json-string">"monitoramento_fitossanitario"</span>,
+    <span class="json-key">"status"</span>: <span class="json-string">"finalizado"</span>,
+    <span class="json-key">"version"</span>: <span class="json-number">3</span>,
+    <span class="json-key">"previous_version_id"</span>: <span class="json-string">"FS-ENT-2026-000014-v2"</span>,
+    <span class="json-key">"created_at"</span>: <span class="json-string">"2026-03-02T09:15:00Z"</span>,
+    <span class="json-key">"finalized_at"</span>: <span class="json-string">"2026-03-02T10:02:00Z"</span>,
+    <span class="json-key">"created_by"</span>: {
+      <span class="json-key">"user_id"</span>: <span class="json-string">"usr_0032"</span>,
+      <span class="json-key">"name"</span>: <span class="json-string">"Carlos Henrique Demo"</span>,
+      <span class="json-key">"role"</span>: <span class="json-string">"engenheiro_agronomo"</span>,
+      <span class="json-key">"crea"</span>: <span class="json-string">"CREA-000000-D"</span>
+    },
+    <span class="json-key">"approved_by"</span>: {
+      <span class="json-key">"user_id"</span>: <span class="json-string">"usr_0001"</span>,
+      <span class="json-key">"name"</span>: <span class="json-string">"Administrador Técnico"</span>,
+      <span class="json-key">"role"</span>: <span class="json-string">"diretor_tecnico"</span>
+    }
+  },
+
+  <span class="json-key">"property_structure"</span>: {
+    <span class="json-key">"farm"</span>: {
+      <span class="json-key">"farm_id"</span>: <span class="json-string">"farm_014"</span>,
+      <span class="json-key">"name"</span>: <span class="json-string">"Fazenda Ferradura"</span>,
+      <span class="json-key">"city"</span>: <span class="json-string">"Rio Verde"</span>,
+      <span class="json-key">"state"</span>: <span class="json-string">"GO"</span>,
+      <span class="json-key">"country"</span>: <span class="json-string">"Brasil"</span>,
+      <span class="json-key">"total_area_hectares"</span>: <span class="json-number">850</span>
+    },
+    <span class="json-key">"field"</span>: {
+      <span class="json-key">"field_id"</span>: <span class="json-string">"field_014"</span>,
+      <span class="json-key">"name"</span>: <span class="json-string">"Talhão 14"</span>,
+      <span class="json-key">"area_hectares"</span>: <span class="json-number">32.5</span>,
+      <span class="json-key">"soil_type"</span>: <span class="json-string">"Latossolo Vermelho"</span>,
+      <span class="json-key">"irrigation"</span>: <span class="json-boolean">false</span>,
+      <span class="json-key">"previous_crop"</span>: <span class="json-string">"Soja"</span>,
+      <span class="json-key">"geo_boundary"</span>: {
+        <span class="json-key">"type"</span>: <span class="json-string">"Polygon"</span>,
+        <span class="json-key">"coordinates"</span>: [
+          [-<span class="json-number">50.9193</span>, -<span class="json-number">17.7895</span>],
+          [-<span class="json-number">50.9187</span>, -<span class="json-number">17.7890</span>],
+          [-<span class="json-number">50.9182</span>, -<span class="json-number">17.7898</span>],
+          [-<span class="json-number">50.9190</span>, -<span class="json-number">17.7902</span>]
+        ]
+      }
+    }
+  },
+
+  <span class="json-key">"crop_cycle"</span>: {
+    <span class="json-key">"season"</span>: <span class="json-string">"Safra 2025/2026"</span>,
+    <span class="json-key">"crop"</span>: <span class="json-string">"Milho"</span>,
+    <span class="json-key">"hybrid"</span>: <span class="json-string">"2B610 PRO3"</span>,
+    <span class="json-key">"sowing_date"</span>: <span class="json-string">"2026-02-18"</span>,
+    <span class="json-key">"emergence_date"</span>: <span class="json-string">"2026-02-20"</span>,
+    <span class="json-key">"days_after_emergence"</span>: <span class="json-number">12</span>,
+    <span class="json-key">"phenological_stage"</span>: <span class="json-string">"V3"</span>
+  },
+
+  <span class="json-key">"monitoring"</span>: {
+    <span class="json-key">"event_id"</span>: <span class="json-string">"mon_014_20260302"</span>,
+    <span class="json-key">"monitoring_method"</span>: <span class="json-string">"Amostragem em zigue-zague"</span>,
+    <span class="json-key">"sample_points"</span>: <span class="json-number">10</span>,
+    <span class="json-key">"climate_conditions"</span>: {
+      <span class="json-key">"temperature_celsius"</span>: <span class="json-number">29</span>,
+      <span class="json-key">"humidity_percent"</span>: <span class="json-number">72</span>,
+      <span class="json-key">"rain_last_7_days_mm"</span>: <span class="json-number">38</span>
+    },
+    <span class="json-key">"general_notes"</span>: <span class="json-string">"Desenvolvimento vegetativo uniforme. Presença inicial de moluscos e baixa incidência de ovoposição."</span>
+  },
+
+  <span class="json-key">"pest_analysis"</span>: [
+    {
+      <span class="json-key">"pest_id"</span>: <span class="json-string">"pest_001"</span>,
+      <span class="json-key">"common_name"</span>: <span class="json-string">"Caramujo"</span>,
+      <span class="json-key">"category"</span>: <span class="json-string">"molusco"</span>,
+      <span class="json-key">"severity_level"</span>: <span class="json-string">"moderado"</span>,
+      <span class="json-key">"incidence_metrics"</span>: {
+        <span class="json-key">"average_per_sample_point"</span>: <span class="json-number">3</span>,
+        <span class="json-key">"affected_plants_percent"</span>: <span class="json-number">18</span>,
+        <span class="json-key">"distribution_pattern"</span>: <span class="json-string">"bordadura"</span>
+      },
+      <span class="json-key">"economic_threshold_reached"</span>: <span class="json-boolean">false</span>,
+      <span class="json-key">"damage_description"</span>: <span class="json-string">"Lesões irregulares em folhas jovens e trilhas de muco."</span>,
+      <span class="json-key">"historical_comparison"</span>: {
+        <span class="json-key">"last_season_same_stage_incidence_percent"</span>: <span class="json-number">6</span>,
+        <span class="json-key">"variation_percent"</span>: <span class="json-number">12</span>,
+        <span class="json-key">"trend"</span>: <span class="json-string">"aumento"</span>
+      },
+      <span class="json-key">"recommended_action"</span>: {
+        <span class="json-key">"type"</span>: <span class="json-string">"monitoramento_intensificado"</span>,
+        <span class="json-key">"deadline_days"</span>: <span class="json-number">3</span>
+      }
+    },
+    {
+      <span class="json-key">"pest_id"</span>: <span class="json-string">"pest_002"</span>,
+      <span class="json-key">"common_name"</span>: <span class="json-string">"Ovoposição em Milho"</span>,
+      <span class="json-key">"category"</span>: <span class="json-string">"inseto_lepidoptera"</span>,
+      <span class="json-key">"severity_level"</span>: <span class="json-string">"baixo"</span>,
+      <span class="json-key">"incidence_metrics"</span>: {
+        <span class="json-key">"average_per_sample_point"</span>: <span class="json-number">1</span>,
+        <span class="json-key">"affected_plants_percent"</span>: <span class="json-number">7</span>,
+        <span class="json-key">"distribution_pattern"</span>: <span class="json-string">"disperso"</span>
+      },
+      <span class="json-key">"economic_threshold_reached"</span>: <span class="json-boolean">false</span>,
+      <span class="json-key">"damage_description"</span>: <span class="json-string">"Posturas isoladas na face inferior das folhas."</span>,
+      <span class="json-key">"historical_comparison"</span>: {
+        <span class="json-key">"last_season_same_stage_incidence_percent"</span>: <span class="json-number">9</span>,
+        <span class="json-key">"variation_percent"</span>: -<span class="json-number">2</span>,
+        <span class="json-key">"trend"</span>: <span class="json-string">"redução"</span>
+      },
+      <span class="json-key">"recommended_action"</span>: {
+        <span class="json-key">"type"</span>: <span class="json-string">"acompanhamento_semanal"</span>,
+        <span class="json-key">"deadline_days"</span>: <span class="json-number">7</span>
+      }
+    }
+  ],
+
+  <span class="json-key">"media_assets"</span>: [
+    {
+      <span class="json-key">"asset_id"</span>: <span class="json-string">"img_001"</span>,
+      <span class="json-key">"type"</span>: <span class="json-string">"image"</span>,
+      <span class="json-key">"url"</span>: <span class="json-string">"https://demo-storage.fortsmart.com/caramujo_milho.jpg"</span>
+    }
+  ],
+
+  <span class="json-key">"risk_evaluation"</span>: {
+    <span class="json-key">"overall_risk_score"</span>: <span class="json-number">62</span>,
+    <span class="json-key">"risk_level"</span>: <span class="json-string">"medio"</span>,
+    <span class="json-key">"next_recommended_visit"</span>: <span class="json-string">"2026-03-05"</span>
+  },
+
+  <span class="json-key">"decision_support"</span>: {
+    <span class="json-key">"data_driven_insights"</span>: [
+      <span class="json-string">"Incidência de moluscos 12% superior à safra anterior no mesmo estágio."</span>
+    ]
+  },
+
+  <span class="json-key">"digital_security"</span>: {
+    <span class="json-key">"hash_sha256"</span>: <span class="json-string">"e94f2a0c98d2e5demoenterprisehash"</span>,
+    <span class="json-key">"data_integrity_status"</span>: <span class="json-string">"validado"</span>
+  }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         8. TECNOLOGIA E EDUCAÇÃO
     ══════════════════════════════════════════════ -->
     <section class="tech-edu section-padding bg-green-soft">
         <div class="container text-center animate-on-scroll">
@@ -718,15 +900,16 @@
     </section>
 
     <!-- ══════════════════════════════════════════════
-         8. CALL TO ACTION FINAL
+         9. CALL TO ACTION FINAL
     ══════════════════════════════════════════════ -->
-    <section class="cta-final section-padding bg-dark">
+    <section class="cta-final section-padding" style="background-color: var(--color-primary); color: white;">
         <div class="container text-center animate-on-scroll">
-            <h2 class="cta-title">O futuro da agricultura pertence a quem organiza dados hoje.</h2>
+            <h2 class="cta-title" style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">O futuro da agricultura
+                pertence a quem organiza dados hoje.</h2>
             <div class="cta-actions"
                 style="margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="#home" class="btn btn-primary"
-                    style="font-size: 1.1rem; padding: 18px 36px; box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);">👉
+                <a href="#home" class="btn"
+                    style="background-color: #111; color: white; font-size: 1.1rem; padding: 18px 36px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);">👉
                     Baixar Aplicativo</a>
                 <a href="#diferenciais" class="btn btn-outline-white" style="font-size: 1.1rem; padding: 18px 36px;">👉
                     Ver Relatório Web</a>
