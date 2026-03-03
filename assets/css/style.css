@@ -25,12 +25,14 @@
     --spacing-sm: 16px;
     --spacing-md: 32px;
     --spacing-lg: 64px;
-    --spacing-xl: 96px;
+    --spacing-xl: 120px;
+    /* Enhanced vertical pacing */
 
     --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
     --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
 
-    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    /* Premium natural curve */
 }
 
 * {
@@ -436,6 +438,8 @@ a {
 
 .passo-bloco:hover {
     box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+    /* Slight lift */
 }
 
 .passo-texto {
@@ -630,6 +634,12 @@ a {
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: var(--transition-smooth);
+}
+
+.mockup-img:hover {
+    transform: scale(1.03);
+    /* Premium subtle zoom */
 }
 
 .impact-text {
