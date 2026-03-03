@@ -49,6 +49,30 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollObserver.observe(el);
     });
 
+    // ── Contador animado para a seção de Impacto ──
+    const counterEls = document.querySelectorAll('.impacto-num');
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.dataset.animated) {
+                entry.target.dataset.animated = 'true';
+                const target = parseInt(entry.target.dataset.target, 10);
+                const duration = 1800;
+                const frameDuration = 1000 / 60;
+                const totalFrames = Math.round(duration / frameDuration);
+                let frame = 0;
+                const counter = setInterval(() => {
+                    frame++;
+                    const progress = frame / totalFrames;
+                    const ease = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+                    entry.target.textContent = Math.min(Math.round(ease * target), target).toLocaleString('pt-BR');
+                    if (frame === totalFrames) clearInterval(counter);
+                }, frameDuration);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    counterEls.forEach(el => counterObserver.observe(el));
+
     // Staggered effect manual delay calculation para os cards se eles tiverem display block individual
     // Embora no CSS a classe pai `.cards-grid.show .card` já dispare, a gente pode dar delay
     const cards = document.querySelectorAll('.cards-grid .card');

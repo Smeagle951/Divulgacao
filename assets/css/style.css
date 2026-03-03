@@ -862,3 +862,331 @@ a {
     opacity: 1;
     transform: translateX(0);
 }
+
+/* =========================================================================
+   SEÇÃO: PROBLEMA REAL DO CAMPO
+   ========================================================================= */
+.section-title.light,
+.section-desc.light {
+    color: var(--color-white);
+}
+
+.section-desc.light {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.problema-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.problema-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 16px 20px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    transition: var(--transition-smooth);
+}
+
+.problema-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-3px);
+}
+
+.prob-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.problema-solucao {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+    background: var(--color-primary);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md) var(--spacing-lg);
+    color: var(--color-white);
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.problema-solucao strong {
+    color: #90EE90;
+}
+
+/* =========================================================================
+   SEÇÃO: ANTES E DEPOIS
+   ========================================================================= */
+.ad-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: var(--spacing-md);
+    align-items: center;
+    margin-top: var(--spacing-lg);
+}
+
+.ad-col {
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-soft);
+}
+
+.ad-antes {
+    background: #FFF5F5;
+    border: 2px solid #FFCDD2;
+}
+
+.ad-depois {
+    background: var(--color-bg-soft-green);
+    border: 2px solid #A5D6A7;
+}
+
+.ad-header {
+    margin-bottom: var(--spacing-sm);
+}
+
+.ad-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.ad-badge.bad {
+    background: #FFCDD2;
+    color: #C62828;
+}
+
+.ad-badge.good {
+    background: #A5D6A7;
+    color: #1B5E20;
+}
+
+.ad-lista {
+    list-style: none;
+    margin-top: var(--spacing-sm);
+}
+
+.ad-lista li {
+    padding: 9px 0;
+    font-size: 1rem;
+    color: var(--color-text-main);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.ad-lista li:last-child {
+    border-bottom: none;
+}
+
+.ad-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ad-arrow {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    animation: pulseArrow 1.5s ease-in-out infinite;
+}
+
+@keyframes pulseArrow {
+
+    0%,
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(6px);
+        opacity: 0.7;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ad-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .ad-arrow {
+        transform: rotate(90deg);
+    }
+
+    @keyframes pulseArrow {
+
+        0%,
+        100% {
+            transform: rotate(90deg) translateX(0);
+        }
+
+        50% {
+            transform: rotate(90deg) translateX(4px);
+        }
+    }
+}
+
+/* =========================================================================
+   SEÇÃO: INDICADORES DE IMPACTO
+   ========================================================================= */
+.bg-primary-gradient {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #1B5E20 100%);
+    color: var(--color-white);
+}
+
+.impacto-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.impacto-item {
+    text-align: center;
+    padding: var(--spacing-md) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: var(--transition-smooth);
+}
+
+.impacto-item:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-4px);
+}
+
+.impacto-num {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: var(--color-white);
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+
+.impacto-plus,
+.impacto-perc {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #90EE90;
+    vertical-align: super;
+}
+
+.impacto-label {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+@media screen and (max-width: 768px) {
+    .impacto-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* =========================================================================
+   SEÇÃO: PÚBLICO-ALVO
+   ========================================================================= */
+.publico-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.publico-card {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: var(--transition-smooth);
+}
+
+.publico-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-primary);
+}
+
+.publico-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.publico-card h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--color-primary);
+}
+
+.publico-card p {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+}
+
+/* =========================================================================
+   SEÇÃO: AGRICULTURA 4.0
+   ========================================================================= */
+.agro40-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.agro40-item {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+}
+
+.agro40-item:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.agro40-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: var(--spacing-sm);
+}
+
+.agro40-item h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.agro40-item p {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+}
+
+@media screen and (max-width: 768px) {
+    .agro40-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .agro40-grid {
+        grid-template-columns: 1fr;
+    }
+}
