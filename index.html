@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/ecosystem.css">
 </head>
 
 <body>
@@ -24,8 +25,8 @@
                 <a href="#sobre">Sobre</a>
                 <a href="#como-funciona">Funciona</a>
                 <a href="#como-usar">Como Usar</a>
-                <a href="#diferenciais">Diferenciais</a>
-                <a href="#timeline">Evolução</a>
+                <a href="#ecossistema">Ecossistema</a>
+                <a href="#diferenciais">Evolução</a>
             </nav>
         </div>
     </header>
@@ -708,7 +709,194 @@
     </section>
 
     <!-- ══════════════════════════════════════════════
-         7. TECNOLOGIA E EDUCAÇÃO
+         7. ECOSSISTEMA FORTSMART AGRO (9 MÓDULOS)
+    ══════════════════════════════════════════════ -->
+    <section class="ecosystem-section" id="ecossistema">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title text-center" style="color: var(--color-dark); margin-bottom: 1rem;">Portfólio
+                Avançado:<br>FortSmart Agro Ecosystem</h2>
+            <p class="section-desc text-center"
+                style="color: var(--color-gray); margin-bottom: 3rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+                Uma plataforma agronômica robusta e de alta complexidade, projetada para cobrir de ponta a ponta o ciclo
+                de vida da lavoura. Diferente de aplicações genéricas, possui algoritmos proprietários e Inteligência
+                Artificial focada na precisão diária do consultor e do produtor.
+            </p>
+
+            <div class="ecosystem-grid">
+
+                <!-- Card 1 -->
+                <div class="eco-card">
+                    <span class="eco-icon">🛰️</span>
+                    <h3 class="eco-title">1. Monitoramento Inteligente</h3>
+                    <p class="eco-desc">Painel preditivo e reativo (lazy loading) capaz de processar grandes volumes de
+                        dados sem perda de performance.</p>
+                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
+                    <ul class="eco-features-list">
+                        <li><strong>IA Agronômica:</strong> Analisa clima/fenologia e gera <em>Scores de Confiança e
+                                Risco</em> com base na severidade real.</li>
+                        <li><strong>Heatmap Integrado:</strong> Mapas de calor sobrepostos aos talhões indicando
+                            <em>hotspots</em> críticos.
+                        </li>
+                        <li><strong>Assistente Contínuo:</strong> Formula pareceres textuais automáticos sugerindo
+                            manejos (Aceitável/Alerta/Crítico).</li>
+                        <li><strong>Filtros Dinâmicos:</strong> Filtragem cruzada (Culturas x Talhões) com consultas
+                            SQLite indexadas (offline-first).</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="eco-card">
+                    <span class="eco-icon">🌱</span>
+                    <h3 class="eco-title">2. Plantio e Subáreas</h3>
+                    <p class="eco-desc">Essencial para o planejamento milimétrico da semeadura, calibração de maquinário
+                        e acompanhamento da emergência.</p>
+                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
+                    <ul class="eco-features-list">
+                        <li><strong>Gerenciador de Subáreas:</strong> Fraciona o talhão via polígonos (ideal para
+                            pesquisa/testes de variedades).</li>
+                        <li><strong>Cálculo Geodésico Automático:</strong> Recalcula perímetro total e área real ao
+                            desenhar no campo.</li>
+                        <li><strong>Calibração de Plantadeira:</strong> Calcula sementes/m linear e sementes/ha baseado
+                            em germinação desejada.</li>
+                        <li><strong>Dashboard DAE Temporal:</strong> Régua de avanço vinculando Dias Após a Emergência
+                            (DAE) às barras de progresso.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="eco-card">
+                    <span class="eco-icon">🧪</span>
+                    <h3 class="eco-title">3. Prescrição Premium</h3>
+                    <p class="eco-desc">O motor pericial do sistema para geração de receitas e caldas complexas
+                        (pulverizações aéreas e terrestres).</p>
+                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
+                    <ul class="eco-features-list">
+                        <li><strong>Algoritmos Duplos:</strong> Lógica aérea (capacidade de voo/faixa efetiva) e
+                            terrestre (tipo bico/pressão/largura).</li>
+                        <li><strong>Métricas Base-Zero:</strong> Rendimento operativo, volume de segurança (%) e
+                            hectares por tanque.</li>
+                        <li><strong>Geração Laudo PDF/A:</strong> Exports contendo metadados completos e assinatura do
+                            Responsável Técnico (R.T.).</li>
+                        <li><strong>Recarregamento Lote:</strong> Tratamento antifalha e seleção múltipla mestre-detalhe
+                            de talhões para agilidade.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="eco-card">
+                    <span class="eco-icon">🗺️</span>
+                    <h3 class="eco-title">4. Talhões e Editor Poligonal</h3>
+                    <p class="eco-desc">O coração de mapeamento, superando APIs padrão através do algoritmo
+                        <em>FortSmartPolygonController</em>.
+                    </p>
+                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
+                    <ul class="eco-features-list">
+                        <li><strong>Vértices Inteligentes:</strong> Ícones responsivos que pulsam e <em>Midpoints
+                                dinâmicos</em> para edição fina do contorno.</li>
+                        <li><strong>Score de Complexidade Mapeada:</strong> Analisa se a topologia desenhada contém
+                            cruzamentos geométricos inválidos.</li>
+                        <li><strong>Correção Terrestre Elipsoidal:</strong> Traz precisão compensando curvatura real da
+                            Terra no cálculo de área.</li>
+                        <li><strong>Exportação KML Nativa:</strong> Gera e compartilha polígonos salvos com Google
+                            Earth, monitores JD e QGIS.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="eco-card">
+                    <span class="eco-icon">🧑‍🌾</span>
+                    <h3 class="eco-title">5. Consultor (Visita Única)</h3>
+                    <p class="eco-desc">Maior centralizador de infos de R.T., condensando escaneamento total em uma
+                        timeline unificada.</p>
+                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
+                    <ul class="eco-features-list">
+                        <li><strong>Aba Unificada Multipassos:</strong> Clima, Fenologia, GPS point capture, Desvios e
+                            Diagnóstico em UX validada.</li>
+                        <li><strong>Integração Desvios ➡️ Ações:</strong> Atividades da safra nascem organicamente dos
+                            relatórios gerando cards de contexto.</li>
+                        <li><strong>Diagnóstico Duplo:</strong> Suporta envios de diários "parciais" e laudos "finais"
+                            documentados.</li>
+                        <li><strong>Motor Web Supabase:</strong> Empacota fluxos pesados e mídias (até 8 imagens
+                            offline) gerando links Web executivos leves.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="eco-card">
+                    <span class="eco-icon">📊</span>
+                    <h3 class="eco-title">6. Relatório Agronômico</h3>
+                    <p class="eco-desc">Painéis de Business Intelligence (BI) convertidos com altíssima performance para
+                        o cenário mobile e dashboard.</p>
+                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
+                    <ul class="eco-features-list">
+                        <li><strong>Dashboard Executivo:</strong> Condensação do histórico, progresso físico e alertas
+                            por safra analisada.</li>
+                        <li><strong>Auto-Report IA:</strong> Lê os arquivos SQLite, mapeia sazonalidades e cria a base
+                            do relatório sem intervenção manual.</li>
+                        <li><strong>Immersive Gallery Views:</strong> Tela inteira de progressão fotográfica e
+                            checklists para análise detalhada de perdas.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="eco-card">
+                    <span class="eco-icon">📦</span>
+                    <h3 class="eco-title">7. Estoque e Inputs</h3>
+                    <p class="eco-desc">Controle rígido de químicos, biológicos e adubação orgânica garantindo o balanço
+                        do Retorno sobre Investimento (ROI).</p>
+                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
+                    <ul class="eco-features-list">
+                        <li><strong>Rastreio LIFO/FIFO:</strong> Guarda o tracking completo atrelado à operação (quem
+                            aplicou, quando, motivo).</li>
+                        <li><strong>Painéis Antecipados:</strong> Inteligência de relatórios para itens críticos (&lt;10
+                            uni) ou risco de validade (&lt;30 dias).</li>
+                        <li><strong>Chartbars Financeiros Dinâmicos:</strong> Exibe percentual de capital imobilizado
+                            por categoria de defensivo (ex: Inseticidas).</li>
+                    </ul>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="eco-card">
+                    <span class="eco-icon">🌽</span>
+                    <h3 class="eco-title">8. Módulo de Colheita</h3>
+                    <p class="eco-desc">Especialista na mensuração técnica de perdas no fim da cadeia produtiva de Soja
+                        e Milho.</p>
+                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
+                    <ul class="eco-features-list">
+                        <li><strong>Calculadora Reversa Sc/ha:</strong> Cruza Peso de Amostra, Área e PMS (Peso/1000
+                            Sem.) escalando a estimativa de erro.</li>
+                        <li><strong>Carimbo BR de Aceitação:</strong> Bate de frente com os números teóricos para
+                            rotular: Aceitável, Alerta ou Perda Crítica.</li>
+                        <li><strong>Formatação e Localizer 100% Brasil:</strong> Filtros Regex robustos de máscaras e
+                            vírgulas operando nos pontos extraídos do maquinário.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="eco-card">
+                    <span class="eco-icon">🔬</span>
+                    <h3 class="eco-title">9. Research Pro Avançado</h3>
+                    <p class="eco-desc">O módulo state-of-the-art desenhado exclusivamente para pesquisadores acadêmicos
+                        ou R&D científico.</p>
+                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
+                    <ul class="eco-features-list">
+                        <li><strong>Estatística Offline Integrada:</strong> Roda cálculos de ANOVA (Variância),
+                            Quadrados Médios (MQ) e Ratings Tukey (Testemunha x Parcela).</li>
+                        <li><strong>Janela Fenológica Biológica:</strong> Rastreador temporal ("Produto P aplicado c/ 5
+                            dias de atraso na base foliar").</li>
+                        <li><strong>Assistente Machine Learning (Scorecard):</strong> Balanceia Produtividade x
+                            Eficiência x Custo para eleger qual parcela tem maior ROI, plotando Heatmaps.</li>
+                        <li><strong>Sustentabilidade:</strong> Mensura Total I.A. kg/ha e classe toxicológica testada
+                            sobre blocos casualizados experimentais.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         8. TECNOLOGIA E EDUCAÇÃO
     ══════════════════════════════════════════════ -->
     <section class="tech-edu section-padding bg-green-soft">
         <div class="container text-center animate-on-scroll">
