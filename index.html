@@ -908,7 +908,81 @@
     </section>
 
     <!-- ══════════════════════════════════════════════
-         9. CALL TO ACTION FINAL
+         9. CAPTURA DE LEADS E CONTATO
+    ══════════════════════════════════════════════ -->
+    <section class="lead-capture section-padding bg-light" id="contato">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title text-center">Agende uma Demonstração</h2>
+            <p class="section-desc text-center" style="max-width: 700px; margin: 0 auto 3rem auto;">
+                Pronto para digitalizar o campo? Preencha os dados abaixo e entraremos em contato para mostrar como o
+                FortSmart pode transformar a sua gestão agronômica.
+            </p>
+
+            <div class="form-wrapper"
+                style="max-width: 600px; margin: 0 auto; background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <!-- FormSubmit Integration -->
+                <form action="https://formsubmit.co/fortsmart.01@gmail.com" method="POST" class="contact-form">
+
+                    <!-- Configurações do FormSubmit -->
+                    <!-- Redireciona para o próprio site (ou página de obrigado) após envio -->
+                    <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+                    <input type="hidden" name="_subject" value="🚀 Novo Lead FortSmart - Agendar Demonstração!">
+                    <!-- Oculta o captcha chato do FormSubmit -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="name"
+                            style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">Nome
+                            Completo</label>
+                        <input type="text" id="name" name="Nome" placeholder="Seu nome" required
+                            style="width: 100%; padding: 12px 16px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="email"
+                            style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">E-mail
+                            Profissional</label>
+                        <input type="email" id="email" name="Email" placeholder="seu@email.com" required
+                            style="width: 100%; padding: 12px 16px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="phone"
+                            style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">WhatsApp
+                            / Telefone</label>
+                        <input type="tel" id="phone" name="Telefone" placeholder="(00) 00000-0000" required
+                            style="width: 100%; padding: 12px 16px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 2rem;">
+                        <label for="area"
+                            style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">Tamanho
+                            da Propriedade (Hectares)</label>
+                        <select id="area" name="Área_Hectares" required
+                            style="width: 100%; padding: 12px 16px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 1rem; background-color: white;">
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            <option value="Ate 500 ha">Até 500 ha</option>
+                            <option value="501 a 2000 ha">501 a 2.000 ha</option>
+                            <option value="2001 a 5000 ha">2.001 a 5.000 ha</option>
+                            <option value="Mais de 5000 ha">Mais de 5.000 ha</option>
+                            <option value="Consultoria Agronomica">Sou Consultor Agronômico</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"
+                        style="width: 100%; padding: 16px; font-size: 1.1rem; border: none; cursor: pointer; border-radius: 8px;">🚀
+                        Solicitar Demonstração</button>
+                    <p
+                        style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: var(--color-text-muted);">
+                        Seus dados estão seguros conosco.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         10. CALL TO ACTION FINAL
     ══════════════════════════════════════════════ -->
     <section class="cta-final section-padding" style="background-color: var(--color-primary); color: white;">
         <div class="container text-center animate-on-scroll">
@@ -934,6 +1008,16 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/qr/UEWGZ6DMMBBXN1" target="_blank" class="whatsapp-float"
+        aria-label="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 32 32" class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16 2.5C8.544 2.5 2.5 8.544 2.5 16c0 2.378.619 4.654 1.794 6.64L2.5 29.5l7.031-1.844A13.433 13.433 0 0 0 16 29.5c7.456 0 13.5-6.044 13.5-13.5S23.456 2.5 16 2.5m8.053 19.338c-.334.944-1.922 1.815-2.656 1.934-.685.11-1.572.228-5.185-1.272-4.366-1.815-7.185-6.287-7.404-6.581-.219-.294-1.766-2.353-1.766-4.5 0-2.147 1.119-3.2 1.522-3.622.403-.422.875-.528 1.166-.528.29 0 .584 0 .84.013.266.012.619-.1 1.053.944.444 1.075 1.488 3.637 1.622 3.906.134.269.219.584.04.981-.178.403-.269.647-.528.944-.26.297-.547.653-.787.884-.26.253-.535.525-.231 1.044.303.519 1.347 2.222 2.888 3.6 1.987 1.778 3.653 2.331 4.184 2.587.531.256.84.219 1.156-.144.316-.363 1.363-1.584 1.728-2.128.366-.544.731-.453 1.219-.272.488.181 3.084 1.453 3.616 1.719.531.266.884.397 1.016.619.131.222.131 1.284-.203 2.228"
+                fill="#FFF" />
+        </svg>
+    </a>
 </body>
 
 </html>
