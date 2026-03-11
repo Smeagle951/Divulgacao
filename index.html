@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sistema profissional para monitoramento de lavouras, qualidade de plantio, relatórios agronômicos e inteligência agrícola.">
+    <meta name="description" content="FortSmart – Sistema profissional para monitoramento de lavouras, qualidade de plantio, relatórios agronômicos e inteligência agrícola.">
     <title>FortSmart – Plataforma de Agricultura Digital e Monitoramento Agronômico</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,15 +19,14 @@
     <header class="navbar" id="navbar">
         <div class="container navbar-inner">
             <a href="#home" class="navbar-logo">
-                <img src="assets/images/fortsmart.png" alt="FortSmart Logo" class="logo-img">
+                <img src="assets/images/FortSmart.png" alt="FortSmart Logo" class="logo-img">
             </a>
             <nav class="navbar-links">
-                <a href="#problemas">Solução</a>
+                <a href="#problema">Problemas</a>
+                <a href="#solucao">Solução</a>
                 <a href="#como-funciona">Como Funciona</a>
-                <a href="#como-usar">Módulos</a>
-                <a href="#diferenciais">Diferenciais</a>
-                <a href="#publico">Para Quem</a>
-                <a href="#contato">Contato</a>
+                <a href="#ecossistema">Módulos</a>
+                <a href="#contato" class="nav-cta">Demonstração</a>
             </nav>
         </div>
     </header>
@@ -38,22 +37,21 @@
     <section class="hero" id="home">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1 class="hero-title fade-in-up" style="font-size: 4.5rem; letter-spacing: -2px; margin-bottom: 0.5rem; line-height: 1.1;">
-                FortSmart <br>
-                <span style="font-size: 2.2rem; font-weight: 500; letter-spacing: 0px; display: block; margin-top: 10px; color: #e8f5e9;">Plataforma Inteligente de Agricultura Digital</span>
-            </h1>
+            <h1 class="hero-title fade-in-up" style="font-size: 4rem; letter-spacing: -1px; margin-bottom: 0.5rem;">
+                FortSmart</h1>
+            <h2 class="fade-in-up delay-1" style="font-size: 2rem; color: #fff; margin-bottom: 1.5rem; font-weight: 400;">Plataforma Inteligente de Agricultura Digital</h2>
             <p class="hero-subtitle fade-in-up delay-1"
-                style="font-size: 1.35rem; font-weight: 400; max-width: 800px; margin: 0 auto 3rem auto; color: #fff; line-height: 1.6; opacity: 0.9;">
+                style="font-size: 1.2rem; opacity: 0.9; max-width: 800px; margin: 0 auto 3rem auto; font-weight: 300; line-height: 1.6;">
                 Monitoramento agronômico, qualidade de plantio, prescrição técnica e inteligência agrícola em um único sistema.
             </p>
             <div class="hero-actions fade-in-up delay-2"
                 style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="relatorio.html" target="_blank" class="btn btn-primary"
-                    style="padding: 18px 36px; font-size: 1.1rem; font-weight: 600; text-transform: uppercase; box-shadow: 0 8px 25px rgba(46, 125, 50, 0.5);">🚀
-                    TESTAR O FORTSMART</a>
-                <a href="#contato" class="btn btn-outline-white"
-                    style="padding: 18px 36px; font-size: 1.1rem; font-weight: 600; text-transform: uppercase; background: rgba(255,255,255,0.1); backdrop-filter: blur(5px);">📅
+                <a href="#contato" class="btn btn-primary"
+                    style="padding: 18px 40px; font-size: 1.2rem; box-shadow: 0 8px 25px rgba(46, 125, 50, 0.5); font-weight: 700;">🚀
                     SOLICITAR DEMONSTRAÇÃO</a>
+                <a href="relatorio.html" target="_blank" class="btn btn-outline-white"
+                    style="padding: 18px 40px; font-size: 1.1rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(5px);">📊
+                    Ver exemplo de relatório</a>
             </div>
         </div>
     </section>
@@ -70,58 +68,35 @@
         </div>
     </section>
 
-
-
-
-
     <!-- ══════════════════════════════════════════════
          2. PROBLEMA VS SOLUÇÃO
     ══════════════════════════════════════════════ -->
-    <section class="problema-solucao section-padding" id="problemas" style="background: white;">
+    <section class="prob-sol section-padding bg-light" id="problema">
         <div class="container animate-on-scroll">
-            <h2 class="section-title text-center" style="margin-bottom: 3rem;">Por que o FortSmart existe?</h2>
-            
-            <div style="display: flex; flex-wrap: wrap; gap: 2rem; max-width: 1000px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem;">
                 <!-- Problema -->
-                <div style="flex: 1; min-width: 300px; background: #fff5f5; border: 1px solid #ffebeb; padding: 2.5rem; border-radius: 12px;">
-                    <h3 style="color: #d32f2f; margin-bottom: 1.5rem; font-size: 1.5rem; display: flex; align-items: center; gap: 10px;">
-                        <span>❌</span> Problema no campo
+                <div class="problem-box" style="background: #fffcfc; padding: 3rem; border-radius: 20px; border-left: 6px solid #e74c3c; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="color: #e74c3c; margin-bottom: 2rem; font-size: 1.8rem; display: flex; align-items: center; gap: 10px;">
+                        <span>❌</span> Problema no Campo
                     </h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 1.2rem; color: #555; display: flex; gap: 10px; font-weight: 500;">
-                            <span style="color: #d32f2f; font-weight: bold;">✕</span> Falta de dados técnicos no campo
-                        </li>
-                        <li style="margin-bottom: 1.2rem; color: #555; display: flex; gap: 10px; font-weight: 500;">
-                            <span style="color: #d32f2f; font-weight: bold;">✕</span> Dificuldade de acompanhar qualidade de plantio
-                        </li>
-                        <li style="margin-bottom: 1.2rem; color: #555; display: flex; gap: 10px; font-weight: 500;">
-                            <span style="color: #d32f2f; font-weight: bold;">✕</span> Falta de histórico agronômico por talhão
-                        </li>
-                        <li style="color: #555; display: flex; gap: 10px; font-weight: 500;">
-                            <span style="color: #d32f2f; font-weight: bold;">✕</span> Relatórios técnicos demorados
-                        </li>
+                    <ul style="list-style: none; padding: 0; font-size: 1.15rem; color: #444; line-height: 2;">
+                        <li>⚠️ Falta de dados técnicos em tempo real</li>
+                        <li>⚠️ Dificuldade de acompanhar qualidade de plantio</li>
+                        <li>⚠️ Falta de histórico agronômico por talhão</li>
+                        <li>⚠️ Relatórios técnicos demorados e manuais</li>
                     </ul>
                 </div>
 
                 <!-- Solução -->
-                <div style="flex: 1; min-width: 300px; background: #f0fdf4; border: 1px solid #dcfce7; padding: 2.5rem; border-radius: 12px; position: relative;">
-                    <div style="position: absolute; top: -15px; right: 20px; background: var(--color-primary); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; box-shadow: 0 4px 10px rgba(46,125,50,0.3);">A Solução</div>
-                    <h3 style="color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.5rem; display: flex; align-items: center; gap: 10px;">
+                <div class="solution-box" id="solucao" style="background: #f8fff9; padding: 3rem; border-radius: 20px; border-left: 6px solid var(--color-primary); box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--color-primary); margin-bottom: 2rem; font-size: 1.8rem; display: flex; align-items: center; gap: 10px;">
                         <span>✔</span> Solução FortSmart
                     </h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 1.2rem; color: #333; font-weight: 600; display: flex; gap: 10px;">
-                            <span style="color: var(--color-primary); font-weight: bold;">✓</span> Monitoramento digital de talhões
-                        </li>
-                        <li style="margin-bottom: 1.2rem; color: #333; font-weight: 600; display: flex; gap: 10px;">
-                            <span style="color: var(--color-primary); font-weight: bold;">✓</span> Avaliação automática de plantio (CV%)
-                        </li>
-                        <li style="margin-bottom: 1.2rem; color: #333; font-weight: 600; display: flex; gap: 10px;">
-                            <span style="color: var(--color-primary); font-weight: bold;">✓</span> Histórico técnico da lavoura
-                        </li>
-                        <li style="color: #333; font-weight: 600; display: flex; gap: 10px;">
-                            <span style="color: var(--color-primary); font-weight: bold;">✓</span> Relatórios agronômicos profissionais
-                        </li>
+                    <ul style="list-style: none; padding: 0; font-size: 1.15rem; color: #333; line-height: 2;">
+                        <li>✅ Monitoramento digital de talhões (Offline)</li>
+                        <li>✅ Avaliação automática de plantio (CV%)</li>
+                        <li>✅ Histórico técnico completo da lavoura</li>
+                        <li>✅ Relatórios agronômicos profissionais instantâneos</li>
                     </ul>
                 </div>
             </div>
@@ -129,13 +104,146 @@
     </section>
 
     <!-- ══════════════════════════════════════════════
-         4. INDICADORES DE IMPACTO
+         2. SOBRE O PROJETO — imagem Divulgacao.png
+    ══════════════════════════════════════════════ -->
+    <section class="sobre section-padding" id="sobre">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title">🌾 Sobre o FortSmart</h2>
+            <p class="section-desc">
+                O FortSmart é uma plataforma digital voltada exclusivamente para o agronegócio.
+                Foi desenvolvido para organizar o monitoramento técnico por talhão, garantir rastreabilidade
+                das operações e apoiar decisões baseadas em histórico real de campo.
+            </p>
+            <ul class="sobre-lista animate-on-scroll">
+                <li>📍 Monitoramento técnico por talhão</li>
+                <li>📋 Rastreabilidade das operações agrícolas</li>
+                <li>🌱 Centralização de dados de plantio e aplicações</li>
+                <li>📊 Relatórios profissionais online compartilháveis</li>
+                <li>🧠 Decisões baseadas em histórico real de campo</li>
+            </ul>
+            <p class="sobre-nota animate-on-scroll delay-1">
+                Mais do que um aplicativo, o FortSmart é uma ferramenta de gestão agrícola orientada por dados.
+            </p>
+            <div class="app-showcase">
+                <img src="assets/images/Divulgacao.png" alt="FortSmart - Divulgação" class="app-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         3. COMO FUNCIONA (1-2-3-4)
+    ══════════════════════════════════════════════ -->
+    <section class="how-it-works section-padding" id="como-funciona">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title text-center">Como Funciona o FortSmart</h2>
+            <p class="section-desc text-center" style="margin-bottom: 4rem;">O caminho mais curto entre o campo e a decisão inteligente.</p>
+            
+            <div class="steps-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; position: relative;">
+                
+                <!-- Passo 1 -->
+                <div class="step-card" style="text-align: center; background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div class="step-number" style="width: 50px; height: 50px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; font-size: 1.5rem; font-weight: 700;">1</div>
+                    <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Criar Talhão</h4>
+                    <p style="color: #666; font-size: 0.95rem;">Delimite suas áreas de plantio via GPS e organize a propriedade em unidades técnicas.</p>
+                </div>
+
+                <!-- Passo 2 -->
+                <div class="step-card" style="text-align: center; background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div class="step-number" style="width: 50px; height: 50px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; font-size: 1.5rem; font-weight: 700;">2</div>
+                    <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Registrar Plantio</h4>
+                    <p style="color: #666; font-size: 0.95rem;">Lance os dados de semeadura e qualidade para iniciar o histórico de cada área.</p>
+                </div>
+
+                <!-- Passo 3 -->
+                <div class="step-card" style="text-align: center; background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div class="step-number" style="width: 50px; height: 50px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; font-size: 1.5rem; font-weight: 700;">3</div>
+                    <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Monitoramento</h4>
+                    <p style="color: #666; font-size: 0.95rem;">Colete ocorrências de pragas, doenças e estágio fenológico diretamente no campo (Offline).</p>
+                </div>
+
+                <!-- Passo 4 -->
+                <div class="step-card" style="text-align: center; background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div class="step-number" style="width: 50px; height: 50px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; font-size: 1.5rem; font-weight: 700;">4</div>
+                    <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Relatórios Técnicos</h4>
+                    <p style="color: #666; font-size: 0.95rem;">Gere relatórios profissionais e laudos automáticos para compartilhar com produtores e equipes.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         NEW A. PROBLEMA REAL DO CAMPO
+    ══════════════════════════════════════════════ -->
+    <section class="problema section-padding bg-dark" id="problema">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title light">❗ Os Desafios da Gestão Agrícola</h2>
+            <p class="section-desc light">Situações que todo produtor e consultor agronômico já enfrentou.</p>
+            <div class="problema-grid">
+                <div class="problema-item"><span class="prob-icon">📓</span><span>Informações espalhadas em cadernos e
+                        WhatsApp</span></div>
+                <div class="problema-item"><span class="prob-icon">🗂️</span><span>Falta de histórico estruturado por
+                        talhão</span></div>
+                <div class="problema-item"><span class="prob-icon">📋</span><span>Dificuldade em comprovar aplicações
+                        realizadas</span></div>
+                <div class="problema-item"><span class="prob-icon">🧠</span><span>Decisões tomadas apenas com base na
+                        memória</span></div>
+                <div class="problema-item"><span class="prob-icon">📉</span><span>Falta de organização técnica e
+                        rastreabilidade</span></div>
+                <div class="problema-item"><span class="prob-icon">🔗</span><span>Dados desconectados entre campo e
+                        escritório</span></div>
+            </div>
+            <div class="problema-solucao animate-on-scroll delay-2">
+                <p>O FortSmart resolve isso com <strong>organização, rastreabilidade e inteligência de dados.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         NEW B. ANTES E DEPOIS
+    ══════════════════════════════════════════════ -->
+    <section class="antes-depois section-padding" id="transformacao">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title">📊 A Transformação na Gestão</h2>
+            <p class="section-desc">A diferença que o FortSmart gera na sua operação.</p>
+            <div class="ad-wrapper">
+                <div class="ad-col ad-antes animate-on-scroll">
+                    <div class="ad-header"><span class="ad-badge bad">Antes do FortSmart</span></div>
+                    <ul class="ad-lista">
+                        <li>📓 Anotações soltas em caderno ou papel</li>
+                        <li>📷 Fotos perdidas no celular sem contexto</li>
+                        <li>📝 Relatórios informais e sem padrão</li>
+                        <li>❓ Falta de histórico estruturado por safra</li>
+                        <li>⏳ Retrabalho constante e perda de informação</li>
+                    </ul>
+                </div>
+                <div class="ad-divider">
+                    <div class="ad-arrow">→</div>
+                </div>
+                <div class="ad-col ad-depois animate-on-scroll delay-2">
+                    <div class="ad-header"><span class="ad-badge good">Depois do FortSmart</span></div>
+                    <ul class="ad-lista">
+                        <li>✅ Monitoramentos organizados por talhão</li>
+                        <li>📍 Fotos georreferenciadas com data e local</li>
+                        <li>📊 Relatório profissional online compartilhável</li>
+                        <li>📁 Histórico completo por safra e cultura</li>
+                        <li>⚡ Dados centralizados e acessíveis no campo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         NEW C. INDICADORES DE IMPACTO
     ══════════════════════════════════════════════ -->
     <section class="impacto section-padding bg-primary-gradient">
         <div class="container animate-on-scroll">
+            <h2 class="section-title light">📈 Impacto Real no Campo</h2>
             <div class="impacto-grid">
                 <div class="impacto-item">
-                    <span class="impacto-num" data-target="2500">0</span><span class="impacto-plus">+</span>
+                    <span class="impacto-num" data-target="100">0</span><span class="impacto-plus">+</span>
                     <p class="impacto-label">Talhões<br>Monitorados</p>
                 </div>
                 <div class="impacto-item">
@@ -155,40 +263,45 @@
     </section>
 
     <!-- ══════════════════════════════════════════════
-         5. DESENVOLVIDO PARA (PARA QUEM)
+         NEW D. PÚBLICO-ALVO
     ══════════════════════════════════════════════ -->
     <section class="publico section-padding bg-green-soft" id="publico">
         <div class="container animate-on-scroll">
-            <h2 class="section-title text-center">Desenvolvido para</h2>
-            
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 900px; margin: 0 auto 3rem auto;">
-                <div style="flex: 1; min-width: 200px; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
-                    <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🧑‍🔬</span>
-                    <h3 style="font-size: 1.1rem; color: var(--color-dark); margin: 0;">Consultores agrônomos</h3>
+            <h2 class="section-title">🚜 Para Quem é o FortSmart?</h2>
+            <p class="section-desc">Uma plataforma construída para os profissionais do agronegócio.</p>
+            <div class="publico-grid">
+                <div class="publico-card hover-fx">
+                    <div class="publico-icon">🌾</div>
+                    <h3>Produtor Rural</h3>
+                    <p>Controle técnico da propriedade, organização por talhão e histórico por safra.</p>
                 </div>
-                <div style="flex: 1; min-width: 200px; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
-                    <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🌾</span>
-                    <h3 style="font-size: 1.1rem; color: var(--color-dark); margin: 0;">Produtores rurais</h3>
+                <div class="publico-card hover-fx delay-1">
+                    <div class="publico-icon">🧑‍🔬</div>
+                    <h3>Consultor Agronômico</h3>
+                    <p>Registro profissional estruturado, relatórios comerciais e valorização do trabalho técnico.</p>
                 </div>
-                <div style="flex: 1; min-width: 200px; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
-                    <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🏢</span>
-                    <h3 style="font-size: 1.1rem; color: var(--color-dark); margin: 0;">Empresas agrícolas</h3>
+                <div class="publico-card hover-fx delay-2">
+                    <div class="publico-icon">👥</div>
+                    <h3>Equipes Técnicas</h3>
+                    <p>Padronização de registros, organização coletiva e rastreabilidade operacional.</p>
                 </div>
-                <div style="flex: 1; min-width: 200px; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
-                    <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🧪</span>
-                    <h3 style="font-size: 1.1rem; color: var(--color-dark); margin: 0;">Pesquisa agronômica</h3>
+                <div class="publico-card hover-fx delay-3">
+                    <div class="publico-icon">🏡</div>
+                    <h3>Fazendas Estruturadas</h3>
+                    <p>Gestão por área produtiva, controle histórico consolidado e base para planejamento estratégico.
+                    </p>
                 </div>
-            </div>
-
-            <div style="text-align: center; max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 12px; border: 1px solid #eee;">
-                <p style="font-size: 1.1rem; color: #555; margin-bottom: 0.5rem;"><strong>✔ Dados coletados diretamente no campo</strong></p>
-                <p style="font-size: 1.1rem; color: #555; margin: 0;"><strong>✔ Relatórios técnicos profissionais</strong></p>
+                <div class="publico-card hover-fx delay-4">
+                    <div class="publico-icon">🧪</div>
+                    <h3>Projetos Experimentais</h3>
+                    <p>Comparação entre áreas, avaliação técnica detalhada e monitoramento estruturado.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ══════════════════════════════════════════════
-         6. AGRICULTURA 4.0
+         NEW E. AGRICULTURA 4.0
     ══════════════════════════════════════════════ -->
     <section class="agro40 section-padding" id="agro40">
         <div class="container animate-on-scroll">
@@ -213,65 +326,245 @@
                 <div class="agro40-item animate-on-scroll delay-2">
                     <span class="agro40-icon">🔍</span>
                     <h4>Rastreabilidade Total</h4>
-                    <p>Histórico completo de operações e visitas.</p>
+                    <p>Histórico completo de aplicações, monitoramentos e visitas.</p>
                 </div>
                 <div class="agro40-item animate-on-scroll delay-2">
                     <span class="agro40-icon">💡</span>
                     <h4>Histórico Inteligente</h4>
-                    <p>Compare safras e identifique padrões de produtividade.</p>
+                    <p>Compare safras, identifique padrões e melhore a eficiência.</p>
                 </div>
                 <div class="agro40-item animate-on-scroll delay-3">
                     <span class="agro40-icon">📱</span>
                     <h4>100% Mobile</h4>
-                    <p>Registre no campo, acesse no escritório. Sincronização automática.</p>
+                    <p>Registre no campo, acesse no escritório. Sempre sincronizado.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ══════════════════════════════════════════════
-         7. COMO FUNCIONA
+         NEW: PROBLEMA REAL DO CAMPO & INDICADORES
+    ══════════════════════════════════════════════ -->
+    <section class="problema-real section-padding bg-light" id="problema-real">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title">❗ Os Desafios da Gestão Agrícola</h2>
+            <p class="section-desc">Muitos produtores e consultores ainda enfrentam barreiras operacionais diárias como:
+            </p>
+
+            <div class="problema-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                <div class="card hover-fx text-center" style="padding: 2rem;">
+                    <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">📝</span>
+                    <h4>Informações no Papel</h4>
+                    <p class="text-muted" style="font-size: 0.9rem;">Dados espalhados em cadernos e planilhas soltas</p>
+                </div>
+                <div class="card hover-fx text-center" style="padding: 2rem;">
+                    <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">⏳</span>
+                    <h4>Falta de Histórico</h4>
+                    <p class="text-muted" style="font-size: 0.9rem;">Dificuldade em rastrear safras passadas por talhão
+                    </p>
+                </div>
+                <div class="card hover-fx text-center" style="padding: 2rem;">
+                    <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">🤔</span>
+                    <h4>Decisões Intuitivas</h4>
+                    <p class="text-muted" style="font-size: 0.9rem;">Manejo baseado em memória, sem dados técnicos
+                        concretos</p>
+                </div>
+            </div>
+
+            <!-- Indicadores -->
+            <div class="indicadores-wrapper"
+                style="background: var(--color-primary); color: white; border-radius: var(--border-radius); padding: 3rem; display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-around;">
+                <div class="ind-item text-center">
+                    <h3 style="font-size: 2.5rem; margin-bottom: 0;">+100</h3>
+                    <p
+                        style="opacity: 0.9; margin: 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
+                        Talhões Monitorados</p>
+                </div>
+                <div class="ind-item text-center">
+                    <h3 style="font-size: 2.5rem; margin-bottom: 0;">+1k</h3>
+                    <p
+                        style="opacity: 0.9; margin: 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
+                        Registros Técnicos</p>
+                </div>
+                <div class="ind-item text-center">
+                    <h3 style="font-size: 2.5rem; margin-bottom: 0;">+500</h3>
+                    <p
+                        style="opacity: 0.9; margin: 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
+                        Relatórios Gerados</p>
+                </div>
+                <div class="ind-item text-center">
+                    <h3 style="font-size: 2.5rem; margin-bottom: 0;">100%</h3>
+                    <p
+                        style="opacity: 0.9; margin: 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
+                        Histórico por Safra</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         3. COMO FUNCIONA (Cards)
     ══════════════════════════════════════════════ -->
     <section class="como-funciona section-padding bg-green-soft" id="como-funciona">
         <div class="container animate-on-scroll">
-            <h2 class="section-title text-center" style="margin-bottom: 3rem;">Como funciona</h2>
-            
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1000px; margin: 0 auto;">
-                
-                <div style="flex: 1; min-width: 200px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">1️⃣</div>
-                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-dark);">Criar talhão</h3>
-                    <p style="color: #666; font-size: 0.95rem;">Mapeie a área produtiva e inicie o histórico agronômico.</p>
-                </div>
+            <h2 class="section-title">Como Funciona na Lavoura</h2>
+            <p class="section-desc">Ferramentas essenciais para o produtor e o consultor agronômico gerirem a lavoura
+                com precisão.</p>
 
-                <div style="flex: 1; min-width: 200px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">2️⃣</div>
-                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-dark);">Registrar plantio</h3>
-                    <p style="color: #666; font-size: 0.95rem;">Aloque as cultivares e avalie a qualidade de estabelecimento.</p>
+            <div class="cards-grid">
+                <!-- Card 1 -->
+                <div class="card hover-fx">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                            <line x1="8" y1="2" x2="8" y2="18"></line>
+                            <line x1="16" y1="6" x2="16" y2="22"></line>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Mapeamento por Talhão</h3>
+                    <p class="card-text">Delimite e organize cada área produtiva com precisão via GPS para controle
+                        total da lavoura.</p>
                 </div>
-
-                <div style="flex: 1; min-width: 200px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">3️⃣</div>
-                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-dark);">Fazer monitoramento</h3>
-                    <p style="color: #666; font-size: 0.95rem;">Acompanhe o desenvolvimento e realize as visitas técnicas.</p>
+                <!-- Card 2 -->
+                <div class="card hover-fx delay-1">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                            <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Análise e Relatórios</h3>
+                    <p class="card-text">Gere relatórios profissionais de plantio, insumos, monitoramentos e histórico
+                        de campo.</p>
                 </div>
-
-                <div style="flex: 1; min-width: 200px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">4️⃣</div>
-                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-dark);">Gerar relatórios técnicos</h3>
-                    <p style="color: #666; font-size: 0.95rem;">Exporte laudos agronômicos profissionais automaticamente.</p>
+                <!-- Card 3 -->
+                <div class="card hover-fx delay-2">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Decisão Técnica Baseada em Dados</h3>
+                    <p class="card-text">Produtores e consultores acessam histórico real de campo para tomada de decisão
+                        estratégica.</p>
                 </div>
+            </div>
 
+            <!-- Banner Informacoes.png -->
+            <div class="info-banner animate-on-scroll delay-2">
+                <img src="assets/images/Informacoes.png" alt="Informações FortSmart" class="info-banner-img">
             </div>
         </div>
     </section>
 
+
     <!-- ══════════════════════════════════════════════
-         8. FORTSMART EM FUNCIONAMENTO
+         NEW: PLATFORM FLOW
+    ══════════════════════════════════════════════ -->
+    <section class="platform-flow section-padding" style="background: var(--color-dark); color: white;">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title light text-center" style="margin-bottom: 3rem;">Do campo à decisão em minutos</h2>
+
+            <div class="flow-container"
+                style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; max-width: 1000px; margin: 0 auto;">
+
+                <div class="flow-steps"
+                    style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; width: 100%; gap: 15px;">
+
+                    <div class="flow-item text-center" style="flex: 1; min-width: 100px;">
+                        <div class="flow-icon"
+                            style="font-size: 2.5rem; background: rgba(255,255,255,0.05); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto; border: 1px solid rgba(255,255,255,0.1);">
+                            🌾</div>
+                        <p style="font-weight: 500; font-size: 0.95rem;">Campo<br><span
+                                style="font-weight: 300; font-size: 0.75rem; color: #aaa;">Coleta de dados</span></p>
+                    </div>
+
+                    <div class="flow-arrow" style="color: var(--color-primary); font-size: 1.5rem; font-weight: bold;">➔
+                    </div>
+
+                    <div class="flow-item text-center" style="flex: 1; min-width: 100px;">
+                        <div class="flow-icon"
+                            style="font-size: 2.5rem; background: rgba(255,255,255,0.05); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto; border: 1px solid rgba(255,255,255,0.1);">
+                            📱</div>
+                        <p style="font-weight: 500; font-size: 0.95rem;">Aplicativo<br><span
+                                style="font-weight: 300; font-size: 0.75rem; color: #aaa;">Mobile Offline</span></p>
+                    </div>
+
+                    <div class="flow-arrow" style="color: var(--color-primary); font-size: 1.5rem; font-weight: bold;">➔
+                    </div>
+
+                    <div class="flow-item text-center" style="flex: 1; min-width: 100px;">
+                        <div class="flow-icon"
+                            style="font-size: 2.5rem; background: rgba(255,255,255,0.05); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto; border: 1px solid rgba(255,255,255,0.1);">
+                            ☁️</div>
+                        <p style="font-weight: 500; font-size: 0.95rem;">Sincronização<br><span
+                                style="font-weight: 300; font-size: 0.75rem; color: #aaa;">Cloud & API</span></p>
+                    </div>
+
+                    <div class="flow-arrow" style="color: var(--color-primary); font-size: 1.5rem; font-weight: bold;">➔
+                    </div>
+
+                    <div class="flow-item text-center" style="flex: 1; min-width: 100px;">
+                        <div class="flow-icon"
+                            style="font-size: 2.5rem; background: rgba(255,255,255,0.05); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto; border: 1px solid rgba(255,255,255,0.1);">
+                            🧠</div>
+                        <p style="font-weight: 500; font-size: 0.95rem;">Análise<br><span
+                                style="font-weight: 300; font-size: 0.75rem; color: #aaa;">IA Agronômica</span></p>
+                    </div>
+
+                    <div class="flow-arrow" style="color: var(--color-primary); font-size: 1.5rem; font-weight: bold;">➔
+                    </div>
+
+                    <div class="flow-item text-center" style="flex: 1; min-width: 100px;">
+                        <div class="flow-icon"
+                            style="font-size: 2.5rem; background: rgba(255,255,255,0.05); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto; border: 1px solid rgba(255,255,255,0.1);">
+                            📄</div>
+                        <p style="font-weight: 500; font-size: 0.95rem;">Relatório<br><span
+                                style="font-weight: 300; font-size: 0.75rem; color: #aaa;">Técnico / Web</span></p>
+                    </div>
+
+                    <div class="flow-arrow" style="color: var(--color-primary); font-size: 1.5rem; font-weight: bold;">➔
+                    </div>
+
+                    <div class="flow-item text-center" style="flex: 1; min-width: 100px;">
+                        <div class="flow-icon"
+                            style="font-size: 2.5rem; background: var(--color-primary); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto; color: white; box-shadow: 0 0 20px rgba(46, 125, 50, 0.5);">
+                            🎯</div>
+                        <p style="font-weight: 500; font-size: 0.95rem; color: var(--color-primary);">Decisão<br><span
+                                style="font-weight: 300; font-size: 0.75rem; color: #aaa;">Ação no Campo</span></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <style>
+                @media screen and (max-width: 900px) {
+                    .flow-steps {
+                        flex-direction: column;
+                    }
+
+                    .flow-arrow {
+                        transform: rotate(90deg);
+                        margin: 15px 0;
+                    }
+                }
+            </style>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         4. DO CAMPO AO RELATÓRIO DIGITAL
     ══════════════════════════════════════════════ -->
     <section class="como-usar section-padding" id="como-usar">
         <div class="container animate-on-scroll">
-            <h2 class="section-title text-center">📱 FortSmart em funcionamento</h2>
+            <h2 class="section-title">📚 Do Campo ao Relatório Digital</h2>
             <p class="section-desc">Cada módulo do FortSmart foi construído para resolver um problema real da gestão
                 agrícola.</p>
 
@@ -311,13 +604,13 @@
                             <span
                                 style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; z-index: 2;">📱
                                 Mobile</span>
-                            <img src="assets/images/modulo_talhoes.png" alt="Módulo Talhões" class="mockup-img">
+                            <img src="assets/images/Modulo Talhões.png" alt="Módulo Talhões" class="mockup-img">
                         </div>
                         <div class="mockup-wrapper delay-1" style="position: relative;">
                             <span
                                 style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; z-index: 2;">📱
                                 Mobile</span>
-                            <img src="assets/images/talhoes.jpeg" alt="Talhões no mapa" class="mockup-img">
+                            <img src="assets/images/Talhoes.jpeg" alt="Talhões no mapa" class="mockup-img">
                         </div>
                     </div>
                 </div>
@@ -329,19 +622,19 @@
                             <span
                                 style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; z-index: 2;">📱
                                 Mobile</span>
-                            <img src="assets/images/monitoramento_1.jpeg" alt="Monitoramento 1" class="mockup-img">
+                            <img src="assets/images/Monitoramento 1.jpeg" alt="Monitoramento 1" class="mockup-img">
                         </div>
                         <div class="mockup-wrapper delay-1" style="position: relative;">
-                            <img src="assets/images/monitoramento_2.jpeg" alt="Monitoramento 2" class="mockup-img">
+                            <img src="assets/images/Monitoramento 2.jpeg" alt="Monitoramento 2" class="mockup-img">
                         </div>
                         <div class="mockup-wrapper delay-2" style="position: relative;">
-                            <img src="assets/images/monitoramento_3.jpeg" alt="Monitoramento 3" class="mockup-img">
+                            <img src="assets/images/Monitoramento 3.jpeg" alt="Monitoramento 3" class="mockup-img">
                         </div>
                         <div class="mockup-wrapper delay-1" style="position: relative;">
-                            <img src="assets/images/monitoramento_4.jpeg" alt="Monitoramento 4" class="mockup-img">
+                            <img src="assets/images/Monitoramento 4.jpeg" alt="Monitoramento 4" class="mockup-img">
                         </div>
                         <div class="mockup-wrapper delay-2" style="position: relative;">
-                            <img src="assets/images/monitoramento_5.jpeg" alt="Monitoramento 5" class="mockup-img">
+                            <img src="assets/images/Monitoramento 5.jpeg" alt="Monitoramento 5" class="mockup-img">
                         </div>
                     </div>
                     <div class="passo-texto">
@@ -405,11 +698,11 @@
                             <span
                                 style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; z-index: 2;">📱
                                 Mobile</span>
-                            <img src="assets/images/visita_tecnica_1.jpeg" alt="Registro de Aplicações"
+                            <img src="assets/images/Visita Tecnica 1.jpeg" alt="Registro de Aplicações"
                                 class="mockup-img">
                         </div>
                         <div class="mockup-wrapper delay-1" style="position: relative;">
-                            <img src="assets/images/visita_tecnica_2.jpeg" alt="Aplicações no talhão"
+                            <img src="assets/images/Visita Tecnica 2.jpeg" alt="Aplicações no talhão"
                                 class="mockup-img">
                         </div>
                     </div>
@@ -422,10 +715,10 @@
                             <span
                                 style="position: absolute; top: 10px; left: 10px; background: var(--color-primary); color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; z-index: 2;">💻
                                 Web Dashboard</span>
-                            <img src="assets/images/visita_tecnica_3.jpeg" alt="Visita Técnica 3" class="mockup-img">
+                            <img src="assets/images/Visita Tecnica 3.jpeg" alt="Visita Técnica 3" class="mockup-img">
                         </div>
                         <div class="mockup-wrapper delay-1" style="position: relative;">
-                            <img src="assets/images/visita_tecnica_4.jpeg" alt="Visita Técnica 4" class="mockup-img">
+                            <img src="assets/images/Visita Tecnica 4.jpeg" alt="Visita Técnica 4" class="mockup-img">
                         </div>
                     </div>
                     <div class="passo-texto">
@@ -504,100 +797,212 @@
 
             </div><!-- /passo-container -->
 
+            <!-- Indicador de impacto final -->
+            <div class="passo-conclusao text-center animate-on-scroll delay-2">
+                <div class="conclusao-box">
+                    <p class="conclusao-tag">🧠 Resultado Estratégico</p>
+                    <h3 class="impact-text">Do registro no campo à decisão técnica baseada em dados reais.</h3>
+                    <p class="conclusao-sub">FortSmart — mais do que um app, uma ferramenta de gestão agrícola orientada
+                        por dados.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- ══════════════════════════════════════════════
+         5. DIFERENCIAIS — Evolução Fenológica
+    ══════════════════════════════════════════════ -->
+    <section class="diferencial-section section-padding bg-light" id="diferenciais">
+        <div class="container">
+            <h2 class="section-title">🌿 Diferenciais do FortSmart</h2>
+            <p class="section-desc">Funcionalidades exclusivas que elevam o nível do aprendizado técnico.</p>
+
+            <!-- Evolução Fenológica -->
+            <div class="diferencial-bloco animate-on-scroll">
+                <div class="diferencial-texto">
+                    <div class="passo-badge badge-extra">Extra</div>
+                    <h3 class="passo-titulo">🧬 Evolução Fenológica</h3>
+                    <p class="diferencial-desc">
+                        Acompanhe o ciclo biológico da cultura desde a semeadura até a colheita.
+                        A visualização fenológica permite entender cada estádio de desenvolvimento
+                        da planta, conectando a teoria da sala de aula com a realidade do campo.
+                    </p>
+                </div>
+                <div class="diferencial-img-wrap" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <img src="assets/images/Evolucao Fenológica.png" alt="Evolução Fenológica" class="diferencial-img">
+                    <img src="assets/images/Evolucao Fenologica 2.jpeg" alt="Evolução Fenológica 2"
+                        class="diferencial-img">
+                </div>
+            </div>
+
+            <!-- Painel Colheita -->
+            <div class="diferencial-bloco reverse-mobile animate-on-scroll">
+                <div class="diferencial-img-wrap">
+                    <img src="assets/images/Painel Colhieta.png" alt="Painel de Colheita" class="diferencial-img">
+                </div>
+                <div class="diferencial-texto">
+                    <div class="passo-badge badge-inovador">Inovação</div>
+                    <h3 class="passo-titulo">🚜 Painel de Colheita</h3>
+                    <p class="diferencial-desc">
+                        Um dashboard inovador que consolida os dados coletados ao longo de toda
+                        a safra. Métricas de produtividade, rastreabilidade e análise comparativa
+                        diretamente no celular — transformando dados em decisões inteligentes.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- ══════════════════════════════════════════════
-         9. DIFERENCIAIS FORTSMART
+         6. LINHA DO TEMPO
+    ══════════════════════════════════════════════ -->
+    <section class="timeline-section section-padding bg-light" id="timeline">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title">A Evolução da Agricultura</h2>
+            <p class="section-desc">O FortSmart como parte da evolução natural da agricultura.</p>
+
+            <div class="timeline" style="position: relative;">
+                <!-- Linha Vaza-vaza -->
+                <div class="timeline-line"
+                    style="position: absolute; left: 50%; top: 0; bottom: 0; width: 4px; background: rgba(46, 125, 50, 0.15); transform: translateX(-50%); border-radius: 4px; z-index: 0;">
+                </div>
+
+                <div class="timeline-item left" style="position: relative; z-index: 1;">
+                    <div class="timeline-content hover-fx timeline-anim">
+                        <span style="font-size: 2rem; display: block; margin-bottom: 5px;">⛏️</span>
+                        <h3>1. Agricultura Tradicional</h3>
+                        <p>Controle manual, registros em papel e decisão empírica.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right" style="position: relative; z-index: 1;">
+                    <div class="timeline-content hover-fx timeline-anim">
+                        <span style="font-size: 2rem; display: block; margin-bottom: 5px;">🚜</span>
+                        <h3>2. Mecanização</h3>
+                        <p>Aumento de produtividade e ganho de escala operacional.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left" style="position: relative; z-index: 1;">
+                    <div class="timeline-content hover-fx timeline-anim">
+                        <span style="font-size: 2rem; display: block; margin-bottom: 5px;">📡</span>
+                        <h3>3. Agricultura de Precisão</h3>
+                        <p>Uso de GPS, monitoramento técnico e levantamento de dados espaciais.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right" style="position: relative; z-index: 1;">
+                    <div class="timeline-content hover-fx timeline-anim">
+                        <span style="font-size: 2rem; display: block; margin-bottom: 5px;">💻</span>
+                        <h3>4. Digitalização</h3>
+                        <p>Sistemas de registro, aplicativos móveis e organização digital.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left" style="position: relative; z-index: 1;">
+                    <div class="timeline-content hover-fx timeline-anim last"
+                        style="border: 2px solid var(--color-primary); background: var(--color-bg-soft-green);">
+                        <span style="font-size: 2rem; display: block; margin-bottom: 5px;">🚀</span>
+                        <h3 style="color: var(--color-primary);">5. Gestão Baseada em Dados</h3>
+                        <p>Histórico estruturado, relatórios online e decisão técnica orientada por dados com o
+                            FortSmart.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         NEW: DIFERENCIAIS FORTSMART
+    ══════════════════════════════════════════════ -->
+    <!-- ══════════════════════════════════════════════
+         4. DIFERENCIAIS FORTSMART
     ══════════════════════════════════════════════ -->
     <section class="diferenciais section-padding bg-light" id="diferenciais">
         <div class="container animate-on-scroll">
             <h2 class="section-title text-center" style="margin-bottom: 3rem;">Por que escolher o FortSmart?</h2>
-
-            <div class="diferenciais-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
-
-                <div class="diferencial-item" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
+            
+            <div class="diferenciais-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: 0 auto 5rem auto;">
+                
+                <div class="diferencial-item" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
                     <div style="color: var(--color-primary); font-size: 1.5rem; flex-shrink: 0;">✔</div>
                     <div>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.1rem;">Avaliação profissional de plantio (CV%)</h4>
-                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Garante a qualidade do estabelecimento inicial da lavoura.</p>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.15rem;">Avaliação de Plantio (CV%)</h4>
+                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Cálculo automático do Coeficiente de Variação para garantir uma semeadura uniforme e produtiva.</p>
                     </div>
                 </div>
 
-                <div class="diferencial-item" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
+                <div class="diferencial-item" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
                     <div style="color: var(--color-primary); font-size: 1.5rem; flex-shrink: 0;">✔</div>
                     <div>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.1rem;">Relatórios agronômicos automáticos</h4>
-                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Geração imediata de laudos técnicos em PDF e links compartilháveis.</p>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.15rem;">Relatórios Automáticos</h4>
+                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Gere laudos profissionais em segundos, prontos para serem compartilhados via WhatsApp ou E-mail.</p>
                     </div>
                 </div>
 
-                <div class="diferencial-item" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
+                <div class="diferencial-item" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
                     <div style="color: var(--color-primary); font-size: 1.5rem; flex-shrink: 0;">✔</div>
                     <div>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.1rem;">Histórico por talhão</h4>
-                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Organização e rastreabilidade total de cada área produtiva.</p>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.15rem;">Histórico por Talhão</h4>
+                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Rastreabilidade total: saiba exatamente o que aconteceu em cada metro quadrado da sua propriedade.</p>
                     </div>
                 </div>
 
-                <div class="diferencial-item" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
+                <div class="diferencial-item" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
                     <div style="color: var(--color-primary); font-size: 1.5rem; flex-shrink: 0;">✔</div>
                     <div>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.1rem;">Funcionamento offline no campo</h4>
-                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">O aplicativo trabalha perfeitamente sem internet durante a visita técnica.</p>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.15rem;">Operação 100% Offline</h4>
+                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">O aplicativo Mobile funciona perfeitamente sem internet. Sincronize os dados apenas quando retornar à sede.</p>
                     </div>
                 </div>
 
-                <div class="diferencial-item" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
+                <div class="diferencial-item" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
                     <div style="color: var(--color-primary); font-size: 1.5rem; flex-shrink: 0;">✔</div>
                     <div>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.1rem;">Plataforma para consultores agrônomos</h4>
-                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Feito sob medida para valorizar o trabalho do profissional de agronomia.</p>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.15rem;">Inovação para Consultores</h4>
+                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Plataforma completa para consultorias gerenciarem múltiplos clientes e agrônomos de forma centralizada.</p>
                     </div>
                 </div>
 
-                <div class="diferencial-item" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
+                <div class="diferencial-item" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
                     <div style="color: var(--color-primary); font-size: 1.5rem; flex-shrink: 0;">✔</div>
                     <div>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.1rem;">Inteligência agronômica baseada em dados</h4>
-                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Transforma anotações soltas em indicadores de produtividade e eficiência.</p>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.15rem;">Inteligência de Dados</h4>
+                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Transforme observações subjetivas de campo em decisões assertivas baseadas em dados reais.</p>
                     </div>
                 </div>
 
+            </div>
+
+            <!-- ══════════════════════════════════════════════
+                 CREDIBILIDADE (DESENVOLVIDO PARA)
+            ══════════════════════════════════════════════ -->
+            <div class="credibility-section animate-on-scroll">
+                <h3 class="text-center" style="margin-bottom: 3rem; color: var(--color-dark); font-size: 1.8rem;">Desenvolvido Especialmente Para:</h3>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+                    <div style="background: #fff; padding: 1.5rem 2.5rem; border-radius: 50px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 1.5rem;">👨‍🔬</span> <span style="font-weight: 600;">Consultores Agrônomos</span>
+                    </div>
+                    <div style="background: #fff; padding: 1.5rem 2.5rem; border-radius: 50px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 1.5rem;">🚜</span> <span style="font-weight: 600;">Produtores Rurais</span>
+                    </div>
+                    <div style="background: #fff; padding: 1.5rem 2.5rem; border-radius: 50px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 1.5rem;">🏢</span> <span style="font-weight: 600;">Empresas Agrícolas</span>
+                    </div>
+                    <div style="background: #fff; padding: 1.5rem 2.5rem; border-radius: 50px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 1.5rem;">🔬</span> <span style="font-weight: 600;">Pesquisa Agronômica</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ══════════════════════════════════════════════
-         10. EVOLUÇÃO DO MANEJO
-    ══════════════════════════════════════════════ -->
-    <section class="timeline-section section-padding bg-green-soft" id="evolucao">
-        <div class="container animate-on-scroll">
-            <h2 class="section-title text-center">Evolução do Manejo</h2>
-            <div class="timeline" style="position: relative; margin-top: 3rem;">
-                <div class="timeline-line" style="position: absolute; left: 50%; top: 0; bottom: 0; width: 4px; background: rgba(46, 125, 50, 0.15); transform: translateX(-50%);"></div>
-                <!-- Miniatura de Timeline simplificada para fechar o conceito -->
-                <div style="text-align: center; position: relative; z-index: 1;">
-                     <div style="background: white; padding: 2rem; border-radius: 12px; display: inline-block; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                        <span style="font-size: 2.5rem;">🚀</span>
-                        <h4 style="margin-top: 1rem; color: var(--color-primary);">A Era da Decisão por Dados</h4>
-                        <p style="color: #666;">O FortSmart integra histórico, monitoramento e IA para maximizar o ROI do produtor.</p>
-                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-    <!-- ══════════════════════════════════════════════
-         11. ECOSSISTEMA FORTSMART (PORTFÓLIO)
+         7. ECOSSISTEMA FORTSMART AGRO (9 MÓDULOS)
     ══════════════════════════════════════════════ -->
     <section class="ecosystem-section" id="ecossistema">
         <div class="container animate-on-scroll">
@@ -902,7 +1307,7 @@
                 </div>
 
                 <div style="flex: 1; min-width: 300px; text-align: center;">
-                    <img src="assets/images/visita_tecnica_4.jpeg" alt="Exemplo de Relatório FortSmart"
+                    <img src="assets/images/Visita Tecnica 4.jpeg" alt="Exemplo de Relatório FortSmart"
                         style="max-width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 1px solid rgba(0,0,0,0.05);">
                 </div>
 
@@ -915,21 +1320,20 @@
     ══════════════════════════════════════════════ -->
     <section class="roadmap section-padding" style="background: var(--color-dark-deep); color: white;">
         <div class="container animate-on-scroll">
-            <h2 class="section-title text-center" style="color: white; margin-bottom: 1rem;">FortSmart está evoluindo para uma<br>Plataforma de Inteligência Agronômica.
-            </h2>
-            <p class="text-center" style="color: #bbb; max-width: 700px; margin: 0 auto 3rem auto; font-size: 1.1rem;">
-                Dados coletados no campo permitirão gerar recomendações regionais para plantio e manejo.
+            <h2 class="section-title text-center" style="color: white; margin-bottom: 1rem;">O FortSmart está evoluindo</h2>
+            <p class="text-center" style="color: #bbb; max-width: 800px; margin: 0 auto 3rem auto; font-size: 1.15rem; line-height: 1.6;">
+                Estamos construindo a mais completa <strong>Plataforma de Inteligência Agronômica</strong> do mercado.
+                Os dados coletados hoje no campo permitirão gerar recomendações regionais ultra-precisas para plantio e manejo no amanhã.
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
 
                 <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; text-align: center; transition: transform 0.3s; cursor: default;"
                     onmouseover="this.style.transform='translateY(-5px)'"
                     onmouseout="this.style.transform='translateY(0)'">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem;">🤖</div>
-                    <h4 style="color: white; margin-bottom: 0.5rem;">Oráculo IA</h4>
-                    <p style="color: #aaa; font-size: 0.9rem;">Assistente agronômico treinado para analisar os dados da
-                        sua fazenda e gerar insights preventivos automaticamente.</p>
+                    <h4 style="color: white; margin-bottom: 0.5rem;">Inteligência Preditiva</h4>
+                    <p style="color: #aaa; font-size: 0.9rem;">Assistente agronômico treinado para analisar os dados da sua fazenda e gerar insights preventivos automaticamente.</p>
                 </div>
 
                 <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; text-align: center; transition: transform 0.3s; cursor: default;"
@@ -937,26 +1341,15 @@
                     onmouseout="this.style.transform='translateY(0)'">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem;">🛰️</div>
                     <h4 style="color: white; margin-bottom: 0.5rem;">Integração Satélite</h4>
-                    <p style="color: #aaa; font-size: 0.9rem;">Mapas de Índice de Vegetação (NDVI) diretos no app para
-                        guiar a visita técnica aos <em>hotspots</em> de estresse da lavoura.</p>
+                    <p style="color: #aaa; font-size: 0.9rem;">Mapas de Índice de Vegetação (NDVI) diretos no app para guiar a visita técnica aos <em>hotspots</em> de estresse da lavoura em tempo real.</p>
                 </div>
 
                 <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; text-align: center; transition: transform 0.3s; cursor: default;"
                     onmouseover="this.style.transform='translateY(-5px)'"
                     onmouseout="this.style.transform='translateY(0)'">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌦️</div>
-                    <h4 style="color: white; margin-bottom: 0.5rem;">Modelagem Climática</h4>
-                    <p style="color: #aaa; font-size: 0.9rem;">Cruzamento hiperlocal do clima com a sua janela de
-                        pulverização, indicando as melhores horas para evitar a deriva.</p>
-                </div>
-
-                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; text-align: center; transition: transform 0.3s; cursor: default;"
-                    onmouseover="this.style.transform='translateY(-5px)'"
-                    onmouseout="this.style.transform='translateY(0)'">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📶</div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📡</div>
                     <h4 style="color: white; margin-bottom: 0.5rem;">Sensores e IoT</h4>
-                    <p style="color: #aaa; font-size: 0.9rem;">Preparação para receber inputs diretos de sondas de
-                        umidade de solo e pluviômetros digitais espalhados no talhão.</p>
+                    <p style="color: #aaa; font-size: 0.9rem;">Conexão direta com estações meteorológicas e sensores de solo para recomendações de manejo dinâmicas.</p>
                 </div>
 
             </div>
@@ -1096,16 +1489,11 @@
     ══════════════════════════════════════════════ -->
     <section class="cta-final section-padding" style="background-color: var(--color-primary); color: white;">
         <div class="container text-center animate-on-scroll">
-            <h2 class="cta-title" style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">O futuro da agricultura
-                pertence a quem organiza dados hoje.</h2>
-            <div class="cta-actions"
-                style="margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="#home" class="btn"
-                    style="background-color: #111; color: white; font-size: 1.1rem; padding: 18px 36px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);">👉
-                    Baixar Aplicativo</a>
-                <a href="relatorio.html" target="_blank" class="btn btn-outline-white"
-                    style="font-size: 1.1rem; padding: 18px 36px;">👉
-                    Ver Relatório Web</a>
+            <h2 class="cta-title" style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">O futuro da agricultura pertence a quem organiza dados hoje.</h2>
+            <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 3rem;">Junte-se às consultorias e produtores que já digitalizaram o campo.</p>
+            <div class="cta-actions" style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#contato" class="btn" style="background-color: #111; color: white; font-size: 1.2rem; padding: 20px 45px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); font-weight: 700;">🚀 SOLICITAR DEMONSTRAÇÃO</a>
+                <a href="relatorio.html" target="_blank" class="btn btn-outline-white" style="font-size: 1.2rem; padding: 20px 45px;">📊 VER RELATÓRIO EXEMPLO</a>
             </div>
         </div>
     </section>
