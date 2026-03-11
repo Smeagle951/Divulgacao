@@ -246,7 +246,7 @@ a {
     text-align: center;
 
     /* Configuração do Parallax — imagem real do campo */
-    background-image: url('../images/Fundo.jpeg');
+    background-image: url('../images/fundo.jpeg');
     background-color: #2a4020;
     /* Fallback verde escuro */
     background-attachment: fixed;
