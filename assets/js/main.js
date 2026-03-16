@@ -10,14 +10,26 @@ document.addEventListener('DOMContentLoaded', () => {
         if (rect.top < viewportH * 2) el.classList.add('show');
     });
 
-    // Fallback para imagens que não carregam (evita quebra de layout e placeholders visíveis)
+    // Base URL do site (funciona em GitHub Pages /Divulgacao/ e em local)
+    function getAssetsBase() {
+        const path = window.location.pathname;
+        const dir = path.endsWith('/') ? path : path.replace(/\/[^/]*$/, '/');
+        return window.location.origin + dir;
+    }
+
+    // Fallback: quando imagem não carrega, exibir placeholder.svg (URL absoluta para GitHub Pages)
     document.querySelectorAll('img[src*="assets/images"]').forEach(img => {
         img.addEventListener('error', function onImgError() {
             this.onerror = null;
-            this.style.background = 'linear-gradient(135deg, #f0f4f0 0%, #e0e8e0 100%)';
-            this.style.minHeight = '100px';
-            this.style.objectFit = 'none';
-            if (!this.alt.includes('não disponível')) this.alt = (this.alt || 'Imagem') + ' (não disponível)';
+            this.src = getAssetsBase() + 'assets/images/placeholder.svg';
+            this.alt = (this.alt || 'Imagem').replace(/\s*\(não disponível\)\s*$/, '');
+            this.onerror = function() {
+                this.onerror = null;
+                this.style.background = 'linear-gradient(135deg, #f0f4f0 0%, #e0e8e0 100%)';
+                this.style.minHeight = '100px';
+                this.style.objectFit = 'none';
+                this.alt = (this.alt || 'Imagem') + ' (não disponível)';
+            };
         });
     });
 

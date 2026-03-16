@@ -2,7 +2,10 @@
 
 Use os **nomes exatos** abaixo na pasta `assets/images/`. No GitHub os nomes são sensíveis a maiúsculas/minúsculas.
 
-**Implementação:** Se um arquivo não existir, o site exibe automaticamente `placeholder.svg` (imagem padrão verde com ícone). Todas as tags `<img>` já têm fallback configurado.
+**Implementação:** Se um arquivo não existir, o site exibe automaticamente `placeholder.svg`. Foi configurado:
+- **&lt;base href&gt;** em cada página para as rotas relativas funcionarem no GitHub Pages (https://smeagle951.github.io/Divulgacao/).
+- **main.js** usa URL absoluta para o placeholder quando a imagem falha, para garantir que ele carregue em qualquer subpasta.
+- Para as imagens reais aparecerem, adicione os 18 arquivos listados abaixo na pasta `assets/images/` e faça push para o repositório.
 
 ---
 
