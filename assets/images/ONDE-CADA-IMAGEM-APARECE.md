@@ -67,27 +67,23 @@ As mesmas imagens acima aparecem nas mesmas seções. A única diferença é que
 
 ---
 
-## 4. Resumo rápido (lista para colar na pasta)
+## 4. Nomes reais no repositório (GitHub)
+
+O HTML foi ajustado para usar os **nomes exatos** que estão no repo [Smeagle951/Divulgacao](https://github.com/Smeagle951/Divulgacao):
 
 ```
 FortSmart.png
 Divulgacao.png
 Informacoes.png
-Modulo Talhões.png
+modulo_talhoes.png
 Talhoes.jpeg
-Monitoramento 1.jpeg
-Monitoramento 2.jpeg
-Monitoramento 3.jpeg
-Monitoramento 4.jpeg
-Monitoramento 5.jpeg
-Visita Tecnica 1.jpeg
-Visita Tecnica 2.jpeg
-Visita Tecnica 3.jpeg
-Visita Tecnica 4.jpeg
-Evolucao Fenológica.png
-Evolucao Fenologica 2.jpeg
-Evolucao Fenologica.jpeg
-Painel Colheita.png
+monitoramento_1.jpeg … monitoramento_5.jpeg
+visita_tecnica_1.jpeg … visita_tecnica_4.jpeg
+evolucao_fenologica.png
+evolucao_fenologica_2.jpeg
+painel_colhieta.png
+relatorio__monitoramento.png
+placeholder.svg
 ```
 
-**Total: 18 arquivos.** Coloque cada um em `assets/images/` com o nome exato (incluindo espaços e acentos).
+Assim as imagens carregam no site https://smeagle951.github.io/Divulgacao/
