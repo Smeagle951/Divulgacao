@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Remove no-js para ativar animações (evita tela branca se o JS rodar)
+    document.documentElement.classList.remove('no-js');
+
+    // Mostrar imediatamente os elementos já na viewport (evita tela branca no carregamento)
+    const animatableElements = document.querySelectorAll('.animate-on-scroll, .cards-grid, .timeline-section');
+    const viewportH = window.innerHeight;
+    animatableElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < viewportH * 1.2) el.classList.add('show');
+    });
 
     // Navbar — adiciona classe 'scrolled' ao rolar
     const navbar = document.getElementById('navbar');
@@ -42,9 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Seleciona todos os elementos que devem ser animados (Seções, Grids e Timeline)
-    const animatableElements = document.querySelectorAll('.animate-on-scroll, .cards-grid, .timeline-section');
-
+    // Observa os mesmos elementos para animar ao rolar
     animatableElements.forEach(el => {
         scrollObserver.observe(el);
     });

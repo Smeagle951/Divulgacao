@@ -924,7 +924,7 @@ a {
     }
 }
 
-/* Classes controladas via JS */
+/* Classes controladas via JS — fallback: sem JS o conteúdo fica visível */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(40px);
@@ -935,6 +935,14 @@ a {
 .animate-on-scroll.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Sem JavaScript: mostrar todo o conteúdo (evita tela branca) */
+html.no-js .animate-on-scroll,
+html.no-js .cards-grid .card,
+html.no-js .timeline-section .timeline-anim {
+    opacity: 1;
+    transform: none;
 }
 
 .cards-grid .card {
