@@ -1,13 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Remove no-js para ativar animações (evita tela branca se o JS rodar)
+    // Remove no-js para ativar animações
     document.documentElement.classList.remove('no-js');
 
-    // Mostrar imediatamente os elementos já na viewport (evita tela branca no carregamento)
+    // Mostrar imediatamente os elementos já na viewport
     const animatableElements = document.querySelectorAll('.animate-on-scroll, .cards-grid, .timeline-section');
     const viewportH = window.innerHeight;
     animatableElements.forEach(el => {
         const rect = el.getBoundingClientRect();
-        if (rect.top < viewportH * 1.2) el.classList.add('show');
+        if (rect.top < viewportH * 2) el.classList.add('show');
+    });
+
+    // Fallback para imagens que não carregam (evita quebra de layout e placeholders visíveis)
+    document.querySelectorAll('img[src*="assets/images"]').forEach(img => {
+        img.addEventListener('error', function onImgError() {
+            this.onerror = null;
+            this.style.background = 'linear-gradient(135deg, #f0f4f0 0%, #e0e8e0 100%)';
+            this.style.minHeight = '100px';
+            this.style.objectFit = 'none';
+            if (!this.alt.includes('não disponível')) this.alt = (this.alt || 'Imagem') + ' (não disponível)';
+        });
     });
 
     // Navbar — adiciona classe 'scrolled' ao rolar
