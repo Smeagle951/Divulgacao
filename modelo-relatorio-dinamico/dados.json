@@ -1,0 +1,165 @@
+{
+  "enterprise_metadata": {
+    "tenant_id": "tenant_fortsmart_demo",
+    "organization": {
+      "name": "Grupo Agrícola Ferradura",
+      "document_id": "00.000.000/0001-00",
+      "subscription_plan": "Enterprise",
+      "active_users": 12
+    },
+    "system_version": "2.3.0",
+    "environment": "production",
+    "generated_at": "2026-03-02T14:10:00Z"
+  },
+
+  "report": {
+    "report_id": "FS-ENT-2026-000014",
+    "report_type": "monitoramento_fitossanitario",
+    "status": "finalizado",
+    "version": 3,
+    "previous_version_id": "FS-ENT-2026-000014-v2",
+    "created_at": "2026-03-02T09:15:00Z",
+    "finalized_at": "2026-03-02T10:02:00Z",
+    "created_by": {
+      "user_id": "usr_0032",
+      "name": "Carlos Henrique",
+      "role": "Engenheiro Agrônomo",
+      "crea": "CREA-000000-D",
+      "avatar_initials": "CH"
+    },
+    "approved_by": {
+      "user_id": "usr_0001",
+      "name": "Administrador Técnico",
+      "role": "diretor_tecnico"
+    }
+  },
+
+  "property_structure": {
+    "farm": {
+      "farm_id": "farm_014",
+      "name": "Fazenda Ferradura",
+      "city": "Rio Verde",
+      "state": "GO",
+      "country": "Brasil",
+      "total_area_hectares": 850
+    },
+    "field": {
+      "field_id": "field_014",
+      "name": "Talhão 14",
+      "area_hectares": 32.5,
+      "soil_type": "Latossolo Vermelho",
+      "irrigation": false,
+      "previous_crop": "Soja",
+      "geo_boundary": {
+        "type": "Polygon",
+        "coordinates": [
+          [-50.9193, -17.7895],
+          [-50.9187, -17.7890],
+          [-50.9182, -17.7898],
+          [-50.9190, -17.7902]
+        ]
+      }
+    }
+  },
+
+  "crop_cycle": {
+    "season": "Safra 2025/2026",
+    "crop": "Milho",
+    "hybrid": "2B610 PRO3",
+    "sowing_date": "2026-02-18",
+    "emergence_date": "2026-02-20",
+    "days_after_emergence": 12,
+    "phenological_stage": "V3"
+  },
+
+  "monitoring": {
+    "event_id": "mon_014_20260302",
+    "monitoring_method": "Amostragem em zigue-zague",
+    "sample_points": 10,
+    "climate_conditions": {
+      "temperature_celsius": 29,
+      "humidity_percent": 72,
+      "rain_last_7_days_mm": 38
+    },
+    "general_notes": "Desenvolvimento vegetativo uniforme. Presença inicial de moluscos e baixa incidência de ovoposição."
+  },
+
+  "pest_analysis": [
+    {
+      "pest_id": "pest_001",
+      "common_name": "Caramujo",
+      "category": "molusco",
+      "severity_level": "moderado",
+      "incidence_metrics": {
+        "average_per_sample_point": 3,
+        "affected_plants_percent": 18,
+        "distribution_pattern": "Distribuição em bordadura"
+      },
+      "economic_threshold_reached": false,
+      "damage_description": "Lesões irregulares em folhas jovens e trilhas de muco.",
+      "historical_comparison": {
+        "last_season_same_stage_incidence_percent": 6,
+        "variation_percent": 12,
+        "trend": "aumento"
+      },
+      "recommended_action": {
+        "type": "Monitoramento Intensificado",
+        "deadline_days": 3
+      }
+    },
+    {
+      "pest_id": "pest_002",
+      "common_name": "Ovoposição em Milho",
+      "category": "inseto_lepidoptera",
+      "severity_level": "baixo",
+      "incidence_metrics": {
+        "average_per_sample_point": 1,
+        "affected_plants_percent": 7,
+        "distribution_pattern": "Distribuição dispersa"
+      },
+      "economic_threshold_reached": false,
+      "damage_description": "Posturas isoladas na face inferior das folhas.",
+      "historical_comparison": {
+        "last_season_same_stage_incidence_percent": 9,
+        "variation_percent": -2,
+        "trend": "redução"
+      },
+      "recommended_action": {
+        "type": "Acompanhamento Semanal",
+        "deadline_days": 7
+      }
+    }
+  ],
+
+  "risk_evaluation": {
+    "overall_risk_score": 62,
+    "risk_level": "medio",
+    "next_recommended_visit": "2026-03-05"
+  },
+
+  "decision_support": {
+    "data_driven_insights": [
+      {
+        "icon": "⚠️",
+        "html_text": "Incidência de moluscos <strong>12% superior</strong> à safra anterior no mesmo estágio fenológico."
+      },
+      {
+        "icon": "💧",
+        "html_text": "Condições de umidade (<strong>72%</strong>) favorecem aumento populacional de caramujos."
+      },
+      {
+        "icon": "📈",
+        "html_text": "Análise preditiva indica <strong>probabilidade moderada de aumento</strong> (<strong>84%</strong> de confiança)."
+      },
+      {
+        "icon": "✅",
+        "html_text": "Ovoposição em <strong>tendência de redução</strong> comparado à safra anterior. Acompanhamento semanal suficiente."
+      }
+    ]
+  },
+
+  "digital_security": {
+    "hash_sha256": "e94f2a0c98d2e5demoenterprisehash",
+    "data_integrity_status": "validado"
+  }
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relatório Técnico Dinâmico</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <div class="layout">
+        <!-- ════════════════════════ SIDEBAR ════════════════════════ -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div
+                    style="background:#111; color:#fff; width:32px; height:32px; display:flex; align-items:center; justify-content:center; border-radius:6px; font-weight:bold; font-size:1.2rem;">
+                    F</div>
+                <div>
+                    <div class="sidebar-logo-text" id="bind-app-name">App Dashboard</div>
+                    <span class="sidebar-logo-sub" id="bind-org-name">Carregando...</span>
+                </div>
+            </div>
+
+            <div class="sidebar-user">
+                <div class="user-avatar" id="bind-user-avatar">--</div>
+                <div class="user-name" id="bind-user-name">Carregando...</div>
+                <div class="user-role" id="bind-user-role">Carregando...</div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-label">Navegação</div>
+                <a class="nav-item active" href="#resumo"><span class="nav-icon">📋</span> Visão Geral</a>
+                <a class="nav-item" href="#propriedade"><span class="nav-icon">🌾</span> Propriedade</a>
+                <a class="nav-item" href="#monitoramento"><span class="nav-icon">🔬</span> Monitoramento</a>
+                <a class="nav-item" href="#pragas"><span class="nav-icon">🐛</span> Análise de Pragas</a>
+                <a class="nav-item" href="#risco"><span class="nav-icon">📊</span> Avaliação de Risco</a>
+
+                <div class="nav-section-label" style="margin-top:1rem;">Relatório</div>
+                <a class="nav-item" href="#" onclick="window.print(); return false;"><span class="nav-icon">🖨️</span>
+                    Imprimir / PDF</a>
+            </nav>
+        </aside>
+
+        <!-- ════════════════════════ MAIN ════════════════════════ -->
+        <main class="main">
+            <!-- Barra mobile: nome do app quando sidebar está oculta -->
+            <div class="mobile-brand" aria-hidden="true">
+                <span class="mobile-brand-logo">F</span>
+                <span class="mobile-brand-name" id="bind-mobile-org">FortSmart</span>
+            </div>
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <nav class="breadcrumb">
+                        <span id="bind-bc-farm">...</span>
+                        <span class="breadcrumb-sep">›</span>
+                        <span id="bind-bc-field">...</span>
+                        <span class="breadcrumb-sep">›</span>
+                        <span class="breadcrumb-current">Relatório Técnico</span>
+                    </nav>
+                    <span class="status-badge" id="bind-status-badge">
+                        <span class="dot"></span> <span id="bind-status-text">...</span>
+                    </span>
+                </div>
+                <div class="header-right">
+                    <span class="meta-tag" id="bind-version">v-</span>
+                    <span class="meta-tag" id="bind-report-id">ID ...</span>
+                    <a href="#" onclick="window.print(); return false;" class="btn-action outline">🖨️ Export PDF</a>
+                </div>
+            </header>
+
+            <div class="page-content" id="report-content" style="opacity: 0; transition: opacity 0.3s ease;">
+
+                <!-- ── REPORT HEADER CARD ──────────────────── -->
+                <div id="resumo" class="report-header-card">
+                    <div class="report-header-info">
+                        <h1>📋 Relatório de Monitoramento</h1>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 4px;" id="bind-emit-info">
+                            Emitido em --/--/---- · Aprovado por ...
+                        </p>
+                        <div class="report-meta-tags">
+                            <span class="meta-tag" id="tag-crop">Cultura</span>
+                            <span class="meta-tag" id="tag-location">Localização</span>
+                            <span class="meta-tag" id="tag-area">Área</span>
+                            <span class="meta-tag" id="tag-stage">Estádio</span>
+                            <span class="meta-tag" id="tag-hybrid">Semente</span>
+                            <span class="meta-tag" id="tag-plan">Plano</span>
+                        </div>
+                    </div>
+                    <div class="report-header-right">
+                        <div class="risk-badge" id="bind-risk-badge">
+                            <span>⚠️</span>
+                            <div>
+                                <div class="risk-score" id="bind-risk-score">--</div>
+                                <div style="font-size: 0.7rem; font-weight: 500;" id="bind-risk-level">Risco --</div>
+                            </div>
+                        </div>
+                        <span style="font-size: 0.75rem; color: var(--text-muted);" id="bind-next-visit">Próxima visita:
+                            --</span>
+                    </div>
+                </div>
+
+                <!-- ── PROPRIEDADE & SAFRA ─────────────────── -->
+                <div id="propriedade" class="grid-2">
+                    <div class="card">
+                        <div class="card-title"><span class="card-title-icon">🏡</span> Propriedade</div>
+                        <div class="info-row"><span class="info-label">Fazenda</span><span class="info-value"
+                                id="prop-farm">--</span></div>
+                        <div class="info-row"><span class="info-label">Município</span><span class="info-value"
+                                id="prop-city">--</span></div>
+                        <div class="info-row"><span class="info-label">Área total</span><span class="info-value"
+                                id="prop-total-area">--</span></div>
+                        <div class="info-row"><span class="info-label">Talhão</span><span class="info-value"
+                                id="prop-field">--</span></div>
+                        <div class="info-row"><span class="info-label">Solo</span><span class="info-value"
+                                id="prop-soil">--</span></div>
+                        <div class="info-row"><span class="info-label">Irrigação</span><span class="info-value"
+                                id="prop-irrigation">--</span></div>
+                        <div class="info-row"><span class="info-label">Cultura anterior</span><span class="info-value"
+                                id="prop-prev-crop">--</span></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title"><span class="card-title-icon">🌱</span> Ciclo da Cultura</div>
+                        <div class="info-row"><span class="info-label">Safra</span><span class="info-value"
+                                id="cycle-season">--</span></div>
+                        <div class="info-row"><span class="info-label">Cultura</span><span class="info-value"
+                                id="cycle-crop">--</span></div>
+                        <div class="info-row"><span class="info-label">Híbrido</span><span class="info-value"
+                                id="cycle-hybrid">--</span></div>
+                        <div class="info-row"><span class="info-label">Data de semeadura</span><span class="info-value"
+                                id="cycle-sow">--</span></div>
+                        <div class="info-row"><span class="info-label">Data de emergência</span><span class="info-value"
+                                id="cycle-emergence">--</span></div>
+                        <div class="info-row"><span class="info-label">DAE (Dias após emergência)</span><span
+                                class="info-value" id="cycle-dae">--</span></div>
+                        <div class="info-row"><span class="info-label">Estádio fenológico</span><span class="info-value"
+                                id="cycle-stage" style="color: var(--primary); font-weight: 700;">--</span></div>
+                    </div>
+                </div>
+
+                <!-- ── MONITORAMENTO ──────────────────────── -->
+                <div id="monitoramento">
+                    <div class="section-heading">🔬 Visita de Monitoramento</div>
+                    <div class="grid-4" style="margin-bottom: 1.25rem;">
+                        <div class="stat-card">
+                            <div class="stat-label">Método</div>
+                            <div class="stat-value" id="mon-method"
+                                style="font-size: 1.1rem; margin-top: 6px; line-height: 1.3;">--</div>
+                            <div class="stat-unit">Padrão técnico</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">Pontos amostrados</div>
+                            <div class="stat-value" id="mon-points">--</div>
+                            <div class="stat-unit">pontos de coleta</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">Temperatura</div>
+                            <div class="stat-value" id="mon-temp">--</div>
+                            <div class="stat-unit">no momento da visita</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">Umidade relativa</div>
+                            <div class="stat-value" id="mon-humidity">--</div>
+                            <div class="stat-unit">favorável a patógenos</div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 1.25rem;">
+                        <div class="card-title">📝 Observações Gerais da Visita</div>
+                        <div style="padding: 0.9rem; background: var(--bg); border-radius: 8px; border-left: 3px solid var(--primary); font-size: 0.85rem; color: var(--text-main);"
+                            id="mon-notes">
+                            --
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── ANÁLISE DE PRAGAS ──────────────────── -->
+                <div id="pragas">
+                    <div class="section-heading">🐛 Análise Fitossanitária</div>
+                    <!-- O container das pragas geradas dinamicamente -->
+                    <div class="grid-2" id="pest-container">
+                        <!-- Os cards serão inseridos aqui pelo Javascript -->
+                    </div>
+                </div>
+
+                <!-- ── RISCO & DECISÃO ────────────────────── -->
+                <div id="risco">
+                    <div class="section-heading">📊 Avaliação de Risco e Suporte à Decisão</div>
+                    <div class="grid-2">
+                        <div class="card">
+                            <div class="card-title"><span class="card-title-icon">⚠️</span> Score de Risco Global</div>
+                            <div class="risk-gauge-wrap">
+                                <div class="gauge-ring">
+                                    <svg viewBox="0 0 120 120">
+                                        <circle class="gauge-track" cx="60" cy="60" r="50" />
+                                        <circle id="gauge-fill" class="gauge-fill" cx="60" cy="60" r="50"
+                                            stroke-dasharray="314" stroke-dashoffset="314" />
+                                    </svg>
+                                    <div class="gauge-label" id="main-gauge-score">0</div>
+                                </div>
+                                <div class="gauge-sub" id="main-gauge-subtitle">Risco <strong>--</strong> — Prioridade:
+                                    Monitorar</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title"><span class="card-title-icon">🧠</span> Inteligência de Dados</div>
+                            <!-- Insights dinâmicos -->
+                            <div id="insights-container">
+                                <!-- Inserido pelo JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /page-content -->
+
+            <footer class="page-footer">
+                <div style="display:flex; align-items:center; gap: 0.5rem; flex-wrap:wrap;">
+                    <span>Hash SHA-256:</span>
+                    <span class="hash-display" id="footer-hash">--</span>
+                </div>
+                <div style="display:flex; align-items:center; gap: 0.75rem; flex-wrap:wrap;">
+                    <span class="integrity-badge">✓ Integridade validada</span>
+                </div>
+                <div style="color: var(--text-light);" id="footer-text">
+                    --
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- SCRIPTS PARA RENDERIZAR O JSON -->
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
