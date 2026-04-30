@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/ecosystem.css">
+    <link rel="stylesheet" href="assets/css/landing.css">
 </head>
 
 <body>
@@ -26,174 +27,249 @@
     <header class="navbar" id="navbar">
         <div class="container navbar-inner">
             <a href="#home" class="navbar-logo">
-                <img src="assets/images/FortSmart.png" alt="FortSmart Logo" class="logo-img" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+                <img src="assets/images/fortsmart.png" alt="FortSmart Logo" class="logo-img"
+                    onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
             </a>
-            <nav class="navbar-links">
-                <a href="#sobre">Sobre</a>
-                <a href="#como-funciona">Funciona</a>
-                <a href="#como-usar">Como Usar</a>
-                <a href="#ecossistema">Ecossistema</a>
-                <a href="#diferenciais">Evolução</a>
+            <nav class="navbar-links" id="navbarLinks">
+                <a href="#problema">Problema</a>
+                <a href="#solucao">Solução</a>
+                <a href="#funcionalidades">Funcionalidades</a>
+                <a href="#resultados">Resultados</a>
+                <a href="#contato" class="btn-nav">Testar Grátis</a>
             </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
     <!-- ══════════════════════════════════════════════
-         1. HERO SECTION — imagem Fundo.jpeg
+         1. HERO SECTION - ALTA CONVERSÃO
     ══════════════════════════════════════════════ -->
     <section class="hero" id="home">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1 class="hero-title fade-in-up" style="font-size: 4rem; letter-spacing: -1px; margin-bottom: 1rem;">
-                FortSmart Agro Platform</h1>
-            <p class="hero-subtitle fade-in-up delay-1"
-                style="font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; color: #fff;">
-                A plataforma inteligente para gestão agronômica, monitoramento de lavouras e tomada de decisão baseada
-                em dados.
+            <div class="hero-badge fade-in-up">
+                🚀 Sistema Completo + GPS + IA + Offline
+            </div>
+            <h1 class="hero-title fade-in-up delay-1">
+                Pare de perder dinheiro<br>na sua lavoura por falta de controle
+            </h1>
+            <p class="hero-subtitle fade-in-up delay-2">
+                O FortSmart Agro é um sistema completo que usa dados reais, GPS e inteligência para <strong>aumentar sua
+                    produtividade</strong> e <strong>reduzir seus custos</strong>
             </p>
-            <p class="hero-subtitle fade-in-up delay-1"
-                style="font-size: 1.1rem; opacity: 0.85; max-width: 800px; margin: 0 auto 3rem auto; font-weight: 300;">
-                Transformando observações de campo em inteligência agronômica para produtores, consultores e empresas do
-                agro.
-            </p>
-            <div class="hero-actions fade-in-up delay-2"
-                style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="#ecossistema" class="btn btn-primary"
-                    style="padding: 16px 32px; font-size: 1.1rem; box-shadow: 0 8px 20px rgba(46, 125, 50, 0.4);">🚀
-                    Conhecer módulos</a>
-                <a href="relatorio.html" target="_blank" class="btn btn-outline-white"
-                    style="padding: 16px 32px; font-size: 1.1rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(5px);">📊
-                    Ver relatório exemplo</a>
-                <a href="#contato" class="btn btn-outline-white" style="padding: 16px 32px; font-size: 1.1rem;">📱
-                    Baixar aplicativo</a>
+            <div class="hero-actions fade-in-up delay-3">
+                <a href="https://play.google.com/store/apps/details?id=com.fortsmart.agro&pcampaignid=web_share" target="_blank"
+                    class="btn btn-primary btn-large">
+                    🚀 Testar Grátis
+                </a>
+                <a href="https://wa.me/556692505091?text=Quero%20conhecer%20o%20FortSmart%20Agro" target="_blank"
+                    class="btn btn-outline-white btn-large">
+                    💬 Falar no WhatsApp
+                </a>
+            </div>
+            <div class="hero-trust fade-in-up delay-3">
+                <span>✓ Funciona Offline</span>
+                <span>✓ Setup em 5 min</span>
+                <span>✓ Suporte Agronômico</span>
+            </div>
+            </div>
+            <div class="hero-scroll">
+                <a href="#problema" aria-label="Rolar para baixo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M19 12l-7 7-7-7" />
+                    </svg>
+                </a>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         2. PROBLEMA - CONEXÃO COM O CLIENTE
+    ══════════════════════════════════════════════ -->
+    <section class="problema-lp section-padding bg-dark" id="problema">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">O Desafio</span>
+                <h2 class="section-title light">Você realmente sabe o que está acontecendo na sua lavoura?</h2>
+            </div>
+    
+            <div class="problema-grid-lp">
+                <div class="problema-card animate-on-scroll">
+                    <div class="problema-icon">📉</div>
+                    <h4>Está perdendo produtividade e não sabe onde?</h4>
+                    <p>Sem dados organizados, impossível identificar gargalos de produtividade por talhão.</p>
+                </div>
+                <div class="problema-card animate-on-scroll delay-1">
+                    <div class="problema-icon">💸</div>
+                    <h4>Não tem controle real dos custos por hectare?</h4>
+                    <p>Aplicações e insumos registrados no papel ou espalhados em conversas.</p>
+                </div>
+                <div class="problema-card animate-on-scroll delay-2">
+                    <div class="problema-icon">🐛</div>
+                    <h4>Demora para identificar pragas e problemas?</h4>
+                    <p>Sem monitoramento estruturado, pragas se espalham antes da ação.</p>
+                </div>
+                <div class="problema-card animate-on-scroll delay-3">
+                    <div class="problema-icon">🎲</div>
+                    <h4>Toma decisões sem base em dados?</h4>
+                    <p>Manejo baseado na memória, sem histórico técnico para embasar decisões.</p>
+                </div>
+            </div>
+    
+            <div class="problema-destaque animate-on-scroll">
+                <p>👉 <strong>Isso custa dinheiro todos os dias.</strong></p>
             </div>
         </div>
     </section>
 
     <!-- ══════════════════════════════════════════════
-         NEW: FRASAL DE MARCA
+         3. SOLUÇÃO - SEU SISTEMA
     ══════════════════════════════════════════════ -->
-    <section class="brand-phrase bg-primary" style="padding: 4rem 0; text-align: center; color: white;">
-        <div class="container animate-on-scroll">
-            <h2 style="font-size: 2.5rem; font-weight: 300; letter-spacing: -0.5px; line-height: 1.3;">
-                “A terra fala. <br>
-                <span style="font-weight: 700; color: #ffeb3b;">O FortSmart transforma isso em decisão.”</span>
-            </h2>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         2. SOBRE O PROJETO — imagem Divulgacao.png
-    ══════════════════════════════════════════════ -->
-    <section class="sobre section-padding" id="sobre">
-        <div class="container animate-on-scroll">
-            <h2 class="section-title">🌾 Sobre o FortSmart</h2>
-            <p class="section-desc">
-                O FortSmart é uma plataforma digital voltada exclusivamente para o agronegócio.
-                Foi desenvolvido para organizar o monitoramento técnico por talhão, garantir rastreabilidade
-                das operações e apoiar decisões baseadas em histórico real de campo.
-            </p>
-            <ul class="sobre-lista animate-on-scroll">
-                <li>📍 Monitoramento técnico por talhão</li>
-                <li>📋 Rastreabilidade das operações agrícolas</li>
-                <li>🌱 Centralização de dados de plantio e aplicações</li>
-                <li>📊 Relatórios profissionais online compartilháveis</li>
-                <li>🧠 Decisões baseadas em histórico real de campo</li>
-            </ul>
-            <p class="sobre-nota animate-on-scroll delay-1">
-                Mais do que um aplicativo, o FortSmart é uma ferramenta de gestão agrícola orientada por dados.
-            </p>
-            <div class="app-showcase">
-                <img src="assets/images/Divulgacao.png" alt="FortSmart - Divulgação" class="app-image" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+    <section class="solucao-lp section-padding" id="solucao">
+        <div class="container">
+            <div class="solucao-grid">
+                <div class="solucao-texto animate-on-scroll">
+                    <span class="section-tag">A Solução</span>
+                    <h2 class="section-title">O FortSmart Agro resolve isso pra você</h2>
+                    <p class="solucao-desc">
+                        Centralize todas as informações da sua fazenda em um único sistema inteligente.
+                    </p>
+                    <p class="solucao-desc-secondary">
+                        Tenha controle total da sua operação, com dados organizados, análises automáticas e acompanhamento em tempo real —
+                        <strong>direto do campo</strong>.
+                    </p>
+                    <div class="solucao-checklist">
+                        <div class="check-item">
+                            <span class="check-icon">✓</span>
+                            <span>Dados organizados por talhão</span>
+                        </div>
+                        <div class="check-item">
+                            <span class="check-icon">✓</span>
+                            <span>Análises automáticas com IA</span>
+                        </div>
+                        <div class="check-item">
+                            <span class="check-icon">✓</span>
+                            <span>Acompanhamento em tempo real</span>
+                        </div>
+                        <div class="check-item">
+                            <span class="check-icon">✓</span>
+                            <span>Funciona 100% offline no campo</span>
+                        </div>
+                    </div>
+                    <a href="#funcionalidades" class="btn btn-primary">
+                        Conhecer Funcionalidades
+                    </a>
+                    </div>
+                    <div class="solucao-imagem animate-on-scroll delay-2">
+                        <div class="app-mockup">
+                            <img src="assets/images/divulgacao.png" alt="FortSmart App"
+                                onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+                            <div class="mockup-badge">📱 Mobile + Web</div>
+                        </div>
+                    </div>
             </div>
         </div>
     </section>
 
     <!-- ══════════════════════════════════════════════
-         NEW A. PROBLEMA REAL DO CAMPO
+         4. FUNCIONALIDADES - EM FORMATO DE VENDA
     ══════════════════════════════════════════════ -->
-    <section class="problema section-padding bg-dark" id="problema">
-        <div class="container animate-on-scroll">
-            <h2 class="section-title light">❗ Os Desafios da Gestão Agrícola</h2>
-            <p class="section-desc light">Situações que todo produtor e consultor agronômico já enfrentou.</p>
-            <div class="problema-grid">
-                <div class="problema-item"><span class="prob-icon">📓</span><span>Informações espalhadas em cadernos e
-                        WhatsApp</span></div>
-                <div class="problema-item"><span class="prob-icon">🗂️</span><span>Falta de histórico estruturado por
-                        talhão</span></div>
-                <div class="problema-item"><span class="prob-icon">📋</span><span>Dificuldade em comprovar aplicações
-                        realizadas</span></div>
-                <div class="problema-item"><span class="prob-icon">🧠</span><span>Decisões tomadas apenas com base na
-                        memória</span></div>
-                <div class="problema-item"><span class="prob-icon">📉</span><span>Falta de organização técnica e
-                        rastreabilidade</span></div>
-                <div class="problema-item"><span class="prob-icon">🔗</span><span>Dados desconectados entre campo e
-                        escritório</span></div>
-            </div>
-            <div class="problema-solucao animate-on-scroll delay-2">
-                <p>O FortSmart resolve isso com <strong>organização, rastreabilidade e inteligência de dados.</strong>
+    <section class="funcionalidades-lp section-padding bg-light" id="funcionalidades">
+        <div class="container">
+            <div class="section-header animate-on-scroll text-center">
+                <span class="section-tag">Funcionalidades</span>
+                <h2 class="section-title">Tudo que você precisa para gerenciar sua lavoura</h2>
+                <p class="section-desc">Sistema completo com recursos de nível enterprise, acessível para qualquer produtor.
                 </p>
             </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         NEW B. ANTES E DEPOIS
-    ══════════════════════════════════════════════ -->
-    <section class="antes-depois section-padding" id="transformacao">
-        <div class="container animate-on-scroll">
-            <h2 class="section-title">📊 A Transformação na Gestão</h2>
-            <p class="section-desc">A diferença que o FortSmart gera na sua operação.</p>
-            <div class="ad-wrapper">
-                <div class="ad-col ad-antes animate-on-scroll">
-                    <div class="ad-header"><span class="ad-badge bad">Antes do FortSmart</span></div>
-                    <ul class="ad-lista">
-                        <li>📓 Anotações soltas em caderno ou papel</li>
-                        <li>📷 Fotos perdidas no celular sem contexto</li>
-                        <li>📝 Relatórios informais e sem padrão</li>
-                        <li>❓ Falta de histórico estruturado por safra</li>
-                        <li>⏳ Retrabalho constante e perda de informação</li>
+            <div class="features-grid-lp">
+                <!-- Feature 1 -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon-wrapper">
+                        <span class="feature-icon">🌱</span>
+                    </div>
+                    <h3 class="feature-title">Monitoramento Inteligente</h3>
+                    <p class="feature-desc">Identifique pragas, doenças e falhas <strong>antes que prejudiquem</strong> sua
+                        produtividade.
+                        Receba alertas automáticos baseados em IA.</p>
+                    <ul class="feature-list">
+                        <li>Detecção precoce de problemas</li>
+                        <li>Fotos georreferenciadas</li>
+                        <li>Classificação automática de severidade</li>
+                    </ul>
+                    </div>
+                <!-- Feature 2 -->
+                <div class="feature-card animate-on-scroll delay-1">
+                    <div class="feature-icon-wrapper">
+                        <span class="feature-icon">🗺️</span>
+                    </div>
+                    <h3 class="feature-title">Mapeamento com GPS</h3>
+                    <p class="feature-desc">Mapeie talhões, áreas e experimentos com <strong>precisão</strong> diretamente no campo.
+                        Editor poligonal avançado.</p>
+                    <ul class="feature-list">
+                        <li>Delimitação via GPS</li>
+                        <li>Cálculo automático de área</li>
+                        <li>Exportação KML para outros sistemas</li>
+                    </ul>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature-card animate-on-scroll delay-2">
+                        <div class="feature-icon-wrapper">
+                            <span class="feature-icon">💰</span>
+                        </div>
+                        <h3 class="feature-title">Gestão de Custos</h3>
+                        <p class="feature-desc">Saiba exatamente quanto está investindo e lucrando <strong>por área</strong>. Controle
+                            financeiro por talhão.</p>
+                        <ul class="feature-list">
+                            <li>Custo por hectare</li>
+                            <li>Controle de insumos</li>
+                            <li>ROI por talhão</li>
+                        </ul>
+                        </div>
+                        <!-- Feature 4 -->
+                        <div class="feature-card animate-on-scroll">
+                            <div class="feature-icon-wrapper">
+                                <span class="feature-icon">📊</span>
+                    </div>
+                    <h3 class="feature-title">Relatórios Técnicos</h3>
+                    <p class="feature-desc">Tenha dados organizados para <strong>tomada de decisão rápida e segura</strong>. Relatórios
+                        profissionais compartilháveis.</p>
+                    <ul class="feature-list">
+                        <li>Laudos técnicos automáticos</li>
+                        <li>Links de compartilhamento</li>
+                        <li>PDFs profissionais</li>
                     </ul>
                 </div>
-                <div class="ad-divider">
-                    <div class="ad-arrow">→</div>
-                </div>
-                <div class="ad-col ad-depois animate-on-scroll delay-2">
-                    <div class="ad-header"><span class="ad-badge good">Depois do FortSmart</span></div>
-                    <ul class="ad-lista">
-                        <li>✅ Monitoramentos organizados por talhão</li>
-                        <li>📍 Fotos georreferenciadas com data e local</li>
-                        <li>📊 Relatório profissional online compartilhável</li>
-                        <li>📁 Histórico completo por safra e cultura</li>
-                        <li>⚡ Dados centralizados e acessíveis no campo</li>
+                <!-- Feature 5 -->
+                <div class="feature-card animate-on-scroll delay-1">
+                    <div class="feature-icon-wrapper">
+                        <span class="feature-icon">🤖</span>
+                    </div>
+                    <h3 class="feature-title">Inteligência Agronômica</h3>
+                    <p class="feature-desc">Receba <strong>recomendações automáticas</strong> baseadas nos seus dados reais. IA que aprende
+                        com sua fazenda.</p>
+                    <ul class="feature-list">
+                        <li>Scores de confiança e risco</li>
+                        <li>Previsões de produtividade</li>
+                        <li>Sugestões de manejo</li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         NEW C. INDICADORES DE IMPACTO
-    ══════════════════════════════════════════════ -->
-    <section class="impacto section-padding bg-primary-gradient">
-        <div class="container animate-on-scroll">
-            <h2 class="section-title light">📈 Impacto Real no Campo</h2>
-            <div class="impacto-grid">
-                <div class="impacto-item">
-                    <span class="impacto-num" data-target="100">0</span><span class="impacto-plus">+</span>
-                    <p class="impacto-label">Talhões<br>Monitorados</p>
-                </div>
-                <div class="impacto-item">
-                    <span class="impacto-num" data-target="1000">0</span><span class="impacto-plus">+</span>
-                    <p class="impacto-label">Registros<br>Técnicos</p>
-                </div>
-                <div class="impacto-item">
-                    <span class="impacto-num" data-target="500">0</span><span class="impacto-plus">+</span>
-                    <p class="impacto-label">Relatórios<br>Gerados</p>
-                </div>
-                <div class="impacto-item">
-                    <span class="impacto-num" data-target="100">0</span><span class="impacto-perc">%</span>
-                    <p class="impacto-label">Histórico<br>por Safra</p>
+                <!-- Feature 6 -->
+                <div class="feature-card animate-on-scroll delay-2">
+                    <div class="feature-icon-wrapper">
+                        <span class="feature-icon">📡</span>
+                    </div>
+                    <h3 class="feature-title">Funciona Offline</h3>
+                    <p class="feature-desc">Use no campo <strong>mesmo sem internet</strong> — sincroniza depois automaticamente quando
+                        tiver conexão.</p>
+                    <ul class="feature-list">
+                        <li>100% funcional sem internet</li>
+                        <li>Sincronização automática</li>
+                        <li>Dados seguros no dispositivo</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -1270,144 +1346,170 @@
     </section>
 
     <!-- ══════════════════════════════════════════════
-         NEW: PARCERIAS ESTRATÉGICAS (ENTERPRISE)
+         5. IMPACTO - VALOR PERCEBIDO
     ══════════════════════════════════════════════ -->
-    <section class="enterprise section-padding" id="enterprise" style="background: #fdfdfd;">
-        <div class="container animate-on-scroll">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto 4rem auto;">
-                <h2 class="section-title">Parcerias Estratégicas</h2>
-                <p class="section-desc">Focado em Enterprise: Cooperativas, Revendas e Consultorias de grande porte.</p>
+    <section class="impacto-lp section-padding bg-primary-gradient" id="resultados">
+        <div class="container">
+            <div class="section-header animate-on-scroll text-center">
+                <span class="section-tag light">Resultados</span>
+                <h2 class="section-title light">Resultados que fazem diferença</h2>
             </div>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
-                <div style="padding-right: 2rem; border-right: 1px solid #eee;">
-                    <h3 style="color: var(--color-dark); margin-bottom: 1.5rem; font-size: 1.4rem;">💡 Por que ser um parceiro?</h3>
-                    <p style="color: #666; margin-bottom: 1.5rem;">Potencialize a recomendação técnica de seus consultores e fidelize seus clientes com tecnologia de ponta.</p>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 10px; display: flex; gap: 10px;"><span style="color: var(--color-primary);">•</span> Inteligência Regional de Dados</li>
-                        <li style="margin-bottom: 10px; display: flex; gap: 10px;"><span style="color: var(--color-primary);">•</span> Padronização de Laudos Técnicos</li>
-                        <li style="margin-bottom: 10px; display: flex; gap: 10px;"><span style="color: var(--color-primary);">•</span> Dashboards Customizados para Gestão</li>
-                    </ul>
+            <div class="impacto-grid-lp">
+                <div class="impacto-card animate-on-scroll">
+                    <div class="impacto-icon">📈</div>
+                    <h3>Aumento da Produtividade</h3>
+                    <p>Identifique gargalos e aplique correções precisas por talhão.</p>
                 </div>
-                <div>
-                    <h3 style="color: var(--color-dark); margin-bottom: 1.5rem; font-size: 1.4rem;">🏢 Hub Enterprise</h3>
-                    <p style="color: #666; margin-bottom: 1.5rem;">Crie um ecossistema digital conectando sua empresa diretamente aos talhões dos seus produtores parceiros.</p>
-                    <a href="#contato" class="btn btn-outline-primary" style="padding: 12px 24px;">Saiba mais sobre parcerias</a>
+                <div class="impacto-card animate-on-scroll delay-1">
+                    <div class="impacto-icon">💵</div>
+                    <h3>Redução de Custos</h3>
+                    <p>Evite desperdícios com aplicações certeiras e monitoramento inteligente.</p>
+                </div>
+                <div class="impacto-card animate-on-scroll delay-2">
+                    <div class="impacto-icon">⚡</div>
+                    <h3>Decisões Mais Rápidas</h3>
+                    <p>Dados em tempo real para ação imediata no campo.</p>
+                </div>
+                <div class="impacto-card animate-on-scroll delay-3">
+                    <div class="impacto-icon">🎯</div>
+                    <h3>Controle Total</h3>
+                    <p>Visão completa da fazenda na palma da sua mão.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ══════════════════════════════════════════════
-         9. CAPTURA DE LEADS E CONTATO
+         6. PROVA SOCIAL - DEPOIMENTO
     ══════════════════════════════════════════════ -->
-    <section class="lead-capture section-padding bg-light" id="contato">
-        <div class="container animate-on-scroll">
-            <h2 class="section-title text-center">Agende uma Demonstração</h2>
-            <p class="section-desc text-center" style="max-width: 700px; margin: 0 auto 3rem auto;">
-                Pronto para digitalizar o campo? Preencha os dados abaixo e entraremos em contato para mostrar como o
-                FortSmart pode transformar a sua gestão agronômica.
-            </p>
-
-            <div class="form-wrapper"
-                style="max-width: 600px; margin: 0 auto; background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                <!-- FormSubmit Integration -->
-                <form action="https://formsubmit.co/fortsmart.01@gmail.com" method="POST" class="contact-form">
-
-                    <!-- Configurações do FormSubmit -->
-                    <!-- Redireciona para o próprio site após envio -->
-                    <input type="hidden" name="_next" value="https://smeagle951.github.io/Divulgacao/">
-                    <input type="hidden" name="_subject" value="🚀 Novo Lead FortSmart - Agendar Demonstração!">
-                    <!-- Oculta o captcha chato do FormSubmit -->
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-
-                    <div class="form-group" style="margin-bottom: 1.5rem;">
-                        <label for="name"
-                            style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">Nome
-                            Completo</label>
-                        <input type="text" id="name" name="Nome" placeholder="Seu nome" required
-                            style="width: 100%; padding: 12px 16px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;">
+    <section class="depoimento-lp section-padding" id="depoimento">
+        <div class="container">
+            <div class="depoimento-card animate-on-scroll">
+                <div class="depoimento-conteudo">
+                    <div class="depoimento-estrelas">★★★★★</div>
+                    <blockquote>
+                        "Depois que comecei a organizar meus dados com o sistema, consegui enxergar onde estava perdendo
+                        dinheiro. Aumentei minha produtividade em 15% na primeira safra."
+                    </blockquote>
+                    <div class="depoimento-autor">
+                        <div class="autor-info">
+                            <strong>Produtor Rural</strong>
+                            <span>Soja e Milho • 1.200 hectares</span>
+                        </div>
                     </div>
-
-                    <div class="form-group" style="margin-bottom: 1.5rem;">
-                        <label for="email"
-                            style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">E-mail
-                            Profissional</label>
-                        <input type="email" id="email" name="Email" placeholder="seu@email.com" required
-                            style="width: 100%; padding: 12px 16px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;">
-                    </div>
-
-                    <div class="form-group" style="margin-bottom: 1.5rem;">
-                        <label for="phone"
-                            style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">WhatsApp
-                            / Telefone</label>
-                        <input type="tel" id="phone" name="Telefone" placeholder="(00) 00000-0000" required
-                            style="width: 100%; padding: 12px 16px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;">
-                    </div>
-
-                    <div class="form-group" style="margin-bottom: 2rem;">
-                        <label for="area"
-                            style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">Tamanho
-                            da Propriedade (Hectares)</label>
-                        <select id="area" name="Área_Hectares" required
-                            style="width: 100%; padding: 12px 16px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 1rem; background-color: white;">
-                            <option value="" disabled selected>Selecione uma opção</option>
-                            <option value="Ate 500 ha">Até 500 ha</option>
-                            <option value="501 a 2000 ha">501 a 2.000 ha</option>
-                            <option value="2001 a 5000 ha">2.001 a 5.000 ha</option>
-                            <option value="Mais de 5000 ha">Mais de 5.000 ha</option>
-                            <option value="Consultoria Agronomica">Sou Consultor Agronômico</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary"
-                        style="width: 100%; padding: 16px; font-size: 1.1rem; border: none; cursor: pointer; border-radius: 8px;">🚀
-                        Solicitar Demonstração</button>
-                    <p
-                        style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: var(--color-text-muted);">
-                        Seus dados estão seguros conosco.</p>
-                </form>
+                </div>
+                <div class="depoimento-badge">
+                    <span>🚀</span>
+                    <p>Resultados reais de quem usa FortSmart</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ══════════════════════════════════════════════
-         10. CALL TO ACTION FINAL
+                         7. IMAGENS DO SISTEMA - PROVA VISUAL
+                    ══════════════════════════════════════════════ -->
+    <section class="galeria-lp section-padding bg-light" id="galeria">
+        <div class="container">
+            <div class="section-header animate-on-scroll text-center">
+                <span class="section-tag">Veja na Prática</span>
+                <h2 class="section-title">O sistema que está transformando a gestão agrícola</h2>
+            </div>
+            <div class="galeria-grid">
+                <div class="galeria-item animate-on-scroll">
+                    <img src="assets/images/modulo_talhoes.png" alt="Mapeamento de Talhões"
+                        onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+                    <div class="galeria-overlay">
+                        <span>🗺️ Mapeamento de Talhões</span>
+                    </div>
+                </div>
+                <div class="galeria-item animate-on-scroll delay-1">
+                    <img src="assets/images/monitoramento_1.jpeg" alt="Monitoramento no Campo"
+                        onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+                    <div class="galeria-overlay">
+                        <span>📱 App no Campo</span>
+                    </div>
+                </div>
+                <div class="galeria-item animate-on-scroll delay-2">
+                    <img src="assets/images/relatorio__monitoramento.png" alt="Relatório Técnico"
+                        onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+                    <div class="galeria-overlay">
+                        <span>📊 Relatórios Profissionais</span>
+                    </div>
+                </div>
+                <div class="galeria-item animate-on-scroll">
+                    <img src="assets/images/talhoes.jpeg" alt="Visualização de Mapa"
+                        onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+                    <div class="galeria-overlay">
+                        <span>🌾 Visualização por Talhão</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         8. CTA FINAL - FORTE
     ══════════════════════════════════════════════ -->
-    <section class="cta-final section-padding" style="background-color: var(--color-dark); color: white; padding: 6rem 0; position: relative; overflow: hidden;">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; background-image: radial-gradient(var(--color-primary) 1px, transparent 1px); background-size: 30px 30px;"></div>
-        <div class="container text-center animate-on-scroll" style="position: relative; z-index: 2;">
-            <h2 class="cta-title" style="color: white; font-size: 3rem; margin-bottom: 1.5rem; font-weight: 300;">Pronto para transformar a sua <span style="font-weight: 700; color: var(--color-primary);">gestão agronômica?</span></h2>
-            <p style="font-size: 1.25rem; opacity: 0.8; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">Comece agora com o FortSmart e tenha a inteligência do campo na palma da sua mão.</p>
-            <div class="cta-actions"
-                style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-                <a href="#contato" class="btn btn-primary"
-                    style="font-size: 1.2rem; padding: 20px 40px; box-shadow: 0 10px 30px rgba(46, 125, 50, 0.4);">🚀 Solicitar demonstração gratuita</a>
-                <a href="https://wa.me/qr/UEWGZ6DMMBBXN1" target="_blank" class="btn btn-outline-white"
-                    style="font-size: 1.2rem; padding: 20px 40px; border-width: 2px;">💬 Falar com especialista</a>
+    <section class="cta-final-lp section-padding" id="contato">
+        <div class="container">
+            <div class="cta-box animate-on-scroll">
+                <h2>Comece agora a transformar sua lavoura</h2>
+                <p>Não continue tomando decisões no escuro. Use tecnologia para <strong>aumentar seus resultados</strong>.
+                </p>
+    
+                <div class="cta-botoes">
+                    <a href="https://play.google.com/store/apps/details?id=com.fortsmart.agro&pcampaignid=web_share"
+                        target="_blank" class="btn btn-primary btn-xlarge">
+                        🚀 Testar Grátis
+                    </a>
+                    <a href="https://wa.me/556692505091?text=Quero%20conhecer%20o%20FortSmart%20Agro" target="_blank"
+                        class="btn btn-outline-white btn-xlarge">
+                        💬 Falar no WhatsApp
+                    </a>
+                </div>
+    
+                <div class="cta-garantia">
+                    <span>✓ Teste gratuito</span>
+                    <span>✓ Sem cartão de crédito</span>
+                    <span>✓ Suporte personalizado</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="site-footer bg-dark-deep">
+    <footer class="site-footer-lp">
         <div class="container">
-            <p>&copy; 2026 FortSmart. Todos os direitos reservados.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/images/fortsmart.png" alt="FortSmart" class="footer-logo"
+                        onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+                    <p>FortSmart Agro - Tecnologia Inteligente no Campo</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#problema">Problema</a>
+                    <a href="#solucao">Solução</a>
+                    <a href="#funcionalidades">Funcionalidades</a>
+                    <a href="#contato">Contato</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FortSmart. Todos os direitos reservados.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
-
-    <!-- Botão Flutuante do WhatsApp -->
-    <a href="https://wa.me/qr/UEWGZ6DMMBBXN1" target="_blank" class="whatsapp-float"
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/556692505091?text=Quero%20conhecer%20o%20FortSmart%20Agro" target="_blank" class="whatsapp-float"
         aria-label="Fale conosco no WhatsApp">
-        <svg viewBox="0 0 32 32" class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M16 2.5C8.544 2.5 2.5 8.544 2.5 16c0 2.378.619 4.654 1.794 6.64L2.5 29.5l7.031-1.844A13.433 13.433 0 0 0 16 29.5c7.456 0 13.5-6.044 13.5-13.5S23.456 2.5 16 2.5m8.053 19.338c-.334.944-1.922 1.815-2.656 1.934-.685.11-1.572.228-5.185-1.272-4.366-1.815-7.185-6.287-7.404-6.581-.219-.294-1.766-2.353-1.766-4.5 0-2.147 1.119-3.2 1.522-3.622.403-.422.875-.528 1.166-.528.29 0 .584 0 .84.013.266.012.619-.1 1.053.944.444 1.075 1.488 3.637 1.622 3.906.134.269.219.584.04.981-.178.403-.269.647-.528.944-.26.297-.547.653-.787.884-.26.253-.535.525-.231 1.044.303.519 1.347 2.222 2.888 3.6 1.987 1.778 3.653 2.331 4.184 2.587.531.256.84.219 1.156-.144.316-.363 1.363-1.584 1.728-2.128.366-.544.731-.453 1.219-.272.488.181 3.084 1.453 3.616 1.719.531.266.884.397 1.016.619.131.222.131 1.284-.203 2.228"
                 fill="#FFF" />
         </svg>
     </a>
+<script src="assets/js/main.js"></script>
 </body>
-
 </html>

@@ -270,5 +270,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     buildGallery();
 
+    // ── Mobile Menu Toggle ──
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navbarLinks = document.getElementById('navbarLinks');
+
+    if (mobileMenuBtn && navbarLinks) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navbarLinks.classList.toggle('active');
+        });
+
+        // Fecha menu ao clicar em um link
+        navbarLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navbarLinks.classList.remove('active');
+            });
+        });
+    }
+
 }); // fim DOMContentLoaded
 
