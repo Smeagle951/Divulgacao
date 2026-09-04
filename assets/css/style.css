@@ -1,38 +1,14 @@
 /* =========================================================================
    VARIÁVEIS GLOBAIS E RESET
    ========================================================================= */
+@import url('tokens.css');
+@import url('components.css');
+
 :root {
-    --color-primary: #2E7D32;
-    /* Verde Principal */
-    --color-primary-hover: #43A047;
-    /* Verde Destaque */
-    --color-bg: #FFFFFF;
-    --color-bg-light: #F8FAF8;
-    /* Fundo Claro */
-    --color-bg-soft-green: #e9f5e9;
-    /* Fundo Verde Suave */
-    --color-bg-dark: #1E1E1E;
-    --color-bg-dark-deep: #121212;
-    --color-text-main: #1E1E1E;
-    --color-text-muted: #555555;
-    --color-white: #FFFFFF;
-
-    --font-main: 'Inter', sans-serif;
-    --border-radius: 16px;
-    --border-radius-btn: 8px;
-
-    --spacing-xs: 8px;
-    --spacing-sm: 16px;
     --spacing-md: 32px;
     --spacing-lg: 64px;
-    --spacing-xl: 120px;
-    /* Enhanced vertical pacing */
-
-    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
-    --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
-
-    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    /* Premium natural curve */
+    --spacing-xl: 96px;
+    --shadow-hover: 0 8px 28px rgba(32, 39, 34, 0.1);
 }
 
 * {
@@ -48,7 +24,7 @@ html {
 body {
     font-family: var(--font-main);
     color: var(--color-text-main);
-    background-color: var(--color-bg);
+    background-color: var(--fs-bg-warm);
     line-height: 1.6;
     overflow-x: hidden;
 }

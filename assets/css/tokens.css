@@ -1,0 +1,71 @@
+/* FortSmart — Design tokens (identidade agronômica) */
+:root {
+    --fs-green-deep: #173B2A;
+    --fs-green-ops: #2F7D4A;
+    --fs-green-ops-hover: #276B3F;
+    --fs-bg-warm: #F5F4EF;
+    --fs-bg-surface: #FFFFFF;
+    --fs-graphite: #202722;
+    --fs-gray: #667069;
+    --fs-gray-soft: #8A928C;
+    --fs-border: #D8D6CE;
+    --fs-border-soft: #E8E6DE;
+    --fs-amber: #C68A22;
+    --fs-amber-bg: #F8F0E0;
+    --fs-risk: #C4473A;
+    --fs-risk-bg: #F8EBE9;
+    --fs-ok: #2F7D4A;
+    --fs-ok-bg: #E8F2EC;
+
+    /* Aliases for legacy / shared use */
+    --color-primary: var(--fs-green-ops);
+    --color-primary-hover: var(--fs-green-ops-hover);
+    --color-primary-deep: var(--fs-green-deep);
+    --color-bg: var(--fs-bg-warm);
+    --color-bg-light: var(--fs-bg-warm);
+    --color-bg-soft-green: var(--fs-ok-bg);
+    --color-bg-dark: var(--fs-green-deep);
+    --color-bg-dark-deep: #0F2419;
+    --color-text-main: var(--fs-graphite);
+    --color-text-muted: var(--fs-gray);
+    --color-white: var(--fs-bg-surface);
+    --color-border: var(--fs-border);
+    --color-amber: var(--fs-amber);
+    --color-risk: var(--fs-risk);
+
+    --font-main: 'Manrope', system-ui, sans-serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.375rem;
+    --font-size-2xl: 1.75rem;
+    --font-size-3xl: 2.25rem;
+    --font-size-hero: clamp(2rem, 4vw, 3rem);
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --border-radius: var(--radius-lg);
+    --border-radius-btn: var(--radius-md);
+
+    --shadow-soft: 0 1px 2px rgba(32, 39, 34, 0.06);
+    --shadow-panel: 0 4px 24px rgba(32, 39, 34, 0.08);
+
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 48px;
+    --spacing-xl: 80px;
+
+    --motion-fast: 150ms;
+    --motion-base: 200ms;
+    --motion-slow: 250ms;
+    --ease-out: cubic-bezier(0.25, 0.8, 0.25, 1);
+    --transition-smooth: all var(--motion-base) var(--ease-out);
+
+    --sidebar-w: 240px;
+    --sidebar-collapsed: 72px;
+    --header-h: 56px;
+    --bottom-nav-h: 64px;
+}

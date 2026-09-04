@@ -3,7 +3,8 @@
    relatorio.css
 ===================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('tokens.css');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
 
 *,
 *::before,
@@ -14,27 +15,27 @@
 }
 
 :root {
-    --primary: #2E7D32;
-    --primary-light: #43A047;
-    --primary-bg: #E8F5E9;
-    --white: #ffffff;
-    --bg: #F4F6F8;
-    --surface: #ffffff;
-    --border: #E0E4E8;
-    --text-main: #1A202C;
-    --text-muted: #6B7280;
-    --text-light: #9CA3AF;
-    --warning: #F59E0B;
-    --warning-bg: #FFFBEB;
-    --danger: #EF4444;
-    --danger-bg: #FEF2F2;
-    --success: #10B981;
-    --success-bg: #ECFDF5;
+    --primary: var(--fs-green-ops);
+    --primary-light: var(--fs-green-ops-hover);
+    --primary-bg: var(--fs-ok-bg);
+    --white: var(--fs-bg-surface);
+    --bg: var(--fs-bg-warm);
+    --surface: var(--fs-bg-surface);
+    --border: var(--fs-border);
+    --text-main: var(--fs-graphite);
+    --text-muted: var(--fs-gray);
+    --text-light: var(--fs-gray-soft);
+    --warning: var(--fs-amber);
+    --warning-bg: var(--fs-amber-bg);
+    --danger: var(--fs-risk);
+    --danger-bg: var(--fs-risk-bg);
+    --success: var(--fs-green-ops);
+    --success-bg: var(--fs-ok-bg);
     --sidebar-w: 260px;
     --header-h: 64px;
-    --radius: 12px;
-    --shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.05);
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --radius: var(--radius-lg);
+    --shadow: var(--shadow-soft);
+    --shadow-sm: var(--shadow-soft);
 }
 
 html {
@@ -42,7 +43,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-main);
     background: var(--bg);
     color: var(--text-main);
     font-size: 0.9rem;

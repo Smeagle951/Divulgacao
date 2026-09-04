@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="no-js">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FortSmart - Conectando educação e agricultura digital.">
-    <title>FortSmart | Tecnologia Inteligente no Campo</title>
+    <meta name="description" content="FortSmart Agro — controle técnico e operacional da fazenda em uma única plataforma. Prescrição, estoque, mapas e relatórios rastreáveis.">
+    <title>FortSmart | Controle técnico e operacional da fazenda</title>
     <script>
       (function() {
         var path = location.pathname;
@@ -15,1501 +14,333 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/ecosystem.css">
     <link rel="stylesheet" href="assets/css/landing.css">
+    <style>
+      .hero-dash {
+        display: grid;
+        grid-template-columns: 1.2fr 0.9fr;
+        gap: 0.65rem;
+        padding: 0.85rem;
+        color: var(--fs-graphite);
+        font-size: 0.72rem;
+      }
+      .hero-dash .hd-metrics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.45rem;
+        margin-bottom: 0.65rem;
+      }
+      .hero-dash .hd-metric {
+        background: #fff;
+        border: 1px solid var(--fs-border);
+        border-radius: 6px;
+        padding: 0.55rem 0.65rem;
+      }
+      .hero-dash .hd-metric.is-alert { background: var(--fs-amber-bg); border-color: var(--fs-amber); }
+      .hero-dash .hd-label { font-size: 0.58rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--fs-gray); }
+      .hero-dash .hd-value { font-size: 0.95rem; font-weight: 700; margin-top: 0.1rem; }
+      .hero-dash .hd-panel {
+        background: #fff;
+        border: 1px solid var(--fs-border);
+        border-radius: 8px;
+        padding: 0.65rem;
+      }
+      .hero-dash .hd-panel h4 { font-size: 0.7rem; font-weight: 700; margin-bottom: 0.45rem; }
+      .hero-dash .hd-alert {
+        padding: 0.4rem 0.5rem;
+        border-left: 3px solid var(--fs-risk);
+        background: var(--fs-bg-warm);
+        margin-bottom: 0.35rem;
+        border-radius: 0 4px 4px 0;
+      }
+      .hero-dash .hd-alert.warn { border-left-color: var(--fs-amber); }
+      .hero-dash svg { width: 100%; height: 130px; }
+      @media (max-width: 700px) {
+        .hero-dash { grid-template-columns: 1fr; }
+      }
+    </style>
 </head>
+<body style="background: var(--fs-bg-warm); font-family: var(--font-main);">
 
-<body>
-
-    <!-- ══ NAVBAR ══ -->
     <header class="navbar" id="navbar">
         <div class="container navbar-inner">
             <a href="#home" class="navbar-logo">
-                <img src="assets/images/fortsmart.png" alt="FortSmart Logo" class="logo-img"
+                <img src="assets/images/fortsmart.png" alt="FortSmart" class="logo-img"
                     onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
+                <span class="logo-word">FortSmart</span>
             </a>
             <nav class="navbar-links" id="navbarLinks">
-                <a href="#problema">Problema</a>
-                <a href="#solucao">Solução</a>
-                <a href="#funcionalidades">Funcionalidades</a>
-                <a href="#resultados">Resultados</a>
-                <a href="#contato" class="btn-nav">Testar Grátis</a>
+                <a href="#prova">Prova</a>
+                <a href="#fluxo">Fluxo</a>
+                <a href="#modulos">Módulos</a>
+                <a href="#demonstracao">Demonstração</a>
+                <a href="app/index.html" class="btn-nav">Ver o sistema</a>
             </nav>
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
             </button>
         </div>
     </header>
 
-    <!-- ══════════════════════════════════════════════
-         1. HERO SECTION - ALTA CONVERSÃO
-    ══════════════════════════════════════════════ -->
-    <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <div class="hero-badge fade-in-up">
-                🚀 Sistema Completo + GPS + IA + Offline
-            </div>
-            <h1 class="hero-title fade-in-up delay-1">
-                Pare de perder dinheiro<br>na sua lavoura por falta de controle
-            </h1>
-            <p class="hero-subtitle fade-in-up delay-2">
-                O FortSmart Agro é um sistema completo que usa dados reais, GPS e inteligência para <strong>aumentar sua
-                    produtividade</strong> e <strong>reduzir seus custos</strong>
-            </p>
-            <div class="hero-actions fade-in-up delay-3">
-                <a href="https://play.google.com/store/apps/details?id=com.fortsmart.agro&pcampaignid=web_share" target="_blank"
-                    class="btn btn-primary btn-large">
-                    🚀 Testar Grátis
-                </a>
-                <a href="https://wa.me/556692505091?text=Quero%20conhecer%20o%20FortSmart%20Agro" target="_blank"
-                    class="btn btn-outline-white btn-large">
-                    💬 Falar no WhatsApp
-                </a>
-            </div>
-            <div class="hero-trust fade-in-up delay-3">
-                <span>✓ Funciona Offline</span>
-                <span>✓ Setup em 5 min</span>
-                <span>✓ Suporte Agronômico</span>
-            </div>
-            </div>
-            <div class="hero-scroll">
-                <a href="#problema" aria-label="Rolar para baixo">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 5v14M19 12l-7 7-7-7" />
-                    </svg>
-                </a>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         2. PROBLEMA - CONEXÃO COM O CLIENTE
-    ══════════════════════════════════════════════ -->
-    <section class="problema-lp section-padding bg-dark" id="problema">
-        <div class="container">
-            <div class="section-header animate-on-scroll">
-                <span class="section-tag">O Desafio</span>
-                <h2 class="section-title light">Você realmente sabe o que está acontecendo na sua lavoura?</h2>
-            </div>
-    
-            <div class="problema-grid-lp">
-                <div class="problema-card animate-on-scroll">
-                    <div class="problema-icon">📉</div>
-                    <h4>Está perdendo produtividade e não sabe onde?</h4>
-                    <p>Sem dados organizados, impossível identificar gargalos de produtividade por talhão.</p>
-                </div>
-                <div class="problema-card animate-on-scroll delay-1">
-                    <div class="problema-icon">💸</div>
-                    <h4>Não tem controle real dos custos por hectare?</h4>
-                    <p>Aplicações e insumos registrados no papel ou espalhados em conversas.</p>
-                </div>
-                <div class="problema-card animate-on-scroll delay-2">
-                    <div class="problema-icon">🐛</div>
-                    <h4>Demora para identificar pragas e problemas?</h4>
-                    <p>Sem monitoramento estruturado, pragas se espalham antes da ação.</p>
-                </div>
-                <div class="problema-card animate-on-scroll delay-3">
-                    <div class="problema-icon">🎲</div>
-                    <h4>Toma decisões sem base em dados?</h4>
-                    <p>Manejo baseado na memória, sem histórico técnico para embasar decisões.</p>
-                </div>
-            </div>
-    
-            <div class="problema-destaque animate-on-scroll">
-                <p>👉 <strong>Isso custa dinheiro todos os dias.</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         3. SOLUÇÃO - SEU SISTEMA
-    ══════════════════════════════════════════════ -->
-    <section class="solucao-lp section-padding" id="solucao">
-        <div class="container">
-            <div class="solucao-grid">
-                <div class="solucao-texto animate-on-scroll">
-                    <span class="section-tag">A Solução</span>
-                    <h2 class="section-title">O FortSmart Agro resolve isso pra você</h2>
-                    <p class="solucao-desc">
-                        Centralize todas as informações da sua fazenda em um único sistema inteligente.
-                    </p>
-                    <p class="solucao-desc-secondary">
-                        Tenha controle total da sua operação, com dados organizados, análises automáticas e acompanhamento em tempo real —
-                        <strong>direto do campo</strong>.
-                    </p>
-                    <div class="solucao-checklist">
-                        <div class="check-item">
-                            <span class="check-icon">✓</span>
-                            <span>Dados organizados por talhão</span>
-                        </div>
-                        <div class="check-item">
-                            <span class="check-icon">✓</span>
-                            <span>Análises automáticas com IA</span>
-                        </div>
-                        <div class="check-item">
-                            <span class="check-icon">✓</span>
-                            <span>Acompanhamento em tempo real</span>
-                        </div>
-                        <div class="check-item">
-                            <span class="check-icon">✓</span>
-                            <span>Funciona 100% offline no campo</span>
-                        </div>
-                    </div>
-                    <a href="#funcionalidades" class="btn btn-primary">
-                        Conhecer Funcionalidades
-                    </a>
-                    </div>
-                    <div class="solucao-imagem animate-on-scroll delay-2">
-                        <div class="app-mockup">
-                            <img src="assets/images/resolve-isso.jpeg" alt="FortSmart Agro resolve isso pra você"
-                                onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                            <div class="mockup-badge">📱 Mobile + Web</div>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         4. FUNCIONALIDADES - EM FORMATO DE VENDA
-    ══════════════════════════════════════════════ -->
-    <section class="funcionalidades-lp section-padding bg-light" id="funcionalidades">
-        <div class="container">
-            <div class="section-header animate-on-scroll text-center">
-                <span class="section-tag">Funcionalidades</span>
-                <h2 class="section-title">Tudo que você precisa para gerenciar sua lavoura</h2>
-                <p class="section-desc">Sistema completo com recursos de nível enterprise, acessível para qualquer produtor.
+    <!-- 1. Hero -->
+    <section class="hero-lp" id="home">
+        <div class="container hero-grid">
+            <div>
+                <p class="hero-brand">FortSmart Agro</p>
+                <h1>Controle técnico e operacional da fazenda em uma única plataforma.</h1>
+                <p class="hero-lead">
+                    Planeje a safra, acompanhe talhões, gere prescrições, movimente o estoque e transforme cada operação em informação rastreável.
                 </p>
+                <div class="hero-actions">
+                    <a href="app/index.html" class="btn btn-primary btn-large">Abrir demonstração</a>
+                    <a href="https://wa.me/556692505091?text=Quero%20conhecer%20o%20FortSmart%20Agro" target="_blank" rel="noopener" class="btn btn-outline-white btn-large">Solicitar demonstração</a>
+                </div>
+                <div class="hero-meta">
+                    <span>Offline no campo</span>
+                    <span>Rastreio de lotes</span>
+                    <span>Relatórios técnicos</span>
+                </div>
             </div>
-            <div class="features-grid-lp">
-                <!-- Feature 1 -->
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">🌱</span>
-                    </div>
-                    <h3 class="feature-title">Monitoramento Inteligente</h3>
-                    <p class="feature-desc">Identifique pragas, doenças e falhas <strong>antes que prejudiquem</strong> sua
-                        produtividade.
-                        Receba alertas automáticos baseados em IA.</p>
-                    <ul class="feature-list">
-                        <li>Detecção precoce de problemas</li>
-                        <li>Fotos georreferenciadas</li>
-                        <li>Classificação automática de severidade</li>
-                    </ul>
-                    </div>
-                <!-- Feature 2 -->
-                <div class="feature-card animate-on-scroll delay-1">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">🗺️</span>
-                    </div>
-                    <h3 class="feature-title">Mapeamento com GPS</h3>
-                    <p class="feature-desc">Mapeie talhões, áreas e experimentos com <strong>precisão</strong> diretamente no campo.
-                        Editor poligonal avançado.</p>
-                    <ul class="feature-list">
-                        <li>Delimitação via GPS</li>
-                        <li>Cálculo automático de área</li>
-                        <li>Exportação KML para outros sistemas</li>
-                    </ul>
-                    </div>
-                    <!-- Feature 3 -->
-                    <div class="feature-card animate-on-scroll delay-2">
-                        <div class="feature-icon-wrapper">
-                            <span class="feature-icon">💰</span>
-                        </div>
-                        <h3 class="feature-title">Gestão de Custos</h3>
-                        <p class="feature-desc">Saiba exatamente quanto está investindo e lucrando <strong>por área</strong>. Controle
-                            financeiro por talhão.</p>
-                        <ul class="feature-list">
-                            <li>Custo por hectare</li>
-                            <li>Controle de insumos</li>
-                            <li>ROI por talhão</li>
-                        </ul>
-                        </div>
-                        <!-- Feature 4 -->
-                        <div class="feature-card animate-on-scroll">
-                            <div class="feature-icon-wrapper">
-                                <span class="feature-icon">📊</span>
-                    </div>
-                    <h3 class="feature-title">Relatórios Técnicos</h3>
-                    <p class="feature-desc">Tenha dados organizados para <strong>tomada de decisão rápida e segura</strong>. Relatórios
-                        profissionais compartilháveis.</p>
-                    <ul class="feature-list">
-                        <li>Laudos técnicos automáticos</li>
-                        <li>Links de compartilhamento</li>
-                        <li>PDFs profissionais</li>
-                    </ul>
+            <div class="hero-product animate-on-scroll">
+                <div class="hero-product-chrome">
+                    <div class="dots"><span></span><span></span><span></span></div>
+                    Visão Geral · Fazenda Ferradura · Safra 2025/26
                 </div>
-                <!-- Feature 5 -->
-                <div class="feature-card animate-on-scroll delay-1">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">🤖</span>
+                <div class="hero-dash">
+                    <div>
+                        <div class="hd-metrics">
+                            <div class="hd-metric"><div class="hd-label">Área plantada</div><div class="hd-value">1.620 ha</div></div>
+                            <div class="hd-metric"><div class="hd-label">Custo / ha</div><div class="hd-value">R$ 312,40</div></div>
+                            <div class="hd-metric"><div class="hd-label">Progresso</div><div class="hd-value">68%</div></div>
+                            <div class="hd-metric is-alert"><div class="hd-label">Estoque</div><div class="hd-value">Atenção</div></div>
+                        </div>
+                        <div class="hd-panel">
+                            <h4>Mapa por situação</h4>
+                            <svg viewBox="0 0 320 140" aria-hidden="true">
+                                <rect x="10" y="20" width="70" height="50" rx="4" fill="#2F7D4A"/>
+                                <rect x="90" y="15" width="85" height="60" rx="4" fill="#C68A22"/>
+                                <rect x="185" y="25" width="75" height="55" rx="4" fill="#2F7D4A"/>
+                                <rect x="60" y="80" width="95" height="50" rx="4" fill="#C4473A"/>
+                                <rect x="165" y="85" width="70" height="45" rx="4" fill="#2F7D4A"/>
+                                <rect x="245" y="40" width="65" height="70" rx="4" fill="#8A928C"/>
+                            </svg>
+                        </div>
                     </div>
-                    <h3 class="feature-title">Inteligência Agronômica</h3>
-                    <p class="feature-desc">Receba <strong>recomendações automáticas</strong> baseadas nos seus dados reais. IA que aprende
-                        com sua fazenda.</p>
-                    <ul class="feature-list">
-                        <li>Scores de confiança e risco</li>
-                        <li>Previsões de produtividade</li>
-                        <li>Sugestões de manejo</li>
-                    </ul>
-                </div>
-                <!-- Feature 6 -->
-                <div class="feature-card animate-on-scroll delay-2">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">📡</span>
+                    <div class="hd-panel">
+                        <h4>Alertas</h4>
+                        <div class="hd-alert"><strong>Estoque crítico</strong><br>Glifosato 480 · 42 L</div>
+                        <div class="hd-alert warn"><strong>Aplicação atrasada</strong><br>Talhão 14 · PS-0146</div>
+                        <div class="hd-alert warn"><strong>Validade</strong><br>Inoculante · 12 dias</div>
                     </div>
-                    <h3 class="feature-title">Funciona Offline</h3>
-                    <p class="feature-desc">Use no campo <strong>mesmo sem internet</strong> — sincroniza depois automaticamente quando
-                        tiver conexão.</p>
-                    <ul class="feature-list">
-                        <li>100% funcional sem internet</li>
-                        <li>Sincronização automática</li>
-                        <li>Dados seguros no dispositivo</li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════
-         NEW D. PÚBLICO-ALVO
-    ══════════════════════════════════════════════ -->
-    <section class="publico section-padding bg-green-soft" id="publico">
-        <div class="container animate-on-scroll">
-            <h2 class="section-title">🚜 Para Quem é o FortSmart?</h2>
-            <p class="section-desc">Uma plataforma construída para os profissionais do agronegócio.</p>
-            <div class="publico-grid">
-                <div class="publico-card hover-fx">
-                    <div class="publico-icon">🌾</div>
-                    <h3>Produtor Rural</h3>
-                    <p>Controle técnico da propriedade, organização por talhão e histórico por safra.</p>
+    <!-- 2. Prova -->
+    <section class="lp-section bg-surface" id="prova">
+        <div class="container">
+            <span class="lp-kicker animate-on-scroll">Prova</span>
+            <h2 class="lp-title animate-on-scroll">Operação real, com contexto — não números soltos.</h2>
+            <p class="lp-sub animate-on-scroll">Indicadores pensados para quem decide no escritório e executa no talhão.</p>
+            <div class="prova-grid">
+                <div class="prova-item animate-on-scroll">
+                    <strong>1.840 ha</strong>
+                    <p>Área total sob gestão na fazenda demonstrativa Ferradura, com talhões georreferenciados.</p>
                 </div>
-                <div class="publico-card hover-fx delay-1">
-                    <div class="publico-icon">🧑‍🔬</div>
-                    <h3>Consultor Agronômico</h3>
-                    <p>Registro profissional estruturado, relatórios comerciais e valorização do trabalho técnico.</p>
+                <div class="prova-item animate-on-scroll">
+                    <strong>47 ops</strong>
+                    <p>Aplicações e movimentações registradas na safra 2025/26 do protótipo — cada uma com lote e custo.</p>
                 </div>
-                <div class="publico-card hover-fx delay-2">
-                    <div class="publico-icon">👥</div>
-                    <h3>Equipes Técnicas</h3>
-                    <p>Padronização de registros, organização coletiva e rastreabilidade operacional.</p>
+                <div class="prova-item animate-on-scroll">
+                    <strong>1 fluxo</strong>
+                    <p>Planejar, prescrever, reservar, aplicar e relatar sem perder o contexto de fazenda e safra.</p>
                 </div>
-                <div class="publico-card hover-fx delay-3">
-                    <div class="publico-icon">🏡</div>
-                    <h3>Fazendas Estruturadas</h3>
-                    <p>Gestão por área produtiva, controle histórico consolidado e base para planejamento estratégico.
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Fluxo -->
+    <section class="lp-section bg-warm" id="fluxo">
+        <div class="container">
+            <span class="lp-kicker animate-on-scroll">Fluxo contínuo</span>
+            <h2 class="lp-title animate-on-scroll">Da decisão técnica ao registro de campo.</h2>
+            <p class="lp-sub animate-on-scroll">O FortSmart conecta módulos em um caminho único — não em telas isoladas.</p>
+            <div class="fluxo-track">
+                <div class="fluxo-step animate-on-scroll">
+                    <h3>Planejar</h3>
+                    <p>Safra, talhões e agenda operacional com o que falta executar.</p>
+                </div>
+                <div class="fluxo-step animate-on-scroll">
+                    <h3>Prescrever</h3>
+                    <p>Dose/ha, calda, tanque e custo calculados na mesma tela.</p>
+                </div>
+                <div class="fluxo-step animate-on-scroll">
+                    <h3>Reservar</h3>
+                    <p>Lotes e saldo vinculados à necessidade da operação.</p>
+                </div>
+                <div class="fluxo-step animate-on-scroll">
+                    <h3>Aplicar</h3>
+                    <p>Execução no campo, inclusive offline, com sync posterior.</p>
+                </div>
+                <div class="fluxo-step animate-on-scroll">
+                    <h3>Relatar</h3>
+                    <p>Documento técnico com mapa, lotes, custos e rastreio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Módulos -->
+    <section class="lp-section bg-surface" id="modulos">
+        <div class="container">
+            <span class="lp-kicker animate-on-scroll">Módulos</span>
+            <h2 class="lp-title animate-on-scroll">O essencial para controle agronômico e operacional.</h2>
+            <div class="modulos-grid">
+                <article class="modulo animate-on-scroll">
+                    <svg class="fs-icon fs-icon-lg" viewBox="0 0 24 24"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21" fill="none" stroke="currentColor"/><line x1="9" y1="3" x2="9" y2="18" stroke="currentColor"/><line x1="15" y1="6" x2="15" y2="21" stroke="currentColor"/></svg>
+                    <h3>Áreas e mapas</h3>
+                    <p>Talhões coloridos por situação — o que está em dia, em atraso ou em risco.</p>
+                </article>
+                <article class="modulo animate-on-scroll">
+                    <svg class="fs-icon fs-icon-lg" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" fill="none" stroke="currentColor"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor"/></svg>
+                    <h3>Monitoramento</h3>
+                    <p>Registros de campo com histórico por talhão para embasar a próxima decisão.</p>
+                </article>
+                <article class="modulo animate-on-scroll">
+                    <svg class="fs-icon fs-icon-lg" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" fill="none" stroke="currentColor"/></svg>
+                    <h3>Estoque rastreável</h3>
+                    <p>Produto, lote, galpão, movimentação, aplicação e custo em um só fluxo.</p>
+                </article>
+                <article class="modulo animate-on-scroll">
+                    <svg class="fs-icon fs-icon-lg" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" fill="none" stroke="currentColor"/></svg>
+                    <h3>Prescrição</h3>
+                    <p>Cálculo de quantidade, tanque, estoque disponível e custo/ha sem trocar de tela.</p>
+                </article>
+                <article class="modulo animate-on-scroll">
+                    <svg class="fs-icon fs-icon-lg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="none" stroke="currentColor"/><polyline points="14 2 14 8 20 8" fill="none" stroke="currentColor"/></svg>
+                    <h3>Relatórios</h3>
+                    <p>Documento agronômico com mapa, lotes, previsto × realizado e assinatura técnica.</p>
+                </article>
+                <article class="modulo animate-on-scroll">
+                    <svg class="fs-icon fs-icon-lg" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0" fill="none" stroke="currentColor"/><path d="M1.42 9a16 16 0 0 1 21.16 0" fill="none" stroke="currentColor"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0" fill="none" stroke="currentColor"/><line x1="12" y1="20" x2="12.01" y2="20" stroke="currentColor"/></svg>
+                    <h3>Offline</h3>
+                    <p>Campo continua registrando; a sincronização deixa o status claro quando a rede volta.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Demonstração -->
+    <section class="lp-section bg-warm" id="demonstracao">
+        <div class="container">
+            <span class="lp-kicker animate-on-scroll">Demonstração</span>
+            <h2 class="lp-title animate-on-scroll">Veja o produto funcionando.</h2>
+            <p class="lp-sub animate-on-scroll">Protótipos navegáveis com a nova identidade — dashboard, estoque, prescrição e relatório.</p>
+            <div class="demo-grid">
+                <a class="demo-card animate-on-scroll" href="app/index.html">
+                    <h3>Dashboard</h3>
+                    <p>Resumo da safra, mapa, alertas, agenda e previsto × realizado.</p>
+                    <span class="link-more">Abrir visão geral →</span>
+                </a>
+                <a class="demo-card animate-on-scroll" href="app/estoque.html">
+                    <h3>Estoque</h3>
+                    <p>Filtros, lista profissional e painel lateral com lotes e movimentações.</p>
+                    <span class="link-more">Abrir estoque →</span>
+                </a>
+                <a class="demo-card animate-on-scroll" href="app/prescricao.html">
+                    <h3>Prescrição</h3>
+                    <p>Três colunas: área, produtos e cálculo instantâneo com validações.</p>
+                    <span class="link-more">Abrir prescrição →</span>
+                </a>
+                <a class="demo-card animate-on-scroll" href="relatorio.html">
+                    <h3>Relatório técnico</h3>
+                    <p>Documento com propriedade, monitoramento, risco e auditoria.</p>
+                    <span class="link-more">Abrir relatório →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Caso real -->
+    <section class="lp-section bg-surface" id="caso">
+        <div class="container">
+            <span class="lp-kicker animate-on-scroll">Caso</span>
+            <h2 class="lp-title animate-on-scroll">Quando o estoque não cobre a programação.</h2>
+            <div class="caso-grid">
+                <div class="caso-col animate-on-scroll">
+                    <h3>Problema</h3>
+                    <p>Aplicação de herbicida prevista em 180 L e saldo de apenas 42 L no galpão — risco de parar a operação no meio do talhão.</p>
+                </div>
+                <div class="caso-col animate-on-scroll">
+                    <h3>Processo</h3>
+                    <p>O dashboard alerta o déficit; a prescrição valida estoque × necessidade; o recebimento registra lote e custo antes de aplicar.</p>
+                </div>
+                <div class="caso-col animate-on-scroll">
+                    <h3>Resultado</h3>
+                    <p>Operação executada com lote rastreável, custo/ha atualizado e relatório pronto para o responsável técnico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Offline -->
+    <section class="lp-section bg-deep" id="offline">
+        <div class="container">
+            <div class="offline-grid">
+                <div>
+                    <span class="lp-kicker animate-on-scroll">Campo e segurança</span>
+                    <h2 class="lp-title animate-on-scroll">Offline explícito. Dados preservados.</h2>
+                    <p class="lp-sub animate-on-scroll">
+                        No celular, a equipe registra com uma mão. O status mostra se está offline ou sincronizado.
+                        Nada some na volta da rede — o histórico técnico permanece intacto.
                     </p>
                 </div>
-                <div class="publico-card hover-fx delay-4">
-                    <div class="publico-icon">🧪</div>
-                    <h3>Projetos Experimentais</h3>
-                    <p>Comparação entre áreas, avaliação técnica detalhada e monitoramento estruturado.</p>
+                <div class="offline-visual animate-on-scroll">
+                    <div class="offline-node">
+                        <span class="dot-status"></span>
+                        Campo · registro local · offline
+                    </div>
+                    <div class="offline-arrow">SYNC 150–250 ms</div>
+                    <div class="offline-node synced">
+                        <span class="dot-status"></span>
+                        Nuvem · fazenda / safra · sincronizado
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════
-         NEW E. AGRICULTURA 4.0
-    ══════════════════════════════════════════════ -->
-    <section class="agro40 section-padding" id="agro40">
-        <div class="container animate-on-scroll">
-            <h2 class="section-title">🌍 FortSmart e a Agricultura 4.0</h2>
-            <p class="section-desc">Conectado com a evolução digital do agronegócio brasileiro.</p>
-            <div class="agro40-grid">
-                <div class="agro40-item animate-on-scroll">
-                    <span class="agro40-icon">📡</span>
-                    <h4>Georreferenciamento</h4>
-                    <p>Cada registro vinculado à localização exata do campo.</p>
-                </div>
-                <div class="agro40-item animate-on-scroll delay-1">
-                    <span class="agro40-icon">📊</span>
-                    <h4>Dados Organizados</h4>
-                    <p>Informações estruturadas, acessíveis e rastreáveis por safra.</p>
-                </div>
-                <div class="agro40-item animate-on-scroll delay-1">
-                    <span class="agro40-icon">🌐</span>
-                    <h4>Relatórios Online</h4>
-                    <p>Compartilhe laudos profissionais com um link, de qualquer lugar.</p>
-                </div>
-                <div class="agro40-item animate-on-scroll delay-2">
-                    <span class="agro40-icon">🔍</span>
-                    <h4>Rastreabilidade Total</h4>
-                    <p>Histórico completo de aplicações, monitoramentos e visitas.</p>
-                </div>
-                <div class="agro40-item animate-on-scroll delay-2">
-                    <span class="agro40-icon">💡</span>
-                    <h4>Histórico Inteligente</h4>
-                    <p>Compare safras, identifique padrões e melhore a eficiência.</p>
-                </div>
-                <div class="agro40-item animate-on-scroll delay-3">
-                    <span class="agro40-icon">📱</span>
-                    <h4>100% Mobile</h4>
-                    <p>Registre no campo, acesse no escritório. Sempre sincronizado.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         NEW: PROBLEMA REAL DO CAMPO & INDICADORES
-    ══════════════════════════════════════════════ -->
-    <section class="problema-real section-padding bg-light" id="problema-real">
-        <div class="container animate-on-scroll">
-            <h2 class="section-title">❗ Os Desafios da Gestão Agrícola</h2>
-            <p class="section-desc">Muitos produtores e consultores ainda enfrentam barreiras operacionais diárias como:
-            </p>
-
-            <div class="problema-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-                <div class="card hover-fx text-center" style="padding: 2rem;">
-                    <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">📝</span>
-                    <h4>Informações no Papel</h4>
-                    <p class="text-muted" style="font-size: 0.9rem;">Dados espalhados em cadernos e planilhas soltas</p>
-                </div>
-                <div class="card hover-fx text-center" style="padding: 2rem;">
-                    <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">⏳</span>
-                    <h4>Falta de Histórico</h4>
-                    <p class="text-muted" style="font-size: 0.9rem;">Dificuldade em rastrear safras passadas por talhão
-                    </p>
-                </div>
-                <div class="card hover-fx text-center" style="padding: 2rem;">
-                    <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">🤔</span>
-                    <h4>Decisões Intuitivas</h4>
-                    <p class="text-muted" style="font-size: 0.9rem;">Manejo baseado em memória, sem dados técnicos
-                        concretos</p>
-                </div>
-            </div>
-
-            <!-- Indicadores -->
-            <div class="indicadores-wrapper"
-                style="background: var(--color-primary); color: white; border-radius: var(--border-radius); padding: 3rem; display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-around;">
-                <div class="ind-item text-center">
-                    <h3 style="font-size: 2.5rem; margin-bottom: 0;">+100</h3>
-                    <p
-                        style="opacity: 0.9; margin: 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
-                        Talhões Monitorados</p>
-                </div>
-                <div class="ind-item text-center">
-                    <h3 style="font-size: 2.5rem; margin-bottom: 0;">+1k</h3>
-                    <p
-                        style="opacity: 0.9; margin: 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
-                        Registros Técnicos</p>
-                </div>
-                <div class="ind-item text-center">
-                    <h3 style="font-size: 2.5rem; margin-bottom: 0;">+500</h3>
-                    <p
-                        style="opacity: 0.9; margin: 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
-                        Relatórios Gerados</p>
-                </div>
-                <div class="ind-item text-center">
-                    <h3 style="font-size: 2.5rem; margin-bottom: 0;">100%</h3>
-                    <p
-                        style="opacity: 0.9; margin: 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
-                        Histórico por Safra</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         3. COMO FUNCIONA (Cards)
-    ══════════════════════════════════════════════ -->
-    <section class="como-funciona section-padding bg-green-soft" id="como-funciona">
-        <div class="container animate-on-scroll">
-            <h2 class="section-title">Como Funciona na Lavoura</h2>
-            <p class="section-desc">Ferramentas essenciais para o produtor e o consultor agronômico gerirem a lavoura
-                com precisão.</p>
-
-            <div class="cards-grid">
-                <!-- Card 1 -->
-                <div class="card hover-fx">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
-                            <line x1="8" y1="2" x2="8" y2="18"></line>
-                            <line x1="16" y1="6" x2="16" y2="22"></line>
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Mapeamento por Talhão</h3>
-                    <p class="card-text">Delimite e organize cada área produtiva com precisão via GPS para controle
-                        total da lavoura.</p>
-                </div>
-                <!-- Card 2 -->
-                <div class="card hover-fx delay-1">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
-                            <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Análise e Relatórios</h3>
-                    <p class="card-text">Gere relatórios profissionais de plantio, insumos, monitoramentos e histórico
-                        de campo.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="card hover-fx delay-2">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Decisão Técnica Baseada em Dados</h3>
-                    <p class="card-text">Produtores e consultores acessam histórico real de campo para tomada de decisão
-                        estratégica.</p>
-                </div>
-            </div>
-
-            <!-- Banner Informacoes.png -->
-            <div class="info-banner animate-on-scroll delay-2">
-                <img src="assets/images/Informacoes.png" alt="Informações FortSmart" class="info-banner-img" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ══════════════════════════════════════════════
-         NEW: PLATFORM FLOW
-    ══════════════════════════════════════════════ -->
-    <section class="platform-flow section-padding" style="background: var(--color-dark); color: white;">
-        <div class="container animate-on-scroll">
-            <h2 class="section-title light text-center" style="margin-bottom: 3rem;">Do campo à decisão em minutos</h2>
-
-            <div class="flow-container"
-                style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; max-width: 1000px; margin: 0 auto;">
-
-                <div class="flow-steps"
-                    style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; width: 100%; gap: 15px;">
-
-                    <div class="flow-item text-center" style="flex: 1; min-width: 100px;">
-                        <div class="flow-icon"
-                            style="font-size: 2.5rem; background: rgba(255,255,255,0.05); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto; border: 1px solid rgba(255,255,255,0.1);">
-                            🌾</div>
-                        <p style="font-weight: 500; font-size: 0.95rem;">Campo<br><span
-                                style="font-weight: 300; font-size: 0.75rem; color: #aaa;">Coleta de dados</span></p>
-                    </div>
-
-                    <div class="flow-arrow" style="color: var(--color-primary); font-size: 1.5rem; font-weight: bold;">➔
-                    </div>
-
-                    <div class="flow-item text-center" style="flex: 1; min-width: 100px;">
-                        <div class="flow-icon"
-                            style="font-size: 2.5rem; background: rgba(255,255,255,0.05); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto; border: 1px solid rgba(255,255,255,0.1);">
-                            📱</div>
-                        <p style="font-weight: 500; font-size: 0.95rem;">Aplicativo<br><span
-                                style="font-weight: 300; font-size: 0.75rem; color: #aaa;">Mobile Offline</span></p>
-                    </div>
-
-                    <div class="flow-arrow" style="color: var(--color-primary); font-size: 1.5rem; font-weight: bold;">➔
-                    </div>
-
-                    <div class="flow-item text-center" style="flex: 1; min-width: 100px;">
-                        <div class="flow-icon"
-                            style="font-size: 2.5rem; background: rgba(255,255,255,0.05); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto; border: 1px solid rgba(255,255,255,0.1);">
-                            ☁️</div>
-                        <p style="font-weight: 500; font-size: 0.95rem;">Sincronização<br><span
-                                style="font-weight: 300; font-size: 0.75rem; color: #aaa;">Cloud & API</span></p>
-                    </div>
-
-                    <div class="flow-arrow" style="color: var(--color-primary); font-size: 1.5rem; font-weight: bold;">➔
-                    </div>
-
-                    <div class="flow-item text-center" style="flex: 1; min-width: 100px;">
-                        <div class="flow-icon"
-                            style="font-size: 2.5rem; background: rgba(255,255,255,0.05); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto; border: 1px solid rgba(255,255,255,0.1);">
-                            🧠</div>
-                        <p style="font-weight: 500; font-size: 0.95rem;">Análise<br><span
-                                style="font-weight: 300; font-size: 0.75rem; color: #aaa;">IA Agronômica</span></p>
-                    </div>
-
-                    <div class="flow-arrow" style="color: var(--color-primary); font-size: 1.5rem; font-weight: bold;">➔
-                    </div>
-
-                    <div class="flow-item text-center" style="flex: 1; min-width: 100px;">
-                        <div class="flow-icon"
-                            style="font-size: 2.5rem; background: rgba(255,255,255,0.05); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto; border: 1px solid rgba(255,255,255,0.1);">
-                            📄</div>
-                        <p style="font-weight: 500; font-size: 0.95rem;">Relatório<br><span
-                                style="font-weight: 300; font-size: 0.75rem; color: #aaa;">Técnico / Web</span></p>
-                    </div>
-
-                    <div class="flow-arrow" style="color: var(--color-primary); font-size: 1.5rem; font-weight: bold;">➔
-                    </div>
-
-                    <div class="flow-item text-center" style="flex: 1; min-width: 100px;">
-                        <div class="flow-icon"
-                            style="font-size: 2.5rem; background: var(--color-primary); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto; color: white; box-shadow: 0 0 20px rgba(46, 125, 50, 0.5);">
-                            🎯</div>
-                        <p style="font-weight: 500; font-size: 0.95rem; color: var(--color-primary);">Decisão<br><span
-                                style="font-weight: 300; font-size: 0.75rem; color: #aaa;">Ação no Campo</span></p>
-                    </div>
-
-                </div>
-            </div>
-
-            <style>
-                @media screen and (max-width: 900px) {
-                    .flow-steps {
-                        flex-direction: column;
-                    }
-
-                    .flow-arrow {
-                        transform: rotate(90deg);
-                        margin: 15px 0;
-                    }
-                }
-            </style>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         4. DO CAMPO AO RELATÓRIO DIGITAL
-    ══════════════════════════════════════════════ -->
-    <section class="como-usar section-padding" id="como-usar">
-        <div class="container animate-on-scroll">
-            <h2 class="section-title">📚 Do Campo ao Relatório Digital</h2>
-            <p class="section-desc">Cada módulo do FortSmart foi construído para resolver um problema real da gestão
-                agrícola.</p>
-
-            <div class="passo-container">
-
-                <!-- ── Bloco 1: Criar Talhão ── -->
-                <div class="passo-bloco animate-on-scroll">
-                    <div class="passo-texto">
-                        <div class="passo-badge">Módulo 1</div>
-                        <h3 class="passo-titulo">🌾 Criar Talhão — Gestão Estruturada por Área</h3>
-                        <p class="passo-desc">Organiza a propriedade em unidades técnicas individuais com histórico
-                            próprio.</p>
-                        <div class="funcao-bloco">
-                            <div class="funcao-row">
-                                <span class="funcao-tag problema">Problema</span>
-                                <span>Informações misturadas entre áreas, sem rastreabilidade por talhão</span>
-                            </div>
-                            <div class="funcao-row">
-                                <span class="funcao-tag solucao">Solução</span>
-                                <span>Delimitação via GPS, nomeação por cultura/safra, área total registrada</span>
-                            </div>
-                            <div class="funcao-row">
-                                <span class="funcao-tag impacto">Impacto</span>
-                                <span>Cada talhão tem histórico, monitoramentos, aplicações e relatórios
-                                    individuais</span>
-                            </div>
-                        </div>
-                        <ul class="passo-lista">
-                            <li>Delimitação da área via GPS</li>
-                            <li>Nomear por cultura, safra e localização</li>
-                            <li>Registrar área total e dados técnicos</li>
-                            <li>Centralizar histórico por ciclo produtivo</li>
-                        </ul>
-                    </div>
-                    <div class="passo-galeria galeria-2">
-                        <div class="mockup-wrapper" style="position: relative;">
-                            <span
-                                style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; z-index: 2;">📱
-                                Mobile</span>
-                            <img src="assets/images/modulo_talhoes.png" alt="Módulo Talhões" class="mockup-img" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                        </div>
-                        <div class="mockup-wrapper delay-1" style="position: relative;">
-                            <span
-                                style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; z-index: 2;">📱
-                                Mobile</span>
-                            <img src="assets/images/Talhoes.jpeg" alt="Talhões no mapa" class="mockup-img" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ── Bloco 2: Monitoramento Técnico ── -->
-                <div class="passo-bloco reverse-mobile animate-on-scroll">
-                    <div class="passo-galeria galeria-monit">
-                        <div class="mockup-wrapper" style="position: relative;">
-                            <span
-                                style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; z-index: 2;">📱
-                                Mobile</span>
-                            <img src="assets/images/monitoramento_1.jpeg" alt="Monitoramento 1" class="mockup-img" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                        </div>
-                        <div class="mockup-wrapper delay-1" style="position: relative;">
-                            <img src="assets/images/monitoramento_2.jpeg" alt="Monitoramento 2" class="mockup-img" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                        </div>
-                        <div class="mockup-wrapper delay-2" style="position: relative;">
-                            <img src="assets/images/monitoramento_3.jpeg" alt="Monitoramento 3" class="mockup-img" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                        </div>
-                        <div class="mockup-wrapper delay-1" style="position: relative;">
-                            <img src="assets/images/monitoramento_4.jpeg" alt="Monitoramento 4" class="mockup-img" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                        </div>
-                        <div class="mockup-wrapper delay-2" style="position: relative;">
-                            <img src="assets/images/monitoramento_5.jpeg" alt="Monitoramento 5" class="mockup-img" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                        </div>
-                    </div>
-                    <div class="passo-texto">
-                        <div class="passo-badge">Módulo 2</div>
-                        <h3 class="passo-titulo">🌱 Monitoramento Técnico — Registro Estruturado de Campo</h3>
-                        <p class="passo-desc">Ferramenta para registrar ocorrências técnicas diretamente na lavoura.</p>
-                        <div class="funcao-bloco">
-                            <div class="funcao-row">
-                                <span class="funcao-tag problema">Problema</span>
-                                <span>Falta de histórico estruturado — decisões tomadas só pela memória</span>
-                            </div>
-                            <div class="funcao-row">
-                                <span class="funcao-tag solucao">Solução</span>
-                                <span>Registro técnico por talhão com fotos georreferenciadas e classificação</span>
-                            </div>
-                            <div class="funcao-row">
-                                <span class="funcao-tag impacto">Impacto</span>
-                                <span>Identificar recorrência de pragas e antecipar problemas futuros com dados
-                                    reais</span>
-                            </div>
-                        </div>
-                        <ul class="passo-lista">
-                            <li>Pragas, doenças e plantas daninhas</li>
-                            <li>Estágio fenológico e nível de infestação</li>
-                            <li>Fotos georreferenciadas com data</li>
-                            <li>Base comparativa entre safras</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- ── Bloco 3: Registro de Aplicações ── -->
-                <div class="passo-bloco animate-on-scroll">
-                    <div class="passo-texto">
-                        <div class="passo-badge">Módulo 3</div>
-                        <h3 class="passo-titulo">🚜 Registro de Aplicações — Rastreabilidade Operacional</h3>
-                        <p class="passo-desc">Controle técnico completo de todas as aplicações realizadas na lavoura.
-                        </p>
-                        <div class="funcao-bloco">
-                            <div class="funcao-row">
-                                <span class="funcao-tag problema">Problema</span>
-                                <span>Falta de controle preciso e dificuldade de comprovar manejo realizado</span>
-                            </div>
-                            <div class="funcao-row">
-                                <span class="funcao-tag solucao">Solução</span>
-                                <span>Registro de produto, dose, data, classe e tipo de aplicação por talhão</span>
-                            </div>
-                            <div class="funcao-row">
-                                <span class="funcao-tag impacto">Impacto</span>
-                                <span>Histórico completo para avaliação agronômica e suporte à tomada de decisão</span>
-                            </div>
-                        </div>
-                        <ul class="passo-lista">
-                            <li>Data, produto, dose e classe registrados</li>
-                            <li>Tipo de aplicação e observações técnicas</li>
-                            <li>Histórico completo por talhão e safra</li>
-                            <li>Base para avaliação de eficiência</li>
-                        </ul>
-                    </div>
-                    <div class="passo-galeria galeria-2">
-                        <div class="mockup-wrapper" style="position: relative;">
-                            <span
-                                style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; z-index: 2;">📱
-                                Mobile</span>
-                            <img src="assets/images/visita_tecnica_1.jpeg" alt="Registro de Aplicações" class="mockup-img" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                        </div>
-                        <div class="mockup-wrapper delay-1" style="position: relative;">
-                            <img src="assets/images/visita_tecnica_2.jpeg" alt="Aplicações no talhão" class="mockup-img" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ── Bloco 4: Visita Técnica + Relatório Web ── -->
-                <div class="passo-bloco reverse-mobile animate-on-scroll">
-                    <div class="passo-galeria galeria-2">
-                        <div class="mockup-wrapper" style="position: relative;">
-                            <span
-                                style="position: absolute; top: 10px; left: 10px; background: var(--color-primary); color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; z-index: 2;">💻
-                                Web Dashboard</span>
-                            <img src="assets/images/visita_tecnica_3.jpeg" alt="Visita Técnica 3" class="mockup-img" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                        </div>
-                    </div>
-                    <div class="passo-texto">
-                        <div class="passo-badge">Módulo 4</div>
-                        <h3 class="passo-titulo">📊 Visita Técnica + Relatório Web Profissional</h3>
-                        <p class="passo-desc">Avaliação consolidada do talhão, transformada em relatório digital
-                            compartilhável.</p>
-                        <div class="funcao-bloco">
-                            <div class="funcao-row">
-                                <span class="funcao-tag problema">Problema</span>
-                                <span>Relatórios informais sem padrão, difíceis de compartilhar e apresentar</span>
-                            </div>
-                            <div class="funcao-row">
-                                <span class="funcao-tag solucao">Solução</span>
-                                <span>Visita estruturada gera relatório técnico digital com link de
-                                    compartilhamento</span>
-                            </div>
-                            <div class="funcao-row">
-                                <span class="funcao-tag impacto">Impacto</span>
-                                <span>Valorização do trabalho do consultor e apresentação profissional ao
-                                    produtor</span>
-                            </div>
-                        </div>
-                        <ul class="passo-lista">
-                            <li>Situação geral, monitoramentos e aplicações</li>
-                            <li>Galeria de fotos e observações técnicas</li>
-                            <li>Dashboard técnico por talhão</li>
-                            <li>Compartilhável por link — visual profissional</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- ── Bloco 5: Tomada de Decisão Baseada em Dados ── -->
-                <div class="passo-bloco animate-on-scroll"
-                    style="flex-direction: column; text-align: center; padding: 4rem 2rem;">
-                    <div class="passo-badge mx-auto" style="margin: 0 auto 1rem auto;">Módulo 5</div>
-                    <h3 class="passo-titulo">🧠 Tomada de Decisão Baseada em Dados</h3>
-                    <p class="passo-desc" style="max-width: 600px; margin: 0 auto 2rem auto;">Mais do que registrar.
-                        Decidir. O FortSmart consolida as informações em uma visão gerencial poderosa.</p>
-
-                    <div class="decisao-grid"
-                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; width: 100%;">
-                        <div class="decisao-item"
-                            style="background: var(--color-bg-light); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.05);">
-                            <span style="font-size: 2rem; display: block; margin-bottom: 10px;">📊</span>
-                            <h4 style="font-size: 1.1rem; color: var(--color-text-main); margin-bottom: 5px;">Comparação
-                            </h4>
-                            <p style="font-size: 0.9rem; color: var(--color-text-muted);">Entre safras e talhões</p>
-                        </div>
-                        <div class="decisao-item"
-                            style="background: var(--color-bg-light); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.05);">
-                            <span style="font-size: 2rem; display: block; margin-bottom: 10px;">🔎</span>
-                            <h4 style="font-size: 1.1rem; color: var(--color-text-main); margin-bottom: 5px;">Padrões
-                            </h4>
-                            <p style="font-size: 0.9rem; color: var(--color-text-muted);">Identificação de reincidências
-                            </p>
-                        </div>
-                        <div class="decisao-item"
-                            style="background: var(--color-bg-light); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.05);">
-                            <span style="font-size: 2rem; display: block; margin-bottom: 10px;">📈</span>
-                            <h4 style="font-size: 1.1rem; color: var(--color-text-main); margin-bottom: 5px;">Eficiência
-                            </h4>
-                            <p style="font-size: 0.9rem; color: var(--color-text-muted);">Avaliação de resultados do
-                                manejo</p>
-                        </div>
-                        <div class="decisao-item"
-                            style="background: var(--color-bg-light); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.05);">
-                            <span style="font-size: 2rem; display: block; margin-bottom: 10px;">📅</span>
-                            <h4 style="font-size: 1.1rem; color: var(--color-text-main); margin-bottom: 5px;">
-                                Planejamento</h4>
-                            <p style="font-size: 0.9rem; color: var(--color-text-muted);">Ação orientada por base
-                                técnica</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div><!-- /passo-container -->
-
-            <!-- Indicador de impacto final -->
-            <div class="passo-conclusao text-center animate-on-scroll delay-2">
-                <div class="conclusao-box">
-                    <p class="conclusao-tag">🧠 Resultado Estratégico</p>
-                    <h3 class="impact-text">Do registro no campo à decisão técnica baseada em dados reais.</h3>
-                    <p class="conclusao-sub">FortSmart — mais do que um app, uma ferramenta de gestão agrícola orientada
-                        por dados.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-    <!-- ══════════════════════════════════════════════
-         5. DIFERENCIAIS — Evolução Fenológica
-    ══════════════════════════════════════════════ -->
-    <section class="diferencial-section section-padding bg-light" id="diferenciais">
+    <!-- 8. CTA -->
+    <section class="lp-section bg-warm" id="contato">
         <div class="container">
-            <h2 class="section-title">🌿 Diferenciais do FortSmart</h2>
-            <p class="section-desc">Funcionalidades exclusivas que elevam o nível do aprendizado técnico.</p>
-
-            <!-- Evolução Fenológica -->
-            <div class="diferencial-bloco animate-on-scroll">
-                <div class="diferencial-texto">
-                    <div class="passo-badge badge-extra">Extra</div>
-                    <h3 class="passo-titulo">🧬 Evolução Fenológica</h3>
-                    <p class="diferencial-desc">
-                        Acompanhe o ciclo biológico da cultura desde a semeadura até a colheita.
-                        A visualização fenológica permite entender cada estádio de desenvolvimento
-                        da planta, conectando a teoria da sala de aula com a realidade do campo.
-                    </p>
-                </div>
-                <div class="diferencial-img-wrap" style="display: flex; flex-direction: column; gap: 1.5rem;">
-                    <img src="assets/images/evolucao_fenologica.png" alt="Evolução Fenológica" class="diferencial-img" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                    <img src="assets/images/evolucao_fenologica_2.jpeg" alt="Evolução Fenológica 2" class="diferencial-img" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                </div>
-            </div>
-
-            <!-- Painel Colheita -->
-            <div class="diferencial-bloco reverse-mobile animate-on-scroll">
-                <div class="diferencial-img-wrap">
-                    <img src="assets/images/painel_colhieta.png" alt="Painel de Colheita" class="diferencial-img" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                </div>
-                <div class="diferencial-texto">
-                    <div class="passo-badge badge-inovador">Inovação</div>
-                    <h3 class="passo-titulo">🚜 Painel de Colheita</h3>
-                    <p class="diferencial-desc">
-                        Um dashboard inovador que consolida os dados coletados ao longo de toda
-                        a safra. Métricas de produtividade, rastreabilidade e análise comparativa
-                        diretamente no celular — transformando dados em decisões inteligentes.
-                    </p>
+            <div class="cta-block animate-on-scroll">
+                <span class="lp-kicker">Próximo passo</span>
+                <h2 class="lp-title" style="margin-left:auto;margin-right:auto">Solicite uma demonstração ou entre no sistema.</h2>
+                <p class="lp-sub" style="margin:0 auto 1.75rem">Veja dashboard, estoque e prescrição com a nova identidade FortSmart.</p>
+                <div class="hero-actions">
+                    <a href="app/index.html" class="btn btn-primary btn-large">Entrar na demonstração</a>
+                    <a href="https://wa.me/556692505091?text=Quero%20uma%20demonstracao%20do%20FortSmart%20Agro" target="_blank" rel="noopener" class="btn btn-secondary btn-large">Falar no WhatsApp</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.fortsmart.agro&pcampaignid=web_share" target="_blank" rel="noopener" class="btn btn-secondary btn-large">App na Play Store</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════
-         6. LINHA DO TEMPO
-    ══════════════════════════════════════════════ -->
-    <section class="timeline-section section-padding bg-light" id="timeline">
-        <div class="container animate-on-scroll">
-            <h2 class="section-title">A Evolução da Agricultura</h2>
-            <p class="section-desc">O FortSmart como parte da evolução natural da agricultura.</p>
-
-            <div class="timeline" style="position: relative;">
-                <!-- Linha Vaza-vaza -->
-                <div class="timeline-line"
-                    style="position: absolute; left: 50%; top: 0; bottom: 0; width: 4px; background: rgba(46, 125, 50, 0.15); transform: translateX(-50%); border-radius: 4px; z-index: 0;">
-                </div>
-
-                <div class="timeline-item left" style="position: relative; z-index: 1;">
-                    <div class="timeline-content hover-fx timeline-anim">
-                        <span style="font-size: 2rem; display: block; margin-bottom: 5px;">⛏️</span>
-                        <h3>1. Agricultura Tradicional</h3>
-                        <p>Controle manual, registros em papel e decisão empírica.</p>
-                    </div>
-                </div>
-                <div class="timeline-item right" style="position: relative; z-index: 1;">
-                    <div class="timeline-content hover-fx timeline-anim">
-                        <span style="font-size: 2rem; display: block; margin-bottom: 5px;">🚜</span>
-                        <h3>2. Mecanização</h3>
-                        <p>Aumento de produtividade e ganho de escala operacional.</p>
-                    </div>
-                </div>
-                <div class="timeline-item left" style="position: relative; z-index: 1;">
-                    <div class="timeline-content hover-fx timeline-anim">
-                        <span style="font-size: 2rem; display: block; margin-bottom: 5px;">📡</span>
-                        <h3>3. Agricultura de Precisão</h3>
-                        <p>Uso de GPS, monitoramento técnico e levantamento de dados espaciais.</p>
-                    </div>
-                </div>
-                <div class="timeline-item right" style="position: relative; z-index: 1;">
-                    <div class="timeline-content hover-fx timeline-anim">
-                        <span style="font-size: 2rem; display: block; margin-bottom: 5px;">💻</span>
-                        <h3>4. Digitalização</h3>
-                        <p>Sistemas de registro, aplicativos móveis e organização digital.</p>
-                    </div>
-                </div>
-                <div class="timeline-item left" style="position: relative; z-index: 1;">
-                    <div class="timeline-content hover-fx timeline-anim last"
-                        style="border: 2px solid var(--color-primary); background: var(--color-bg-soft-green);">
-                        <span style="font-size: 2rem; display: block; margin-bottom: 5px;">🚀</span>
-                        <h3 style="color: var(--color-primary);">5. Gestão Baseada em Dados</h3>
-                        <p>Histórico estruturado, relatórios online e decisão técnica orientada por dados com o
-                            FortSmart.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         NEW: DIFERENCIAIS FORTSMART
-    ══════════════════════════════════════════════ -->
-    <section class="diferenciais section-padding bg-light" id="diferenciais">
-        <div class="container animate-on-scroll">
-            <h2 class="section-title text-center" style="margin-bottom: 3rem;">Por que escolher o FortSmart?</h2>
-
-            <div class="diferenciais-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
-
-                <div class="diferencial-item"
-                    style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
-                    <div style="color: var(--color-primary); font-size: 1.5rem; flex-shrink: 0;">✔</div>
-                    <div>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.1rem;">Feito por
-                            Agrônomos</h4>
-                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Lógica operacional baseada na
-                            realidade técnica e nas necessidades práticas do dia a dia no campo.</p>
-                    </div>
-                </div>
-
-                <div class="diferencial-item"
-                    style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
-                    <div style="color: var(--color-primary); font-size: 1.5rem; flex-shrink: 0;">✔</div>
-                    <div>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.1rem;">100%
-                            Offline-First</h4>
-                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">O aplicativo Mobile funciona
-                            perfeitamente sem internet. Você sincroniza os dados apenas quando tiver conexão.</p>
-                    </div>
-                </div>
-
-                <div class="diferencial-item"
-                    style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
-                    <div style="color: var(--color-primary); font-size: 1.5rem; flex-shrink: 0;">✔</div>
-                    <div>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.1rem;">Rastreabilidade
-                            Total</h4>
-                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Histórico georreferenciado
-                            (Polígonos e Pontos GPS) para saber exatamente o que aconteceu em cada talhão.</p>
-                    </div>
-                </div>
-
-                <div class="diferencial-item"
-                    style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
-                    <div style="color: var(--color-primary); font-size: 1.5rem; flex-shrink: 0;">✔</div>
-                    <div>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.1rem;">IA Agronômica
-                        </h4>
-                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Algoritmos que analisam a
-                            severidade dos problemas e auxiliam a tomada de decisão preventiva.</p>
-                    </div>
-                </div>
-
-                <div class="diferencial-item"
-                    style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
-                    <div style="color: var(--color-primary); font-size: 1.5rem; flex-shrink: 0;">✔</div>
-                    <div>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.1rem;">Painéis
-                            Gerenciais (BI)</h4>
-                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Web Dashboard completo com
-                            gráficos técnicos para consultorias e grandes empresas.</p>
-                    </div>
-                </div>
-
-                <div class="diferencial-item"
-                    style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; align-items: flex-start; gap: 1rem;">
-                    <div style="color: var(--color-primary); font-size: 1.5rem; flex-shrink: 0;">✔</div>
-                    <div>
-                        <h4 style="margin-bottom: 0.5rem; color: var(--color-dark); font-size: 1.1rem;">Prescrição
-                            Segura</h4>
-                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Geração de caldas e receitas
-                            integrando segurança e adequação climática.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         7. ECOSSISTEMA FORTSMART AGRO (9 MÓDULOS)
-    ══════════════════════════════════════════════ -->
-    <section class="ecosystem-section" id="ecossistema">
-        <div class="container animate-on-scroll">
-            <h2 class="section-title text-center" style="color: var(--color-dark); margin-bottom: 1rem;">Portfólio
-                Avançado:<br>FortSmart Agro Ecosystem</h2>
-            <p class="section-desc text-center"
-                style="color: var(--color-gray); margin-bottom: 3rem; max-width: 900px; margin-left: auto; margin-right: auto;">
-                Uma plataforma agronômica robusta e de alta complexidade, projetada para cobrir de ponta a ponta o ciclo
-                de vida da lavoura. Diferente de aplicações genéricas, possui algoritmos proprietários e Inteligência
-                Artificial focada na precisão diária do consultor e do produtor.
-            </p>
-
-            <div class="ecosystem-summary animate-on-scroll delay-1"
-                style="max-width: 900px; margin: 0 auto 4rem auto; background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden;">
-                <table style="width: 100%; border-collapse: collapse; text-align: left;">
-                    <thead>
-                        <tr style="background: var(--color-primary); color: white;">
-                            <th style="padding: 1.2rem 1.5rem; font-weight: 600; font-size: 1.1rem;">Módulo</th>
-                            <th style="padding: 1.2rem 1.5rem; font-weight: 600; font-size: 1.1rem;">Função Principal
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid #eee; transition: background 0.3s;"
-                            onmouseover="this.style.background='#f9fcf9'"
-                            onmouseout="this.style.background='transparent'">
-                            <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--color-dark);">📡
-                                Monitoramento</td>
-                            <td style="padding: 1rem 1.5rem; color: #555;">Registro de pragas, doenças e plantas
-                                daninhas</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #eee; transition: background 0.3s;"
-                            onmouseover="this.style.background='#f9fcf9'"
-                            onmouseout="this.style.background='transparent'">
-                            <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--color-dark);">🌱 Plantio
-                            </td>
-                            <td style="padding: 1rem 1.5rem; color: #555;">Controle técnico das operações de plantio
-                            </td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #eee; transition: background 0.3s;"
-                            onmouseover="this.style.background='#f9fcf9'"
-                            onmouseout="this.style.background='transparent'">
-                            <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--color-dark);">🧪 Pesquisa
-                            </td>
-                            <td style="padding: 1rem 1.5rem; color: #555;">Experimentos agronômicos e análise
-                                estatística</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #eee; transition: background 0.3s;"
-                            onmouseover="this.style.background='#f9fcf9'"
-                            onmouseout="this.style.background='transparent'">
-                            <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--color-dark);">📋 Visita
-                                Técnica</td>
-                            <td style="padding: 1rem 1.5rem; color: #555;">Relatórios profissionais para consultoria
-                            </td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #eee; transition: background 0.3s;"
-                            onmouseover="this.style.background='#f9fcf9'"
-                            onmouseout="this.style.background='transparent'">
-                            <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--color-dark);">🗺️ Mapas</td>
-                            <td style="padding: 1rem 1.5rem; color: #555;">Visualização geográfica das áreas</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #eee; transition: background 0.3s;"
-                            onmouseover="this.style.background='#f9fcf9'"
-                            onmouseout="this.style.background='transparent'">
-                            <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--color-dark);">📊 Relatórios
-                            </td>
-                            <td style="padding: 1rem 1.5rem; color: #555;">Relatórios técnicos automatizados</td>
-                        </tr>
-                        <tr style="transition: background 0.3s;" onmouseover="this.style.background='#f9fcf9'"
-                            onmouseout="this.style.background='transparent'">
-                            <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--color-primary);">🧠 IA
-                                Agronômica</td>
-                            <td style="padding: 1rem 1.5rem; color: #555; font-weight: 500;">Recomendação baseada em
-                                dados</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3 class="text-center" style="margin-bottom: 2rem; color: var(--color-dark); font-size: 1.8rem;">
-                Detalhamento Técnico</h3>
-
-            <div class="ecosystem-grid">
-
-                <!-- Card 1 -->
-                <div class="eco-card">
-                    <span class="eco-icon">🛰️</span>
-                    <h3 class="eco-title">1. Monitoramento Inteligente</h3>
-                    <p class="eco-desc">Painel preditivo e reativo (lazy loading) capaz de processar grandes volumes de
-                        dados sem perda de performance.</p>
-                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
-                    <ul class="eco-features-list">
-                        <li><strong>IA Agronômica:</strong> Analisa clima/fenologia e gera <em>Scores de Confiança e
-                                Risco</em> com base na severidade real.</li>
-                        <li><strong>Heatmap Integrado:</strong> Mapas de calor sobrepostos aos talhões indicando
-                            <em>hotspots</em> críticos.
-                        </li>
-                        <li><strong>Assistente Contínuo:</strong> Formula pareceres textuais automáticos sugerindo
-                            manejos (Aceitável/Alerta/Crítico).</li>
-                        <li><strong>Filtros Dinâmicos:</strong> Filtragem cruzada (Culturas x Talhões) com consultas
-                            SQLite indexadas (offline-first).</li>
-                    </ul>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="eco-card">
-                    <span class="eco-icon">🌱</span>
-                    <h3 class="eco-title">2. Plantio e Subáreas</h3>
-                    <p class="eco-desc">Essencial para o planejamento milimétrico da semeadura, calibração de maquinário
-                        e acompanhamento da emergência.</p>
-                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
-                    <ul class="eco-features-list">
-                        <li><strong>Gerenciador de Subáreas:</strong> Fraciona o talhão via polígonos (ideal para
-                            pesquisa/testes de variedades).</li>
-                        <li><strong>Cálculo Geodésico Automático:</strong> Recalcula perímetro total e área real ao
-                            desenhar no campo.</li>
-                        <li><strong>Calibração de Plantadeira:</strong> Calcula sementes/m linear e sementes/ha baseado
-                            em germinação desejada.</li>
-                        <li><strong>Dashboard DAE Temporal:</strong> Régua de avanço vinculando Dias Após a Emergência
-                            (DAE) às barras de progresso.</li>
-                    </ul>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="eco-card">
-                    <span class="eco-icon">🧪</span>
-                    <h3 class="eco-title">3. Prescrição Premium</h3>
-                    <p class="eco-desc">O motor pericial do sistema para geração de receitas e caldas complexas
-                        (pulverizações aéreas e terrestres).</p>
-                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
-                    <ul class="eco-features-list">
-                        <li><strong>Algoritmos Duplos:</strong> Lógica aérea (capacidade de voo/faixa efetiva) e
-                            terrestre (tipo bico/pressão/largura).</li>
-                        <li><strong>Métricas Base-Zero:</strong> Rendimento operativo, volume de segurança (%) e
-                            hectares por tanque.</li>
-                        <li><strong>Geração Laudo PDF/A:</strong> Exports contendo metadados completos e assinatura do
-                            Responsável Técnico (R.T.).</li>
-                        <li><strong>Recarregamento Lote:</strong> Tratamento antifalha e seleção múltipla mestre-detalhe
-                            de talhões para agilidade.</li>
-                    </ul>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="eco-card">
-                    <span class="eco-icon">🗺️</span>
-                    <h3 class="eco-title">4. Talhões e Editor Poligonal</h3>
-                    <p class="eco-desc">O coração de mapeamento, superando APIs padrão através do algoritmo
-                        <em>FortSmartPolygonController</em>.
-                    </p>
-                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
-                    <ul class="eco-features-list">
-                        <li><strong>Vértices Inteligentes:</strong> Ícones responsivos que pulsam e <em>Midpoints
-                                dinâmicos</em> para edição fina do contorno.</li>
-                        <li><strong>Score de Complexidade Mapeada:</strong> Analisa se a topologia desenhada contém
-                            cruzamentos geométricos inválidos.</li>
-                        <li><strong>Correção Terrestre Elipsoidal:</strong> Traz precisão compensando curvatura real da
-                            Terra no cálculo de área.</li>
-                        <li><strong>Exportação KML Nativa:</strong> Gera e compartilha polígonos salvos com Google
-                            Earth, monitores JD e QGIS.</li>
-                    </ul>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="eco-card">
-                    <span class="eco-icon">🧑‍🌾</span>
-                    <h3 class="eco-title">5. Consultor (Visita Única)</h3>
-                    <p class="eco-desc">Maior centralizador de infos de R.T., condensando escaneamento total em uma
-                        timeline unificada.</p>
-                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
-                    <ul class="eco-features-list">
-                        <li><strong>Aba Unificada Multipassos:</strong> Clima, Fenologia, GPS point capture, Desvios e
-                            Diagnóstico em UX validada.</li>
-                        <li><strong>Integração Desvios ➡️ Ações:</strong> Atividades da safra nascem organicamente dos
-                            relatórios gerando cards de contexto.</li>
-                        <li><strong>Diagnóstico Duplo:</strong> Suporta envios de diários "parciais" e laudos "finais"
-                            documentados.</li>
-                        <li><strong>Motor Web Supabase:</strong> Empacota fluxos pesados e mídias (até 8 imagens
-                            offline) gerando links Web executivos leves.</li>
-                    </ul>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="eco-card">
-                    <span class="eco-icon">📊</span>
-                    <h3 class="eco-title">6. Relatório Agronômico</h3>
-                    <p class="eco-desc">Painéis de Business Intelligence (BI) convertidos com altíssima performance para
-                        o cenário mobile e dashboard.</p>
-                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
-                    <ul class="eco-features-list">
-                        <li><strong>Dashboard Executivo:</strong> Condensação do histórico, progresso físico e alertas
-                            por safra analisada.</li>
-                        <li><strong>Auto-Report IA:</strong> Lê os arquivos SQLite, mapeia sazonalidades e cria a base
-                            do relatório sem intervenção manual.</li>
-                        <li><strong>Immersive Gallery Views:</strong> Tela inteira de progressão fotográfica e
-                            checklists para análise detalhada de perdas.</li>
-                    </ul>
-                </div>
-
-                <!-- Card 7 -->
-                <div class="eco-card">
-                    <span class="eco-icon">📦</span>
-                    <h3 class="eco-title">7. Estoque e Inputs</h3>
-                    <p class="eco-desc">Controle rígido de químicos, biológicos e adubação orgânica garantindo o balanço
-                        do Retorno sobre Investimento (ROI).</p>
-                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
-                    <ul class="eco-features-list">
-                        <li><strong>Rastreio LIFO/FIFO:</strong> Guarda o tracking completo atrelado à operação (quem
-                            aplicou, quando, motivo).</li>
-                        <li><strong>Painéis Antecipados:</strong> Inteligência de relatórios para itens críticos (&lt;10
-                            uni) ou risco de validade (&lt;30 dias).</li>
-                        <li><strong>Chartbars Financeiros Dinâmicos:</strong> Exibe percentual de capital imobilizado
-                            por categoria de defensivo (ex: Inseticidas).</li>
-                    </ul>
-                </div>
-
-                <!-- Card 8 -->
-                <div class="eco-card">
-                    <span class="eco-icon">🌽</span>
-                    <h3 class="eco-title">8. Módulo de Colheita</h3>
-                    <p class="eco-desc">Especialista na mensuração técnica de perdas no fim da cadeia produtiva de Soja
-                        e Milho.</p>
-                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
-                    <ul class="eco-features-list">
-                        <li><strong>Calculadora Reversa Sc/ha:</strong> Cruza Peso de Amostra, Área e PMS (Peso/1000
-                            Sem.) escalando a estimativa de erro.</li>
-                        <li><strong>Carimbo BR de Aceitação:</strong> Bate de frente com os números teóricos para
-                            rotular: Aceitável, Alerta ou Perda Crítica.</li>
-                        <li><strong>Formatação e Localizer 100% Brasil:</strong> Filtros Regex robustos de máscaras e
-                            vírgulas operando nos pontos extraídos do maquinário.</li>
-                    </ul>
-                </div>
-
-                <!-- Card 9 -->
-                <div class="eco-card">
-                    <span class="eco-icon">🔬</span>
-                    <h3 class="eco-title">9. Research Pro Avançado</h3>
-                    <p class="eco-desc">O módulo state-of-the-art desenhado exclusivamente para pesquisadores acadêmicos
-                        ou R&D científico.</p>
-                    <div class="eco-features-title">✨ Funcionalidades Avançadas</div>
-                    <ul class="eco-features-list">
-                        <li><strong>Estatística Offline Integrada:</strong> Roda cálculos de ANOVA (Variância),
-                            Quadrados Médios (MQ) e Ratings Tukey (Testemunha x Parcela).</li>
-                        <li><strong>Janela Fenológica Biológica:</strong> Rastreador temporal ("Produto P aplicado c/ 5
-                            dias de atraso na base foliar").</li>
-                        <li><strong>Assistente Machine Learning (Scorecard):</strong> Balanceia Produtividade x
-                            Eficiência x Custo para eleger qual parcela tem maior ROI, plotando Heatmaps.</li>
-                        <li><strong>Sustentabilidade:</strong> Mensura Total I.A. kg/ha e classe toxicológica testada
-                            sobre blocos casualizados experimentais.</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         8. TECNOLOGIA E EDUCAÇÃO
-    ══════════════════════════════════════════════ -->
-    <section class="tech-edu section-padding bg-green-soft">
-        <div class="container text-center animate-on-scroll">
-            <h2 class="inspiring-text">"A agricultura do futuro é digital.<br>Dados de campo, decisões inteligentes."
-            </h2>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         NEW: INTELIGÊNCIA DOCUMENTADA (RELATÓRIOS)
-    ══════════════════════════════════════════════ -->
-    <section class="reports-showcase section-padding" id="relatorios" style="background: white;">
-        <div class="container animate-on-scroll">
-            <div style="display: flex; flex-wrap: wrap; gap: 4rem; align-items: center;">
-                <div style="flex: 1; min-width: 300px;">
-                    <h2 class="section-title" style="margin-bottom: 1.5rem;">Inteligência Documentada</h2>
-                    <p style="color: #666; font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
-                        O FortSmart transforma a complexidade do campo em documentos executivos prontos para compartilhamento. Valorize seu trabalho técnico com relatórios que impressionam clientes e investidores.
-                    </p>
-                    <ul style="list-style: none; padding: 0; margin-bottom: 2.5rem;">
-                        <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
-                            <span style="color: var(--color-primary); font-weight: bold;">✔</span> 
-                            <span>Relatórios de Monitoramento (Pragas/Doenças)</span>
-                        </li>
-                        <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
-                            <span style="color: var(--color-primary); font-weight: bold;">✔</span> 
-                            <span>Laudos Técnicos de Visita (Relatório Web)</span>
-                        </li>
-                        <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
-                            <span style="color: var(--color-primary); font-weight: bold;">✔</span> 
-                            <span>Mapas de Talhão e Perímetros (KML/PDF)</span>
-                        </li>
-                        <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
-                            <span style="color: var(--color-primary); font-weight: bold;">✔</span> 
-                            <span>Resumo de Aplicações e Receituário</span>
-                        </li>
-                    </ul>
-                    <a href="relatorio.html" target="_blank" class="btn btn-primary" style="padding: 18px 36px; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 10px;">
-                        📄 Ver Exemplo de Relatório Técnico
-                    </a>
-                </div>
-                <div style="flex: 1; min-width: 300px; position: relative;">
-                    <div style="background: var(--color-bg-light); border-radius: 15px; padding: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
-                        <img src="assets/images/relatorio__monitoramento.png" alt="Exemplo de Relatório" style="width: 100%; border-radius: 8px; border: 1px solid #ddd;" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                    </div>
-                    <div style="position: absolute; bottom: -20px; right: -20px; background: var(--color-primary); color: white; padding: 15px 25px; border-radius: 10px; font-weight: 700; box-shadow: 0 10px 20px rgba(46, 125, 50, 0.3);">
-                        Mobile + Web
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         NEW: VISÃO DE FUTURO (ROADMAP)
-    ══════════════════════════════════════════════ -->
-    <section class="future-vision section-padding bg-dark" id="roadmap" style="color: white;">
-        <div class="container animate-on-scroll">
-            <h2 class="section-title light text-center">O Futuro do Agronegócio</h2>
-            <p class="section-desc light text-center" style="max-width: 800px; margin: 0 auto 4rem auto;">
-                A FortSmart não para. Estamos construindo a maior infraestrutura de inteligência agronômica da América Latina.
-            </p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem;">
-                <div style="background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; cursor: default;" onmouseover="this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.background='rgba(255,255,255,0.03)'">
-                    <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">🛰️</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--color-primary);">IA & Satélite</h3>
-                    <p style="font-size: 0.95rem; color: #aaa; line-height: 1.5;">Integração nativa com imagens NDVI e algoritmos de detecção automática de estresse hídrico e nutricional.</p>
-                </div>
-                <div style="background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; cursor: default;" onmouseover="this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.background='rgba(255,255,255,0.03)'">
-                    <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">📊</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--color-primary);">Predictive Yield</h3>
-                    <p style="font-size: 0.95rem; color: #aaa; line-height: 1.5;">Modelos estatísticos avançados para previsão de produtividade baseados no histórico acumulado da safra.</p>
-                </div>
-                <div style="background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; cursor: default;" onmouseover="this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.background='rgba(255,255,255,0.03)'">
-                    <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">🦾</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--color-primary);">IoT & Sensores</h3>
-                    <p style="font-size: 0.95rem; color: #aaa; line-height: 1.5;">Conexão direta com estações meteorológicas e sensores de solo para monitoramento em tempo real (Real-time Agro).</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         5. IMPACTO - VALOR PERCEBIDO
-    ══════════════════════════════════════════════ -->
-    <section class="impacto-lp section-padding bg-primary-gradient" id="resultados">
-        <div class="container">
-            <div class="section-header animate-on-scroll text-center">
-                <span class="section-tag light">Resultados</span>
-                <h2 class="section-title light">Resultados que fazem diferença</h2>
-            </div>
-            
-            <div class="impacto-grid-lp">
-                <div class="impacto-card animate-on-scroll">
-                    <div class="impacto-icon">📈</div>
-                    <h3>Aumento da Produtividade</h3>
-                    <p>Identifique gargalos e aplique correções precisas por talhão.</p>
-                </div>
-                <div class="impacto-card animate-on-scroll delay-1">
-                    <div class="impacto-icon">💵</div>
-                    <h3>Redução de Custos</h3>
-                    <p>Evite desperdícios com aplicações certeiras e monitoramento inteligente.</p>
-                </div>
-                <div class="impacto-card animate-on-scroll delay-2">
-                    <div class="impacto-icon">⚡</div>
-                    <h3>Decisões Mais Rápidas</h3>
-                    <p>Dados em tempo real para ação imediata no campo.</p>
-                </div>
-                <div class="impacto-card animate-on-scroll delay-3">
-                    <div class="impacto-icon">🎯</div>
-                    <h3>Controle Total</h3>
-                    <p>Visão completa da fazenda na palma da sua mão.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         6. PROVA SOCIAL - DEPOIMENTO
-    ══════════════════════════════════════════════ -->
-    <section class="depoimento-lp section-padding" id="depoimento">
-        <div class="container">
-            <div class="depoimento-card animate-on-scroll">
-                <div class="depoimento-conteudo">
-                    <div class="depoimento-estrelas">★★★★★</div>
-                    <blockquote>
-                        "Depois que comecei a organizar meus dados com o sistema, consegui enxergar onde estava perdendo
-                        dinheiro. Aumentei minha produtividade em 15% na primeira safra."
-                    </blockquote>
-                    <div class="depoimento-autor">
-                        <div class="autor-info">
-                            <strong>Produtor Rural</strong>
-                            <span>Soja e Milho • 1.200 hectares</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="depoimento-badge">
-                    <span>🚀</span>
-                    <p>Resultados reais de quem usa FortSmart</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-                         7. IMAGENS DO SISTEMA - PROVA VISUAL
-                    ══════════════════════════════════════════════ -->
-    <section class="galeria-lp section-padding bg-light" id="galeria">
-        <div class="container">
-            <div class="section-header animate-on-scroll text-center">
-                <span class="section-tag">Veja na Prática</span>
-                <h2 class="section-title">O sistema que está transformando a gestão agrícola</h2>
-            </div>
-            <div class="galeria-grid">
-                <div class="galeria-item animate-on-scroll">
-                    <img src="assets/images/modulo_talhoes.png" alt="Mapeamento de Talhões"
-                        onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                    <div class="galeria-overlay">
-                        <span>🗺️ Mapeamento de Talhões</span>
-                    </div>
-                </div>
-                <div class="galeria-item animate-on-scroll delay-1">
-                    <img src="assets/images/monitoramento_1.jpeg" alt="Monitoramento no Campo"
-                        onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                    <div class="galeria-overlay">
-                        <span>📱 App no Campo</span>
-                    </div>
-                </div>
-                <div class="galeria-item animate-on-scroll delay-2">
-                    <img src="assets/images/relatorio__monitoramento.png" alt="Relatório Técnico"
-                        onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                    <div class="galeria-overlay">
-                        <span>📊 Relatórios Profissionais</span>
-                    </div>
-                </div>
-                <div class="galeria-item animate-on-scroll">
-                    <img src="assets/images/talhoes.jpeg" alt="Visualização de Mapa"
-                        onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                    <div class="galeria-overlay">
-                        <span>🌾 Visualização por Talhão</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════
-         8. CTA FINAL - FORTE
-    ══════════════════════════════════════════════ -->
-    <section class="cta-final-lp section-padding" id="contato">
-        <div class="container">
-            <div class="cta-box animate-on-scroll">
-                <h2>Comece agora a transformar sua lavoura</h2>
-                <p>Não continue tomando decisões no escuro. Use tecnologia para <strong>aumentar seus resultados</strong>.
-                </p>
-    
-                <div class="cta-botoes">
-                    <a href="https://play.google.com/store/apps/details?id=com.fortsmart.agro&pcampaignid=web_share"
-                        target="_blank" class="btn btn-primary btn-xlarge">
-                        🚀 Testar Grátis
-                    </a>
-                    <a href="https://wa.me/556692505091?text=Quero%20conhecer%20o%20FortSmart%20Agro" target="_blank"
-                        class="btn btn-outline-white btn-xlarge">
-                        💬 Falar no WhatsApp
-                    </a>
-                </div>
-    
-                <div class="cta-garantia">
-                    <span>✓ Teste gratuito</span>
-                    <span>✓ Sem cartão de crédito</span>
-                    <span>✓ Suporte personalizado</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer-lp">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="assets/images/fortsmart.png" alt="FortSmart" class="footer-logo"
-                        onerror="this.onerror=null;this.src='assets/images/placeholder.svg';">
-                    <p>FortSmart Agro - Tecnologia Inteligente no Campo</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#problema">Problema</a>
-                    <a href="#solucao">Solução</a>
-                    <a href="#funcionalidades">Funcionalidades</a>
-                    <a href="#contato">Contato</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 FortSmart. Todos os direitos reservados.</p>
-            </div>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div><strong>FortSmart</strong> — tecnologia agronômica para o campo</div>
+            <div>© <span id="year"></span> FortSmart Agro</div>
         </div>
     </footer>
 
-    <!-- Botão Flutuante WhatsApp -->
-    <a href="https://wa.me/556692505091?text=Quero%20conhecer%20o%20FortSmart%20Agro" target="_blank" class="whatsapp-float"
-        aria-label="Fale conosco no WhatsApp">
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M16 2.5C8.544 2.5 2.5 8.544 2.5 16c0 2.378.619 4.654 1.794 6.64L2.5 29.5l7.031-1.844A13.433 13.433 0 0 0 16 29.5c7.456 0 13.5-6.044 13.5-13.5S23.456 2.5 16 2.5m8.053 19.338c-.334.944-1.922 1.815-2.656 1.934-.685.11-1.572.228-5.185-1.272-4.366-1.815-7.185-6.287-7.404-6.581-.219-.294-1.766-2.353-1.766-4.5 0-2.147 1.119-3.2 1.522-3.622.403-.422.875-.528 1.166-.528.29 0 .584 0 .84.013.266.012.619-.1 1.053.944.444 1.075 1.488 3.637 1.622 3.906.134.269.219.584.04.981-.178.403-.269.647-.528.944-.26.297-.547.653-.787.884-.26.253-.535.525-.231 1.044.303.519 1.347 2.222 2.888 3.6 1.987 1.778 3.653 2.331 4.184 2.587.531.256.84.219 1.156-.144.316-.363 1.363-1.584 1.728-2.128.366-.544.731-.453 1.219-.272.488.181 3.084 1.453 3.616 1.719.531.266.884.397 1.016.619.131.222.131 1.284-.203 2.228"
-                fill="#FFF" />
-        </svg>
+    <a class="wa-float" href="https://wa.me/556692505091?text=Quero%20conhecer%20o%20FortSmart%20Agro" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
-<script src="assets/js/main.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

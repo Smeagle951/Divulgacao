@@ -12,6 +12,9 @@
         document.write('<base href="' + location.origin + base + '">');
       })();
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/relatorio.css" />
 </head>
 
@@ -22,10 +25,10 @@
         <!-- ════════════════════════ SIDEBAR ════════════════════════ -->
         <aside class="sidebar">
             <div class="sidebar-logo">
-                <img src="assets/images/FortSmart.png" alt="FortSmart" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';" />
+                <img src="assets/images/fortsmart.png" alt="FortSmart" onerror="this.onerror=null;this.src='assets/images/placeholder.svg';" />
                 <div>
                     <div class="sidebar-logo-text">FortSmart</div>
-                    <span class="sidebar-logo-sub">Gestão Agrícola</span>
+                    <span class="sidebar-logo-sub">Gestão agronômica</span>
                 </div>
             </div>
 
@@ -37,29 +40,16 @@
 
             <nav class="sidebar-nav">
                 <div class="nav-section-label">Navegação</div>
-                <a class="nav-item active" href="#resumo">
-                    <span class="nav-icon">📋</span> Visão Geral
-                </a>
-                <a class="nav-item" href="#propriedade">
-                    <span class="nav-icon">🌾</span> Propriedade
-                </a>
-                <a class="nav-item" href="#monitoramento">
-                    <span class="nav-icon">🔬</span> Monitoramento
-                </a>
-                <a class="nav-item" href="#pragas">
-                    <span class="nav-icon">🐛</span> Análise de Pragas
-                </a>
-                <a class="nav-item" href="#risco">
-                    <span class="nav-icon">📊</span> Avaliação de Risco
-                </a>
-                <a class="nav-item" href="#auditoria">
-                    <span class="nav-icon">🔒</span> Auditoria
-                </a>
+                <a class="nav-item active" href="#resumo">Visão Geral</a>
+                <a class="nav-item" href="#propriedade">Propriedade</a>
+                <a class="nav-item" href="#monitoramento">Monitoramento</a>
+                <a class="nav-item" href="#pragas">Análise de Pragas</a>
+                <a class="nav-item" href="#risco">Avaliação de Risco</a>
+                <a class="nav-item" href="#auditoria">Auditoria</a>
 
                 <div class="nav-section-label" style="margin-top:1rem;">Relatório</div>
-                <a class="nav-item" href="#" onclick="window.print(); return false;">
-                    <span class="nav-icon">🖨️</span> Imprimir / PDF
-                </a>
+                <a class="nav-item" href="#" onclick="window.print(); return false;">Imprimir / PDF</a>
+                <a class="nav-item" href="app/index.html">Abrir demonstração</a>
             </nav>
 
             <div class="sidebar-footer">
