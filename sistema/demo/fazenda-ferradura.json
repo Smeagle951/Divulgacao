@@ -1,0 +1,588 @@
+{
+  "version": 1,
+  "demoKey": "fortsmart_demo_ferradura_v1",
+  "farmId": "demo-farm-ferradura",
+  "seasonId": "demo-safra-2025-26",
+  "pin": null,
+  "authSession": {
+    "user": {
+      "id": "local-user-1",
+      "email": "demo@fortsmart.local",
+      "user_metadata": { "full_name": "Demonstração FortSmart" }
+    },
+    "access_token": "demo-local-token",
+    "token_type": "bearer"
+  },
+  "farmSession": {
+    "farm_id": "demo-farm-ferradura",
+    "farm_cloud_id": null,
+    "nome": "Fazenda Ferradura",
+    "logo": null,
+    "municipio": "Sorriso",
+    "estado": "MT",
+    "unlocked": true
+  },
+  "seasonSession": {
+    "safra_id": "demo-safra-2025-26",
+    "nome": "Safra 2025/26",
+    "fazenda_id": "demo-farm-ferradura"
+  },
+  "tables": {
+    "fazendas": [
+      {
+        "id": "demo-farm-ferradura",
+        "user_id": "local-user-1",
+        "nome": "Fazenda Ferradura",
+        "area_total": 1840,
+        "municipio": "Sorriso",
+        "estado": "MT",
+        "endereco": "BR-163, km 842 — zona rural",
+        "localizacao": { "lat": -12.545, "lng": -55.712 },
+        "farm_cloud_id": null,
+        "sync_enabled": false,
+        "sync_status": "demo",
+        "created_at": "2025-08-01T12:00:00.000Z",
+        "updated_at": "2026-09-01T12:00:00.000Z"
+      }
+    ],
+    "safras": [
+      {
+        "id": "demo-safra-2025-26",
+        "user_id": "local-user-1",
+        "fazenda_id": "demo-farm-ferradura",
+        "nome": "Safra 2025/26",
+        "ano_inicio": 2025,
+        "ano_fim": 2026,
+        "status": "ativa",
+        "data_inicio": "2025-09-15",
+        "data_fim": "2026-03-31",
+        "observacoes": "Soja — demonstração pública FortSmart",
+        "created_at": "2025-08-10T12:00:00.000Z",
+        "updated_at": "2026-09-01T12:00:00.000Z"
+      }
+    ],
+    "talhoes": [
+      {
+        "id": "demo-t01",
+        "user_id": "local-user-1",
+        "fazenda_id": "demo-farm-ferradura",
+        "nome": "Talhão 01",
+        "area": 85,
+        "cultura_atual": "Soja",
+        "variedade_atual": "97R21",
+        "safra_atual": "2025/26",
+        "centroid_lat": -12.548,
+        "centroid_lng": -55.72,
+        "geojson": {
+          "type": "Polygon",
+          "coordinates": [[
+            [-55.725, -12.545], [-55.715, -12.545], [-55.715, -12.551], [-55.725, -12.551], [-55.725, -12.545]
+          ]]
+        },
+        "created_at": "2025-08-12T12:00:00.000Z",
+        "updated_at": "2026-09-01T12:00:00.000Z"
+      },
+      {
+        "id": "demo-t07",
+        "user_id": "local-user-1",
+        "fazenda_id": "demo-farm-ferradura",
+        "nome": "Talhão 07",
+        "area": 120,
+        "cultura_atual": "Soja",
+        "variedade_atual": "97R21",
+        "safra_atual": "2025/26",
+        "centroid_lat": -12.542,
+        "centroid_lng": -55.708,
+        "geojson": {
+          "type": "Polygon",
+          "coordinates": [[
+            [-55.714, -12.538], [-55.702, -12.538], [-55.702, -12.546], [-55.714, -12.546], [-55.714, -12.538]
+          ]]
+        },
+        "created_at": "2025-08-12T12:00:00.000Z",
+        "updated_at": "2026-09-01T12:00:00.000Z"
+      },
+      {
+        "id": "demo-t12",
+        "user_id": "local-user-1",
+        "fazenda_id": "demo-farm-ferradura",
+        "nome": "Talhão 12",
+        "area": 95,
+        "cultura_atual": "Soja",
+        "variedade_atual": "97R21",
+        "safra_atual": "2025/26",
+        "centroid_lat": -12.55,
+        "centroid_lng": -55.7,
+        "geojson": {
+          "type": "Polygon",
+          "coordinates": [[
+            [-55.706, -12.547], [-55.694, -12.547], [-55.694, -12.553], [-55.706, -12.553], [-55.706, -12.547]
+          ]]
+        },
+        "created_at": "2025-08-12T12:00:00.000Z",
+        "updated_at": "2026-09-01T12:00:00.000Z"
+      },
+      {
+        "id": "demo-t14",
+        "user_id": "local-user-1",
+        "fazenda_id": "demo-farm-ferradura",
+        "nome": "Talhão 14",
+        "area": 110,
+        "cultura_atual": "Soja",
+        "variedade_atual": "97R21",
+        "safra_atual": "2025/26",
+        "centroid_lat": -12.555,
+        "centroid_lng": -55.715,
+        "geojson": {
+          "type": "Polygon",
+          "coordinates": [[
+            [-55.722, -12.552], [-55.708, -12.552], [-55.708, -12.558], [-55.722, -12.558], [-55.722, -12.552]
+          ]]
+        },
+        "created_at": "2025-08-12T12:00:00.000Z",
+        "updated_at": "2026-09-01T12:00:00.000Z"
+      },
+      {
+        "id": "demo-t18",
+        "user_id": "local-user-1",
+        "fazenda_id": "demo-farm-ferradura",
+        "nome": "Talhão 18",
+        "area": 78,
+        "cultura_atual": "Soja",
+        "variedade_atual": "97R21",
+        "safra_atual": "2025/26",
+        "centroid_lat": -12.538,
+        "centroid_lng": -55.695,
+        "geojson": {
+          "type": "Polygon",
+          "coordinates": [[
+            [-55.7, -12.535], [-55.69, -12.535], [-55.69, -12.541], [-55.7, -12.541], [-55.7, -12.535]
+          ]]
+        },
+        "created_at": "2025-08-12T12:00:00.000Z",
+        "updated_at": "2026-09-01T12:00:00.000Z"
+      },
+      {
+        "id": "demo-t22",
+        "user_id": "local-user-1",
+        "fazenda_id": "demo-farm-ferradura",
+        "nome": "Talhão 22",
+        "area": 140,
+        "cultura_atual": "Soja",
+        "variedade_atual": "97R21",
+        "safra_atual": "2025/26",
+        "centroid_lat": -12.56,
+        "centroid_lng": -55.705,
+        "geojson": {
+          "type": "Polygon",
+          "coordinates": [[
+            [-55.712, -12.557], [-55.698, -12.557], [-55.698, -12.563], [-55.712, -12.563], [-55.712, -12.557]
+          ]]
+        },
+        "created_at": "2025-08-12T12:00:00.000Z",
+        "updated_at": "2026-09-01T12:00:00.000Z"
+      }
+    ],
+    "galpoes": [
+      {
+        "id": "demo-galpao-central",
+        "fazenda_id": "demo-farm-ferradura",
+        "nome": "Galpão Central",
+        "tipo": "geral",
+        "ativo": true,
+        "created_at": "2025-08-15T12:00:00.000Z",
+        "updated_at": "2026-09-01T12:00:00.000Z"
+      },
+      {
+        "id": "demo-galpao-norte",
+        "fazenda_id": "demo-farm-ferradura",
+        "nome": "Galpão Norte",
+        "tipo": "sementes",
+        "ativo": true,
+        "created_at": "2025-08-15T12:00:00.000Z",
+        "updated_at": "2026-09-01T12:00:00.000Z"
+      }
+    ],
+    "inventario": [
+      {
+        "id": "demo-inv-glifo",
+        "nome": "Glifosato 480",
+        "categoria": "Defensivo",
+        "subcategoria": "Herbicida",
+        "quantidade": 42,
+        "unidade": "L",
+        "documento": "NF 44190",
+        "data_entrada": "2025-08-12",
+        "data_validade": "2026-03-15",
+        "status": "available",
+        "fazenda_id": "demo-farm-ferradura",
+        "fazenda_nome": "Fazenda Ferradura",
+        "localizacao_estoque": "Galpão Central",
+        "galpao_id": "demo-galpao-central",
+        "lote": "GL-4412",
+        "quantidade_minima": 100,
+        "preco_unitario": 28.5,
+        "fabricante": "AgroQuímica Demo",
+        "principio_ativo": "Glifosato",
+        "safra_id": "demo-safra-2025-26",
+        "is_active": true,
+        "created_at": "2025-08-12T12:00:00.000Z",
+        "updated_at": "2026-08-28T12:00:00.000Z"
+      },
+      {
+        "id": "demo-inv-azoxi",
+        "nome": "Azoxistrobina + Ciproconazol",
+        "categoria": "Defensivo",
+        "subcategoria": "Fungicida",
+        "quantidade": 156,
+        "unidade": "L",
+        "documento": "NF 45667",
+        "data_entrada": "2025-08-25",
+        "data_validade": "2027-02-01",
+        "status": "available",
+        "fazenda_id": "demo-farm-ferradura",
+        "fazenda_nome": "Fazenda Ferradura",
+        "localizacao_estoque": "Galpão Central",
+        "galpao_id": "demo-galpao-central",
+        "lote": "AZ-3301",
+        "quantidade_minima": 80,
+        "preco_unitario": 145,
+        "fabricante": "CropProtect Demo",
+        "principio_ativo": "Azoxistrobina + Ciproconazol",
+        "safra_id": "demo-safra-2025-26",
+        "is_active": true,
+        "created_at": "2025-08-25T12:00:00.000Z",
+        "updated_at": "2026-08-25T12:00:00.000Z"
+      },
+      {
+        "id": "demo-inv-inculo",
+        "nome": "Inoculante Bradyrhizobium",
+        "categoria": "Outro",
+        "subcategoria": "Biológico",
+        "quantidade": 320,
+        "unidade": "doses",
+        "documento": "NF 45201",
+        "data_entrada": "2025-08-20",
+        "data_validade": "2026-09-16",
+        "status": "available",
+        "fazenda_id": "demo-farm-ferradura",
+        "fazenda_nome": "Fazenda Ferradura",
+        "localizacao_estoque": "Galpão Central",
+        "galpao_id": "demo-galpao-central",
+        "lote": "L-8821",
+        "quantidade_minima": 200,
+        "preco_unitario": 1.8,
+        "fabricante": "BioAgro Demo",
+        "principio_ativo": "Bradyrhizobium japonicum",
+        "safra_id": "demo-safra-2025-26",
+        "is_active": true,
+        "created_at": "2025-08-20T12:00:00.000Z",
+        "updated_at": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "demo-inv-semente",
+        "nome": "Semente Soja 97R21",
+        "categoria": "Semente",
+        "subcategoria": "Semente",
+        "quantidade": 860,
+        "unidade": "sc",
+        "documento": "NF 44001",
+        "data_entrada": "2025-09-01",
+        "data_validade": "2027-06-01",
+        "status": "available",
+        "fazenda_id": "demo-farm-ferradura",
+        "fazenda_nome": "Fazenda Ferradura",
+        "localizacao_estoque": "Galpão Norte",
+        "galpao_id": "demo-galpao-norte",
+        "lote": "SM-2104",
+        "quantidade_minima": 400,
+        "preco_unitario": 185,
+        "fabricante": "Sementes Demo",
+        "safra_id": "demo-safra-2025-26",
+        "is_active": true,
+        "created_at": "2025-09-01T12:00:00.000Z",
+        "updated_at": "2026-09-01T12:00:00.000Z"
+      },
+      {
+        "id": "demo-inv-ureia",
+        "nome": "Ureia 45%",
+        "categoria": "Fertilizante",
+        "subcategoria": "Fertilizante",
+        "quantidade": 210,
+        "unidade": "sc",
+        "documento": "NF 44880",
+        "data_entrada": "2025-08-18",
+        "data_validade": "2027-01-01",
+        "status": "available",
+        "fazenda_id": "demo-farm-ferradura",
+        "fazenda_nome": "Fazenda Ferradura",
+        "localizacao_estoque": "Galpão Norte",
+        "galpao_id": "demo-galpao-norte",
+        "lote": "UR-778",
+        "quantidade_minima": 150,
+        "preco_unitario": 98,
+        "fabricante": "FertDemo",
+        "safra_id": "demo-safra-2025-26",
+        "is_active": true,
+        "created_at": "2025-08-18T12:00:00.000Z",
+        "updated_at": "2026-09-03T12:00:00.000Z"
+      },
+      {
+        "id": "demo-inv-gesso",
+        "nome": "Gesso agrícola",
+        "categoria": "Fertilizante",
+        "subcategoria": "Corretivo",
+        "quantidade": 48,
+        "unidade": "t",
+        "documento": "NF 44990",
+        "data_entrada": "2025-07-10",
+        "data_validade": "2028-01-01",
+        "status": "available",
+        "fazenda_id": "demo-farm-ferradura",
+        "fazenda_nome": "Fazenda Ferradura",
+        "localizacao_estoque": "Galpão Central",
+        "galpao_id": "demo-galpao-central",
+        "lote": "GE-102",
+        "quantidade_minima": 20,
+        "preco_unitario": 220,
+        "fabricante": "Mineração Demo",
+        "safra_id": "demo-safra-2025-26",
+        "is_active": true,
+        "created_at": "2025-07-10T12:00:00.000Z",
+        "updated_at": "2026-07-10T12:00:00.000Z"
+      },
+      {
+        "id": "demo-inv-oleo",
+        "nome": "Óleo mineral",
+        "categoria": "Defensivo",
+        "subcategoria": "Adjuvante",
+        "quantidade": 200,
+        "unidade": "L",
+        "documento": "NF 45010",
+        "data_entrada": "2025-08-22",
+        "data_validade": "2027-08-01",
+        "status": "available",
+        "fazenda_id": "demo-farm-ferradura",
+        "fazenda_nome": "Fazenda Ferradura",
+        "localizacao_estoque": "Galpão Central",
+        "galpao_id": "demo-galpao-central",
+        "lote": "OM-550",
+        "quantidade_minima": 50,
+        "preco_unitario": 12,
+        "fabricante": "Adjuvantes Demo",
+        "safra_id": "demo-safra-2025-26",
+        "is_active": true,
+        "created_at": "2025-08-22T12:00:00.000Z",
+        "updated_at": "2026-08-22T12:00:00.000Z"
+      }
+    ],
+    "inventario_movimentacoes": [
+      {
+        "id": "demo-mov-1",
+        "product_id": "demo-inv-glifo",
+        "inventario_id": "demo-inv-glifo",
+        "produto_nome": "Glifosato 480",
+        "tipo": "entrada",
+        "movement_type": "entry",
+        "quantidade": 200,
+        "unidade": "L",
+        "data_movimentacao": "2025-08-12",
+        "farm_id": "demo-farm-ferradura",
+        "destino_fazenda_id": "demo-farm-ferradura",
+        "destino_fazenda_nome": "Fazenda Ferradura",
+        "destino_localizacao": "Galpão Central",
+        "responsavel": "Almoxarifado",
+        "observacoes": "NF 44190",
+        "created_at": "2025-08-12T14:00:00.000Z"
+      },
+      {
+        "id": "demo-mov-2",
+        "product_id": "demo-inv-glifo",
+        "inventario_id": "demo-inv-glifo",
+        "produto_nome": "Glifosato 480",
+        "tipo": "aplicacao",
+        "movement_type": "application",
+        "quantidade": 120,
+        "unidade": "L",
+        "data_movimentacao": "2026-08-28",
+        "farm_id": "demo-farm-ferradura",
+        "origem_fazenda_id": "demo-farm-ferradura",
+        "origem_fazenda_nome": "Fazenda Ferradura",
+        "origem_localizacao": "Galpão Central",
+        "talhao_nome": "Talhão 01",
+        "responsavel": "Operações",
+        "observacoes": "Aplicação herbicida T01",
+        "created_at": "2026-08-28T11:00:00.000Z"
+      },
+      {
+        "id": "demo-mov-3",
+        "product_id": "demo-inv-ureia",
+        "inventario_id": "demo-inv-ureia",
+        "produto_nome": "Ureia 45%",
+        "tipo": "transferencia",
+        "movement_type": "transfer_in",
+        "quantidade": 50,
+        "unidade": "sc",
+        "data_movimentacao": "2026-09-03",
+        "farm_id": "demo-farm-ferradura",
+        "origem_fazenda_id": "demo-farm-ferradura",
+        "destino_fazenda_id": "demo-farm-ferradura",
+        "origem_localizacao": "Galpão Central",
+        "destino_localizacao": "Galpão Norte",
+        "responsavel": "Logística",
+        "observacoes": "Transferência Central → Norte",
+        "created_at": "2026-09-03T09:00:00.000Z"
+      }
+    ],
+    "prescricoes": [
+      {
+        "id": "demo-presc-0148",
+        "fazenda_id": "demo-farm-ferradura",
+        "safra_id": "demo-safra-2025-26",
+        "numero": "PRESC-2026-000148",
+        "status": "emitida",
+        "tipo_aplicacao": "terrestre",
+        "capacidade_tanque_l": 2000,
+        "vazao_l_ha": 100,
+        "area_total_ha": 215,
+        "area_planejada_ha": 215,
+        "volume_total_calda_l": 22575,
+        "hectares_por_tanque": 20,
+        "tanques_cheios": 10,
+        "tanque_parcial": 0.75,
+        "tanques_operacionais": 11,
+        "custo_total": 10642.5,
+        "custo_medio_ha": 49.5,
+        "data_prescricao": "2026-09-01",
+        "data_prevista_aplicacao": "2026-09-05",
+        "responsavel_tecnico": "Carlos Henrique",
+        "crea": "CREA-000000-D",
+        "talhoes_resumo": "Talhão 07, Talhão 12",
+        "produtos_resumo": "Azoxistrobina + Ciproconazol, Óleo mineral",
+        "stock_status": "available",
+        "stock_fulfillment": "reserved",
+        "observacoes_gerais": "Fungicida foliar — demonstração",
+        "created_at": "2026-09-01T10:00:00.000Z",
+        "updated_at": "2026-09-01T10:30:00.000Z"
+      },
+      {
+        "id": "demo-presc-0146",
+        "fazenda_id": "demo-farm-ferradura",
+        "safra_id": "demo-safra-2025-26",
+        "numero": "PRESC-2026-000146",
+        "status": "aprovada",
+        "tipo_aplicacao": "terrestre",
+        "capacidade_tanque_l": 2000,
+        "vazao_l_ha": 100,
+        "area_total_ha": 110,
+        "area_planejada_ha": 110,
+        "volume_total_calda_l": 11550,
+        "hectares_por_tanque": 20,
+        "tanques_cheios": 5,
+        "tanque_parcial": 0.5,
+        "tanques_operacionais": 6,
+        "custo_total": 3135,
+        "custo_medio_ha": 28.5,
+        "data_prescricao": "2026-08-28",
+        "data_prevista_aplicacao": "2026-09-02",
+        "responsavel_tecnico": "Carlos Henrique",
+        "crea": "CREA-000000-D",
+        "talhoes_resumo": "Talhão 14",
+        "produtos_resumo": "Glifosato 480",
+        "stock_status": "pending_osa",
+        "stock_fulfillment": "not_separated",
+        "observacoes_gerais": "Aplicação atrasada — estoque insuficiente",
+        "created_at": "2026-08-28T15:00:00.000Z",
+        "updated_at": "2026-09-02T08:00:00.000Z"
+      }
+    ],
+    "prescricao_talhoes": [
+      {
+        "id": "demo-pt-1",
+        "prescricao_id": "demo-presc-0148",
+        "talhao_id": "demo-t07",
+        "talhao_nome": "Talhão 07",
+        "area_ha": 120
+      },
+      {
+        "id": "demo-pt-2",
+        "prescricao_id": "demo-presc-0148",
+        "talhao_id": "demo-t12",
+        "talhao_nome": "Talhão 12",
+        "area_ha": 95
+      },
+      {
+        "id": "demo-pt-3",
+        "prescricao_id": "demo-presc-0146",
+        "talhao_id": "demo-t14",
+        "talhao_nome": "Talhão 14",
+        "area_ha": 110
+      }
+    ],
+    "prescricao_produtos": [
+      {
+        "id": "demo-pp-1",
+        "prescricao_id": "demo-presc-0148",
+        "nome": "Azoxistrobina + Ciproconazol",
+        "dose_ha": 0.3,
+        "unidade": "L",
+        "quantidade_total": 64.5,
+        "ordem_calda": 1,
+        "custo_unitario": 145,
+        "custo_total": 9352.5,
+        "inventario_id": "demo-inv-azoxi"
+      },
+      {
+        "id": "demo-pp-2",
+        "prescricao_id": "demo-presc-0148",
+        "nome": "Óleo mineral",
+        "dose_ha": 0.5,
+        "unidade": "L",
+        "quantidade_total": 107.5,
+        "ordem_calda": 2,
+        "custo_unitario": 12,
+        "custo_total": 1290,
+        "inventario_id": "demo-inv-oleo"
+      },
+      {
+        "id": "demo-pp-3",
+        "prescricao_id": "demo-presc-0146",
+        "nome": "Glifosato 480",
+        "dose_ha": 2.5,
+        "unidade": "L",
+        "quantidade_total": 275,
+        "ordem_calda": 1,
+        "custo_unitario": 28.5,
+        "custo_total": 7837.5,
+        "inventario_id": "demo-inv-glifo"
+      }
+    ],
+    "plantios": [
+      {
+        "id": "demo-plantio-1",
+        "user_id": "local-user-1",
+        "talhao_id": "demo-t01",
+        "cultura": "Soja",
+        "variedade": "97R21",
+        "safra": "2025/26",
+        "data_plantio": "2025-10-05",
+        "data_prevista_colheita": "2026-02-20",
+        "observacoes": "Plantio demonstração",
+        "created_at": "2025-10-05T12:00:00.000Z",
+        "updated_at": "2025-10-05T12:00:00.000Z"
+      },
+      {
+        "id": "demo-plantio-2",
+        "user_id": "local-user-1",
+        "talhao_id": "demo-t07",
+        "cultura": "Soja",
+        "variedade": "97R21",
+        "safra": "2025/26",
+        "data_plantio": "2025-10-08",
+        "data_prevista_colheita": "2026-02-22",
+        "created_at": "2025-10-08T12:00:00.000Z",
+        "updated_at": "2025-10-08T12:00:00.000Z"
+      }
+    ]
+  }
+}
